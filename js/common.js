@@ -98,13 +98,13 @@ $(function() {
 	}
 
 
-	aa();
+	swiper_list();
 
-	function aa() {
+	function swiper_list() {
 
 		var swiper = new Swiper('.swiper-list.swiper-container', {
 			slidesPerView: 3,
-			spaceBetween: 30
+			spaceBetween: 10
 			/* pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
