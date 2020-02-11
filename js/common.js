@@ -2,13 +2,13 @@ $(function() {
 
 	// INIT
 
-	main_swiper_slider();
+	swiper_slider();
 	faq();
 
 
 	//
 
-	function main_swiper_slider() {
+	function swiper_slider() {
 
 		var $slider = $('.swiper-wrapper');
 
@@ -26,7 +26,7 @@ $(function() {
 
 		if($('.swiper-slide').length > 1){
 
-			var main_visual_swiper = new Swiper('.swiper-container', {
+			var main_visual_swiper = new Swiper('.swiper-view.swiper-container', {
 				parallax: true,
 				loop : true,
 				speed : transition_time,
@@ -97,6 +97,21 @@ $(function() {
 
 	}
 
+
+	aa();
+
+	function aa() {
+
+		var swiper = new Swiper('.swiper-list.swiper-container', {
+			slidesPerView: 3,
+			spaceBetween: 30
+			/* pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}, */
+		});
+
+	}
 
 	// 
 	

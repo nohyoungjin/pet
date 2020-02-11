@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+header, main, footer, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* */
+
+*, html {
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+} 
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;
+} 
+
+html {
+	overflow-y: scroll;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%; 
+	-moz-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', '돋움', 'Dotum', 'Apple Gothic', sans-serif;
+	font-size: 13px;
+	color: #333;
+}
+
+em, address {
+	font-style: normal;
+}
+
+img {
+	border: 0 none; 
+	font-size: 0;
+	line-height: 0;
+}
+
+sup {
+	position: relative;
+	top: 2px;
+	font-size: 11px;
+	line-height: 100%;
+}
+
+caption {
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	font-size: 0; 
+	line-height: 0;
+}
+
+/* Links */
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #333;
+}
+
+/* Headings and Rulers */
+
+hr {
+	height: 1px;
+	margin-bottom: 1.5em;
+	border: 0;
+	background-color: #ccc;
+}
+
+/* Text meant only for screen readers */
+
+.assistive-text {
+	clip: rect(1px 1px 1px 1px);
+	position: absolute !important;
+}
+
+/* */
+
+textarea, input, button, select {
+	font-family: inherit; 
+	font-size: inherit; 
+	box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+textarea {
+	padding: 3px;
+	border: 1px solid #ccc;
+	color: #666;
+}
+
+textarea {
+	overflow: auto;
+	padding: 10px !important;
+	vertical-align: top;
+}
