@@ -7,7 +7,7 @@
 	<title></title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/font.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -74,24 +74,6 @@
 
 					</div>
 
-					<ul class="lst_share">
-						<li>
-							<a href="">
-								좋아요
-							</a>
-						</li>
-						<li>
-							<a href="">
-								리뷰
-							</a>
-						</li>
-						<li>
-							<a href="">
-								공유
-							</a>
-						</li>
-					</ul>
-
 				</div>
 			</section>
 
@@ -132,7 +114,35 @@
 				
 					<h3>기본정보</h3>
 
-					<div class="intro_cont"></div>
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+					<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+
+					<script>
+
+						mapboxgl.accessToken = 'pk.eyJ1IjoibnlqIiwiYSI6ImNqaTl3eWdrNTB5MmgzcW1sdjRpM3kyam8ifQ.j05LYsPyqT2v5LX69n5mHA';
+						var map = new mapboxgl.Map({
+							container: 'map',
+							style: 'mapbox://styles/mapbox/streets-v9',
+							center: [126.9753395, 37.5018880],
+							zoom: 13.15
+						});
+
+						var marker = new mapboxgl.Marker() 
+						  .setLngLat([126.9753395, 37.5018880])
+						  .addTo(map);
+
+						var nav = new mapboxgl.NavigationControl();
+						map.addControl(nav, 'top-left');
+
+						var popup = new mapboxgl.Popup({closeOnClick: false})
+							.setLngLat([126.9753395, 37.5018880])
+							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
+							.addTo(map);
+
+					</script>
 
 					<ul class="lst_info">
 						<li>
@@ -155,11 +165,23 @@
 						</li>
 					</ul>
 
-					<!-- <ul class="lst_share">
-						<li>길찾기</li>
-						<li>전화걸기</li>
-						<li>주소복사</li>
-					</ul> -->
+					<ul class="lst_share">
+						<li>
+							<a href="">
+								길찾기
+							</a>
+						</li>
+						<li>
+							<a href="">
+								전화걸기
+							</a>
+						</li>
+						<li>
+							<a href="">
+								주소복사
+							</a>
+						</li>
+					</ul>
 
 				</div>
 			</section>

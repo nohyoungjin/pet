@@ -11,7 +11,7 @@ $(function() {
 
 		var swiper = new Swiper('.swiper-list.swiper-container', {
 			slidesPerView: 4,
-			spaceBetween: 10
+			spaceBetween: 12
 			/* pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
