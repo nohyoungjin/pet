@@ -1,14 +1,28 @@
 $(function() {
 
 	// INIT
-
-	swiper_slider();
-	faq();
-
+	
+	swiper_list();
+	swiper_view();
 
 	//
 
-	function swiper_slider() {
+	function swiper_list() {
+
+		var swiper = new Swiper('.swiper-list.swiper-container', {
+			slidesPerView: 4,
+			spaceBetween: 10
+			/* pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			}, */
+		});
+
+	}
+
+	//
+
+	function swiper_view() {
 
 		var $slider = $('.swiper-wrapper');
 
@@ -95,38 +109,6 @@ $(function() {
 			}
 		});
 
-	}
-
-
-	swiper_list();
-
-	function swiper_list() {
-
-		var swiper = new Swiper('.swiper-list.swiper-container', {
-			slidesPerView: 3,
-			spaceBetween: 10
-			/* pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			}, */
-		});
-
-	}
-
-	// 
-	
-	function faq() {
-		$(".faq dl dt a").on("click", function() {
-			if ( $(this).parent().next().css("display") == "none" ) {
-				$(".faq dl dt a").removeClass('on');
-				$(".faq dl dd").slideUp(150);
-				$(this).addClass('on');
-				$(this).parent().next().slideDown(150);
-			} else {
-				$(".faq dl dt a").removeClass('on');
-				$(this).parent().next().slideUp(150);
-			}
-		});
 	}
 
 });
