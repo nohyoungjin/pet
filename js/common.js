@@ -2,8 +2,69 @@ $(function() {
 
 	// INIT
 	
+	local();
+
 	swiper_list();
 	swiper_view();
+
+
+	//
+
+	function local() {
+
+		var $body = $('body'),
+			$close_btn = $('#popup_close'),
+			$popup = $('#popup'),
+			_open = true;
+
+		// open
+
+		$(document).on('click', '.local a', function(e) {
+
+			e.preventDefault();
+
+			if ( _open ) {
+
+				$body.addClass('_open');
+				_open = false;
+
+				new TweenLite.fromTo($popup, .5, {y: '-100%'}, {y: '0%', ease: Power4.easeOut});
+				new TweenLite.fromTo($close_btn, .2, {autoAlpha: 0}, {autoAlpha: 1, ease: Power0.easeNone,delay: .1});
+
+			} else {
+
+				close_action();
+
+			}
+
+		});
+
+	   // close
+
+		$close_btn.on('click', function(e) {
+
+			e.preventDefault();
+			close_action();
+
+		});
+
+		// search close action
+
+		function close_action() {
+
+			new TweenLite.to($popup, .4, {
+				y: '-100%',
+				ease: Power4.easeOut,
+				onComplete: function() {
+					$body.removeClass('_open');
+
+					_open = true;
+				}
+			});
+
+		}
+
+	}
 
 	//
 
