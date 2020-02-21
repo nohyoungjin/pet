@@ -4,11 +4,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-	<title></title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+	<title>KOOZPET</title>
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head> 
@@ -35,20 +35,35 @@
 			<section class="pet v1">
 				<div class="sec_inner">
 
-					<h2>메인 타이틀</h2>
-					<p>간략 텍스트</p>
+					<h2>미용/뷰티</h2>
+					<p>우리 아이를 더 예쁘게!</p>
 
 					<div class="swiper-view swiper-container">
 
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url('https://img.youtube.com/vi/GVYRPhsRoDc/0.jpg')"></span>
+									<span style="background-image:url(img/v_1_1.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url('https://img.youtube.com/vi/J9sZQ4NVATA/0.jpg')"></span>
+									<span style="background-image:url(img/v_1_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/v_1_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/v_1_4.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/v_1_5.jpg)"></span>
 								</div>	
 							</div>
 						</div>
@@ -86,20 +101,25 @@
 
 					<div class="intro_cont">
 						
-						<p>공공기관이 우편물로 발송하는 통지서를 문자로 받아볼 수 있습니다. 공공기관이 우편물로 발송하는 통지서를 문자로 받아볼 수 있습니다.</p>
-						<p>이제 공공기관 통지서도 핸드폰 문자메시지로 받아보세요! 이제 공공기관 통지서도 핸드폰 문자메시지로 받아보세요!</p>
+						<p>안녕하세요 트루디독입니다 !!</p>
+						<p>시간이 참 빠른것같네요 벌써 2020년 이라니~ 감사하게도 참 많은 분들이 트루디독을 찾아주셨습니다.</p>
+						<p>모두 모두 진심으로 감사드리며, 앞으로도 최선을 다해 아이들을 사랑하고 케어하겠습니다!</p>
 
-						<div class="price">
+						<!-- <div class="price">
 							<strong>[가격정보]</strong>
 							<ul>
 								<li>크리스프 1kg 이하 1,000원</li>
 								<li>크리스프 1kg 이하 1,000원</li>
 							</ul>
-						</div>
+						</div> -->
 						
 						<div class="clock">
-							<strong>[이용시간]</strong>
-							<p>매일 11:00 ~ 20:00</p>
+							<strong>[픽업시간]</strong>
+							<ul>
+								<li>오전 8:30~ 9:30</li>
+								<li>오후 2:00~ 3:00</li>
+								<li>저녁 7:00~ 8:00</li>
+							</ul>
 						</div>
 
 					</div>
@@ -126,19 +146,19 @@
 						var map = new mapboxgl.Map({
 							container: 'map',
 							style: 'mapbox://styles/mapbox/streets-v9',
-							center: [126.9753395, 37.5018880],
+							center: [129.329694, 35.5628009],
 							zoom: 13.15
 						});
 
 						var marker = new mapboxgl.Marker() 
-						  .setLngLat([126.9753395, 37.5018880])
+						  .setLngLat([129.329694, 35.5628009])
 						  .addTo(map);
 
 						var nav = new mapboxgl.NavigationControl();
 						map.addControl(nav, 'top-left');
 
 						var popup = new mapboxgl.Popup({closeOnClick: false})
-							.setLngLat([126.9753395, 37.5018880])
+							.setLngLat([129.329694, 35.5628009])
 							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
 							.addTo(map);
 
@@ -148,24 +168,24 @@
 						<li>
 							<div class="t_b">
 								<div class="t_c">주소</div>
-								<div class="t_c">서울시 양천구 신정동 서울시 양천구 신정동 서울시 양천구 신정동 서울시 양천구 신정동</div>
+								<div class="t_c">울산광역시 중구 계변로85 / 중구 복산동 399-3번지 1층 트루디독</div>
 							</div>
 						</li>
 						<li>
 							<div class="t_b">
-								<div class="t_c">전화</div>
-								<div class="t_c">010-2333-4343</div>
+								<div class="t_c">문의</div>
+								<div class="t_c">988-5959</div>
 							</div>
 						</li>
-						<li>
+						<!-- <li>
 							<div class="t_b">
 								<div class="t_c">홈페이지</div>
 								<div class="t_c">http://blog~~~</div>
 							</div>
-						</li>
+						</li> -->
 					</ul>
 
-					<ul class="lst_share">
+					<!-- <ul class="lst_share">
 						<li>
 							<a href="">
 								길찾기
@@ -181,14 +201,14 @@
 								주소복사
 							</a>
 						</li>
-					</ul>
+					</ul> -->
 
 				</div>
 			</section>
 
 			<!--  -->
 
-			<section class="pet v4">
+			<!-- <section class="pet v4">
 				<div class="sec_inner">
 				
 					<h3>가고싶어요</h3>
@@ -215,11 +235,11 @@
 					</ul>
 
 				</div>
-			</section>
+			</section> -->
 
 			<!--  -->
 
-			<section class="pet v5">
+			<!-- <section class="pet v5">
 				<div class="sec_inner">
 				
 					<h3>소셜 리뷰</h3>
@@ -258,7 +278,7 @@
 					</ul>
 
 				</div>
-			</section>
+			</section> -->
 
 		</div>
 		<!-- //content -->
@@ -268,14 +288,14 @@
 
 	<!-- footer -->
 	<div id="footer">
-		<p class="copyR">COPYRIGHT</p>
+		<p class="copyR">KOOZPET</p>
 	</div>
 	<!-- //footer -->
 
 </div>
 
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="js/swiper.min.js"></script>
 <script src="js/common.js"></script>
 
 </body> 
