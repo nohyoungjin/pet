@@ -19,8 +19,7 @@
 
 	<!-- header -->
 	<div id="header" class="fix">
-		<!-- <h1><a href="index.html"><img src="" alt=""></a></h1>
-		<span>010-0000-0000</span> -->
+		<a href="/"><i class="ri-arrow-left-s-line"></i></a>
 	</div>
 	<!-- //header -->
 
@@ -76,24 +75,26 @@
 			<section class="pet v2">
 				<div class="sec_inner">
 				
-					<h3>고객과의 신뢰를 최우선으로 하는 애견미용샵 아트펫입니다.</h3>
+					<h3>독블레스는 평택시 소사벌지구에 위치한 반려견 원스탑공간입니다.</h3>
 
 					<div class="intro_cont">
 						
-						<p>한마리 한마리 제 아이처럼 정성으로 미용했습니다. 제가 다른곳에서 일을 그만두고도 많은 분들이 제가 있는 곳까지 다시 찾아주시는 것이 바로 그 이유입니다. 모든분들의 마음에 들 순 없지만 제가 할 수 있는 최선을 다해 사랑으로 미용합니다.</p>
+						<p>카페,분양,호텔,유치원,놀이터,목욕을 운영하고 있습니다. 맛있는 음료는 물론 반려견과 보호자님들에게 최적의 서비스를 제공하겠습니다.</p>
+						<p>셀프목욕시 음료무료제공, 위탁목욕시 리필가격으로 제공합니다.</p>
 
 						<div class="price">
 							<strong>[가격정보]</strong>
 							<ul>
-								<li>소형견미용 ------------- 30,000원</li>
-								<li>중형견미용 ------------- 35,000원</li>
+								<li>아메리카노 ------- 7,500원</li>
+								<li>카페라떼 --------- 8,000원</li>
+								<li>카페모카 --------- 8,000원</li>
 							</ul>
 						</div>
 						
 						<div class="clock">
 							<strong>[이용시간]</strong>
 							<ul>
-								<li>평일 10:00 ~ 20:00</li>
+								<li>매일 11:30 ~ 22:00</li>
 							</ul>
 						</div>
 
@@ -118,22 +119,26 @@
 					<script>
 
 						mapboxgl.accessToken = 'pk.eyJ1IjoibnlqIiwiYSI6ImNqaTl3eWdrNTB5MmgzcW1sdjRpM3kyam8ifQ.j05LYsPyqT2v5LX69n5mHA';
+
+						var map_x = "127.115041",
+							map_y = "36.9996178"
+
 						var map = new mapboxgl.Map({
 							container: 'map',
 							style: 'mapbox://styles/mapbox/streets-v9',
-							center: [129.329694, 35.5628009],
+							center: [map_x, map_y],
 							zoom: 13.15
 						});
 
 						var marker = new mapboxgl.Marker() 
-						  .setLngLat([129.329694, 35.5628009])
+						  .setLngLat([map_x, map_y])
 						  .addTo(map);
 
 						var nav = new mapboxgl.NavigationControl();
 						map.addControl(nav, 'top-left');
 
 						var popup = new mapboxgl.Popup({closeOnClick: false})
-							.setLngLat([129.329694, 35.5628009])
+							.setLngLat([map_x, map_y])
 							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
 							.addTo(map);
 
@@ -143,13 +148,13 @@
 						<li>
 							<div class="t_b">
 								<div class="t_c">주소</div>
-								<div class="t_c">인천시 부평구 영성중로 18 미래타운5단지상가동 102호</div>
+								<div class="t_c">경기도 평택시 비전5로 20-37 파크에비뉴 401호</div>
 							</div>
 						</li>
 						<li>
 							<div class="t_b">
 								<div class="t_c">문의</div>
-								<div class="t_c">032-283-1515</div>
+								<div class="t_c">010-2455-2564</div>
 							</div>
 						</li>
 						<!-- <li>

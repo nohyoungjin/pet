@@ -19,8 +19,7 @@
 
 	<!-- header -->
 	<div id="header" class="fix">
-		<!-- <h1><a href="index.html"><img src="" alt=""></a></h1>
-		<span>010-0000-0000</span> -->
+		<a href="/"><i class="ri-arrow-left-s-line"></i></a>
 	</div>
 	<!-- //header -->
 
@@ -81,24 +80,25 @@
 			<section class="pet v2">
 				<div class="sec_inner">
 				
-					<h3>고객과의 신뢰를 최우선으로 하는 애견미용샵 아트펫입니다.</h3>
+					<h3>반려견을 위한 공간을 새롭게 번역하고 디자인한 공간 다독인더시티입니다.</h3>
 
 					<div class="intro_cont">
 						
-						<p>한마리 한마리 제 아이처럼 정성으로 미용했습니다. 제가 다른곳에서 일을 그만두고도 많은 분들이 제가 있는 곳까지 다시 찾아주시는 것이 바로 그 이유입니다. 모든분들의 마음에 들 순 없지만 제가 할 수 있는 최선을 다해 사랑으로 미용합니다.</p>
+						<p>현재 운영중인 여타 동종업체와는 전혀 차원이 다른 솔루션을 제공하는 다중복합문화시설입니다.</p>
+						<p>강남구 역삼동 소재 3개층 단독건물 전관의 공간을 활용하여 반려견미용시설및 셀프목욕시설과 각종용품을 판매하는 매장이 입점할 예정이마, 반려견 동반카페및 입점하는 업체의 제품을 홍보할 수 있는 별도의 쇼룸이 준비되어져있습니다.</p>
+						<p>이밖에 반려견의 기초교육을 돕는 유치원시설과 24시간 상주인력이 보살피는 호텔시설이 있습니다.</p>
 
 						<div class="price">
 							<strong>[가격정보]</strong>
 							<ul>
-								<li>소형견미용 ------------- 30,000원</li>
-								<li>중형견미용 ------------- 35,000원</li>
+								<li>음료 (입장료포함) ----------- 10,000 ~ 15,000원</li>
 							</ul>
 						</div>
 						
 						<div class="clock">
 							<strong>[이용시간]</strong>
 							<ul>
-								<li>평일 10:00 ~ 20:00</li>
+								<li>매일 10:00 ~ 23:00까지</li>
 							</ul>
 						</div>
 
@@ -123,22 +123,26 @@
 					<script>
 
 						mapboxgl.accessToken = 'pk.eyJ1IjoibnlqIiwiYSI6ImNqaTl3eWdrNTB5MmgzcW1sdjRpM3kyam8ifQ.j05LYsPyqT2v5LX69n5mHA';
+
+						var map_x = "127.034045",
+							map_y = "37.5045647"
+
 						var map = new mapboxgl.Map({
 							container: 'map',
 							style: 'mapbox://styles/mapbox/streets-v9',
-							center: [129.329694, 35.5628009],
+							center: [map_x, map_y],
 							zoom: 13.15
 						});
 
 						var marker = new mapboxgl.Marker() 
-						  .setLngLat([129.329694, 35.5628009])
+						  .setLngLat([map_x, map_y])
 						  .addTo(map);
 
 						var nav = new mapboxgl.NavigationControl();
 						map.addControl(nav, 'top-left');
 
 						var popup = new mapboxgl.Popup({closeOnClick: false})
-							.setLngLat([129.329694, 35.5628009])
+							.setLngLat([map_x, map_y])
 							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
 							.addTo(map);
 
@@ -148,13 +152,13 @@
 						<li>
 							<div class="t_b">
 								<div class="t_c">주소</div>
-								<div class="t_c">인천시 부평구 영성중로 18 미래타운5단지상가동 102호</div>
+								<div class="t_c">서울시 강남구 논현로 101길 10</div>
 							</div>
 						</li>
 						<li>
 							<div class="t_b">
 								<div class="t_c">문의</div>
-								<div class="t_c">032-283-1515</div>
+								<div class="t_c">02-516-9650</div>
 							</div>
 						</li>
 						<!-- <li>

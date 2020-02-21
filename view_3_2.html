@@ -19,8 +19,7 @@
 
 	<!-- header -->
 	<div id="header" class="fix">
-		<!-- <h1><a href="index.html"><img src="" alt=""></a></h1>
-		<span>010-0000-0000</span> -->
+		<a href="/"><i class="ri-arrow-left-s-line"></i></a>
 	</div>
 	<!-- //header -->
 
@@ -123,22 +122,26 @@
 					<script>
 
 						mapboxgl.accessToken = 'pk.eyJ1IjoibnlqIiwiYSI6ImNqaTl3eWdrNTB5MmgzcW1sdjRpM3kyam8ifQ.j05LYsPyqT2v5LX69n5mHA';
+
+						var map_x = "127.115041",
+							map_y = "36.9996178"
+
 						var map = new mapboxgl.Map({
 							container: 'map',
 							style: 'mapbox://styles/mapbox/streets-v9',
-							center: [129.329694, 35.5628009],
+							center: [map_x, map_y],
 							zoom: 13.15
 						});
 
 						var marker = new mapboxgl.Marker() 
-						  .setLngLat([129.329694, 35.5628009])
+						  .setLngLat([map_x, map_y])
 						  .addTo(map);
 
 						var nav = new mapboxgl.NavigationControl();
 						map.addControl(nav, 'top-left');
 
 						var popup = new mapboxgl.Popup({closeOnClick: false})
-							.setLngLat([129.329694, 35.5628009])
+							.setLngLat([map_x, map_y])
 							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
 							.addTo(map);
 

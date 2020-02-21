@@ -3,7 +3,7 @@
 /* layout */
 
 #wrap {width:100%;margin:0;padding:0;background:#ebebeb}
-#header {width:100%;padding:20px 0;border-bottom:1px solid #ddd;background:#fff}
+#header {width:100%;padding:11px 0;border-bottom:1px solid #ddd;background:#fff}
 #container {_display:inline-block;width:100%}
 #container:after {display:block;clear:both;content:''}
 #footer {width:100%;text-align:center}
@@ -12,6 +12,9 @@
 
 #header h1 {position:absolute;top:15px;left:50%;margin-left:-61px}
 #header h1 a {display:block;width:100%;height:37px}
+
+#header a {position:relative;left:10px;text-decoration:none}
+#header a i {font-size:24px}
 
 .fix {position:relative}
 .fix#header h1 {position:absolute;left:20px;margin-left:0}

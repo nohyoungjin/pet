@@ -19,8 +19,7 @@
 
 	<!-- header -->
 	<div id="header" class="fix">
-		<!-- <h1><a href="index.html"><img src="" alt=""></a></h1>
-		<span>010-0000-0000</span> -->
+		<a href="/"><i class="ri-arrow-left-s-line"></i></a>
 	</div>
 	<!-- //header -->
 
@@ -81,9 +80,9 @@
 			<section class="pet v2">
 				<div class="sec_inner">
 				
-					<h3>고객과의 신뢰를 최우선으로 하는 애견미용샵 아트펫입니다.</h3>
+					<h3>타이틀</h3>
 
-					<div class="intro_cont">
+					<!-- <div class="intro_cont">
 						
 						<p>한마리 한마리 제 아이처럼 정성으로 미용했습니다. 제가 다른곳에서 일을 그만두고도 많은 분들이 제가 있는 곳까지 다시 찾아주시는 것이 바로 그 이유입니다. 모든분들의 마음에 들 순 없지만 제가 할 수 있는 최선을 다해 사랑으로 미용합니다.</p>
 
@@ -102,7 +101,7 @@
 							</ul>
 						</div>
 
-					</div>
+					</div> -->
 
 				</div>
 			</section>
@@ -115,7 +114,7 @@
 					<h3>기본정보</h3>
 
 					<!-- 지도를 표시할 div 입니다 -->
-					<div id="map"></div>
+					<!-- <div id="map"></div> -->
 
 					<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
 					<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
@@ -123,28 +122,31 @@
 					<script>
 
 						mapboxgl.accessToken = 'pk.eyJ1IjoibnlqIiwiYSI6ImNqaTl3eWdrNTB5MmgzcW1sdjRpM3kyam8ifQ.j05LYsPyqT2v5LX69n5mHA';
+
+						var map_x = "127.115041",
+							map_y = "36.9996178"
+
 						var map = new mapboxgl.Map({
 							container: 'map',
 							style: 'mapbox://styles/mapbox/streets-v9',
-							center: [129.329694, 35.5628009],
+							center: [map_x, map_y],
 							zoom: 13.15
 						});
 
 						var marker = new mapboxgl.Marker() 
-						  .setLngLat([129.329694, 35.5628009])
+						  .setLngLat([map_x, map_y])
 						  .addTo(map);
 
 						var nav = new mapboxgl.NavigationControl();
 						map.addControl(nav, 'top-left');
 
 						var popup = new mapboxgl.Popup({closeOnClick: false})
-							.setLngLat([129.329694, 35.5628009])
-							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
+							.setLngLat([map_x, map_y])
 							.addTo(map);
 
 					</script>
 
-					<ul class="lst_info">
+					<!-- <ul class="lst_info">
 						<li>
 							<div class="t_b">
 								<div class="t_c">주소</div>
@@ -156,30 +158,6 @@
 								<div class="t_c">문의</div>
 								<div class="t_c">032-283-1515</div>
 							</div>
-						</li>
-						<!-- <li>
-							<div class="t_b">
-								<div class="t_c">홈페이지</div>
-								<div class="t_c">http://blog~~~</div>
-							</div>
-						</li> -->
-					</ul>
-
-					<!-- <ul class="lst_share">
-						<li>
-							<a href="">
-								길찾기
-							</a>
-						</li>
-						<li>
-							<a href="">
-								전화걸기
-							</a>
-						</li>
-						<li>
-							<a href="">
-								주소복사
-							</a>
 						</li>
 					</ul> -->
 
