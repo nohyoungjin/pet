@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head> 
+
+<body> 
+
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header" class="fix">
+		<!-- <h1><a href="index.html"><img src="" alt=""></a></h1>
+		<span>010-0000-0000</span> -->
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>미용/뷰티</h2>
+					<p>우리 아이를 더 예쁘게!</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/beauty_4_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/beauty_4_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/beauty_4_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/beauty_4_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>고객과의 신뢰를 최우선으로 하는 애견미용샵 아트펫입니다.</h3>
+
+					<div class="intro_cont">
+						
+						<p>한마리 한마리 제 아이처럼 정성으로 미용했습니다. 제가 다른곳에서 일을 그만두고도 많은 분들이 제가 있는 곳까지 다시 찾아주시는 것이 바로 그 이유입니다.</p> 
+						<p>모든분들의 마음에 들 순 없지만 제가 할 수 있는 최선을 다해 사랑으로 미용합니다.</p>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>소형견미용 ------------- 30,000원</li>
+								<li>중형견미용 ------------- 35,000원</li>
+							</ul>
+						</div>
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>평일 10:00 ~ 20:00</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+					<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+
+					<script>
+
+						mapboxgl.accessToken = 'pk.eyJ1IjoibnlqIiwiYSI6ImNqaTl3eWdrNTB5MmgzcW1sdjRpM3kyam8ifQ.j05LYsPyqT2v5LX69n5mHA';
+
+						var map_x = "126.744496",
+							map_y = "37.5179670"
+
+						var map = new mapboxgl.Map({
+							container: 'map',
+							style: 'mapbox://styles/mapbox/streets-v9',
+							center: [map_x, map_y],
+							zoom: 13.15
+						});
+
+						var marker = new mapboxgl.Marker() 
+						  .setLngLat([map_x, map_y])
+						  .addTo(map);
+
+						var nav = new mapboxgl.NavigationControl();
+						map.addControl(nav, 'top-left');
+
+						var popup = new mapboxgl.Popup({closeOnClick: false})
+							.setLngLat([map_x, map_y])
+							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
+							.addTo(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">인천시 부평구 영성중로 18 미래타운5단지상가동 102호</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">032-283-1515</div>
+							</div>
+						</li>
+						<!-- <li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c">http://blog~~~</div>
+							</div>
+						</li> -->
+					</ul>
+
+					<!-- <ul class="lst_share">
+						<li>
+							<a href="">
+								길찾기
+							</a>
+						</li>
+						<li>
+							<a href="">
+								전화걸기
+							</a>
+						</li>
+						<li>
+							<a href="">
+								주소복사
+							</a>
+						</li>
+					</ul> -->
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<p class="copyR">KOOZPET</p>
+	</div>
+	<!-- //footer -->
+
+</div>
+
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+
+</body> 
+</html>
