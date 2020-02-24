@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" type="text/css" href="css/font.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head> 
+
+<body> 
+
+<div id="wrap">
+
+	<!-- header -->
+	<div id="header" class="fix">
+		<a href="https://nohyoungjin.github.io/pet/"><i class="ri-arrow-left-s-line"></i></a>
+	</div>
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>펫노블레스</h2>
+					<p>경상남도 양산시</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/funeral_2_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/funeral_2_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/funeral_2_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(img/funeral_2_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>함께했던 아름다운 시간들이 빛나기위해서 마지막 이별의 가치를 더욱 중요하게 만드는 펫노블레스</h3>
+
+					<div class="intro_cont">
+						
+						<p>아름다운 이별을 위한 품격있는 이별예식과 이별의 슬픔을 함께 나눌수 있는 휴식처가 되도록 노력하며 당신의 소중한 가족이자 따뜻했던 친구와의 마지막 이별을 함께하겠습니다.</p>
+
+						<!-- <div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>소형견미용 ------------- 30,000원</li>
+								<li>중형견미용 ------------- 35,000원</li>
+							</ul>
+						</div> -->
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>매일 00:00 ~ 24:00 연중무휴</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+					<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+
+					<script>
+
+						mapboxgl.accessToken = 'pk.eyJ1IjoibnlqIiwiYSI6ImNqaTl3eWdrNTB5MmgzcW1sdjRpM3kyam8ifQ.j05LYsPyqT2v5LX69n5mHA';
+
+						var map_x = "129.040665",
+							map_y = "35.4218416"
+
+						var map = new mapboxgl.Map({
+							container: 'map',
+							style: 'mapbox://styles/mapbox/streets-v9',
+							center: [map_x, map_y],
+							zoom: 8
+						});
+
+						var marker = new mapboxgl.Marker() 
+						  .setLngLat([map_x, map_y])
+						  .addTo(map);
+
+						var nav = new mapboxgl.NavigationControl();
+						map.addControl(nav, 'top-left');
+
+						var popup = new mapboxgl.Popup({closeOnClick: false})
+							.setLngLat([map_x, map_y])
+							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
+							.addTo(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">경남 양산시 상북면 상삼리 807</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">055-374-4400</div>
+							</div>
+						</li>
+						<!-- <li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c">http://blog~~~</div>
+							</div>
+						</li> -->
+					</ul>
+
+					<!-- <ul class="lst_share">
+						<li>
+							<a href="">
+								길찾기
+							</a>
+						</li>
+						<li>
+							<a href="">
+								전화걸기
+							</a>
+						</li>
+						<li>
+							<a href="">
+								주소복사
+							</a>
+						</li>
+					</ul> -->
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<div id="footer">
+		<p class="copyR">KOOZPET</p>
+	</div>
+	<!-- //footer -->
+
+</div>
+
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/common.js"></script>
+
+</body> 
+</html>
