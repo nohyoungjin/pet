@@ -24,7 +24,7 @@
 
 .pet .sec_inner {position:relative;margin:10px 0 0;padding:15px 20px;background:#fff}
 .pet .sec_inner h2 {display:block;margin:5px 0 10px;font-size:23px;font-weight:500;line-height:27px;letter-spacing:-1.2px}
-.pet .sec_inner h3 {display:block;margin:10px 0;font-size:20px;font-weight:500;line-height:28px;letter-spacing:-1.2px}
+.pet .sec_inner h3 {display:block;margin:10px 0;font-size:20px;font-weight:500;line-height:26px;letter-spacing:-1.2px}
 
 .t_b {display:table}
 .t_c {display:table-cell}
@@ -116,7 +116,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 /* .pet.v2 */
 
 .intro_cont {padding:0 5px}
-.intro_cont p {margin:20px 0;line-height:24px}
+.intro_cont p {margin:20px 0;line-height:22px}
 
 .intro_cont .price {margin:30px 0 0}
 .intro_cont .price strong {display:block;margin:10px 0;font-size:20px;font-weight:normal;line-height:28px;letter-spacing:-1.2px}
