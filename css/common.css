@@ -71,7 +71,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .swiper-list.swiper-container .swiper-slide a span {display:block;overflow:hidden;position:relative;width:100%;padding-bottom:100%;font-size:0;border-radius:100%;border:1px solid #fff}
 .swiper-list.swiper-container .swiper-slide a p {margin:12px 0 0;text-align:center}
 
-.swiper-list.swiper-container .swiper-slide a span img {display:block;position:absolute;top:50%;left:50%;width:110px;height:110px;margin:-55px 0 0 -55px}
+.swiper-list.swiper-container .swiper-slide a span img {display:block;position:absolute;top:50%;left:50%;margin:-50px 0 0 -50px}
 
 .lst_shop {margin:30px 0 0}
 .lst_shop:after {display:block;clear:both;content:''}
