@@ -100,6 +100,9 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 
 .slideshow_nav i {font-size:60px;color:#fff}
 
+.swiper-pagination {text-align:right;left:auto;right:10px}
+.swiper-pagination > span {display:inline-block;padding:5px 8px;background-color:rgba(0, 0, 0, 0.7);font-weight:normal;color:#fff;letter-spacing:0.8px;border-radius:14px}
+
 .slideshow_pagination_container {margin:15px 0 0}
 .slideshow_pagination .swiper-pagination-bullet {width:170px;height:8px;margin-right:18px;border:1px solid #000;border-radius:0;background:rgb(255, 255, 255);opacity:1}
 
