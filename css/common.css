@@ -15,7 +15,10 @@
 
 #header a {display:inline-block;position:relative;left:10px;text-decoration:none}
 #header a i {font-size:24px}
-#header a i.ri-arrow-left-s-line {color:#ff5546}
+
+.page #header a {top:-3px}
+.page #header a i {font-size:32px}
+.page #header a i.ri-arrow-left-s-line {color:#ff5546}
 
 .fix {position:relative}
 .fix#header h1 {position:absolute;left:20px;margin-left:0}
@@ -54,7 +57,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .keyword {position:relative;text-align:left}
 .keyword ul {display:inline-block;font-size:0;vertical-align:middle}
 .keyword li {display:inline-block;margin:2.5px 5px;vertical-align:middle}
-.keyword li a {display:block;border:1px solid #ddd;border-radius:30px;padding: 6px 14px;font-size:14px;color:#666;letter-spacing:-0.01em;-webkit-transition: background .3s, border .3s;transition: background .3s, border .3s;}
+.keyword li a {display:block;border:1px solid #ddd;border-radius:30px;padding: 6px 14px;font-size:14px;color:#666;letter-spacing:-0.01em;-webkit-transition:background .3s, border .3s;transition:background .3s, border .3s;}
 
 .popup_close > span {display:block;overflow:hidden;position:relative;width:25px;height:25px;margin:0 auto;text-indent:-9999em}
 .popup_close > span:before,
@@ -64,12 +67,11 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 
 /* */
 
-.swiper-list.swiper-container .swiper-slide {width:110px !important}
 .swiper-list.swiper-container .swiper-slide a {display:block}
-.swiper-list.swiper-container .swiper-slide a span {display:block;overflow:hidden;position:relative;width:110px;height:110px;margin:0 auto;font-size:0;border-radius:100%;box-shadow:1px 2px 3px 0 rgba(0,0,0,.1)}
+.swiper-list.swiper-container .swiper-slide a span {display:block;overflow:hidden;position:relative;width:100%;padding-bottom:100%;font-size:0;border-radius:100%;border:1px solid #fff}
 .swiper-list.swiper-container .swiper-slide a p {margin:12px 0 0;text-align:center}
 
-.swiper-list.swiper-container .swiper-slide a span img {}
+.swiper-list.swiper-container .swiper-slide a span img {display:block;position:absolute;top:50%;left:50%;width:110px;height:110px;margin:-55px 0 0 -55px}
 
 .lst_shop {margin:30px 0 0}
 .lst_shop:after {display:block;clear:both;content:''}

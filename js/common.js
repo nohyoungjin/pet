@@ -72,7 +72,10 @@ $(function() {
 
 		var swiper = new Swiper('.swiper-list.swiper-container', {
 			slidesPerView: 4,
-			spaceBetween: 12
+			spaceBetween: 12,
+			watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+			grabCursor: true
 		});
 
 	}
