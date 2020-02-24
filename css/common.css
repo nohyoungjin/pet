@@ -96,7 +96,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 
 .slideshow_nav {overflow:hidden;position:absolute;top:50%;z-index:40;margin-top:-28px;border:0;background:transparent;-webkit-transition:300ms;transition:300ms}
 .slideshow_nav.slideshow_prev {left:-5px}
-.slideshow_nav.slideshow_next {right:-5px}}
+.slideshow_nav.slideshow_next {right:-5px}
 
 .slideshow_nav i {font-size:50px;color:#fff}
 
