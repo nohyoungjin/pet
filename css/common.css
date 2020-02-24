@@ -3,7 +3,7 @@
 /* layout */
 
 #wrap {width:100%;margin:0;padding:0;background:#ebebeb}
-#header {width:100%;padding:11px 0;border-bottom:1px solid #ddd;background:#fff}
+#header {width:100%;height:48px;padding:11px 0;border-bottom:1px solid #ddd;background:#fff}
 #container {_display:inline-block;width:100%}
 #container:after {display:block;clear:both;content:''}
 #footer {width:100%;text-align:center}
@@ -15,6 +15,7 @@
 
 #header a {display:inline-block;position:relative;left:10px;text-decoration:none}
 #header a i {font-size:24px}
+#header a i.ri-arrow-left-s-line {position:relative;left:-2px;top:-4px;font-size:34px;color:#ff5546}
 
 .fix {position:relative}
 .fix#header h1 {position:absolute;left:20px;margin-left:0}
@@ -64,7 +65,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 /* */
 
 .swiper-list.swiper-container .swiper-slide a {display:block}
-.swiper-list.swiper-container .swiper-slide a span {display:block;overflow:hidden;position:relative;width:100%;height:0;padding-bottom:100%;font-size:0;border-radius:100%;box-shadow:1px 2px 3px 0 rgba(0,0,0,.1)}
+.swiper-list.swiper-container .swiper-slide a span {display:block;overflow:hidden;position:relative;width:100%;padding-bottom:100%;font-size:0;border-radius:100%;box-shadow:1px 2px 3px 0 rgba(0,0,0,.1)}
 .swiper-list.swiper-container .swiper-slide a p {margin:12px 0 0;text-align:center}
 
 .swiper-list.swiper-container .swiper-slide a span img {display:block;position:absolute;top:50%;left:50%;margin:-60px;text-align:center}
