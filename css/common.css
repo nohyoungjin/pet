@@ -24,7 +24,7 @@
 
 .fix {position:relative}
 .fix#header h1 {position:absolute;left:20px;margin-left:0}
-.fix#header span {display:inline-block;position:relative;top:-10px;left:-5px}
+.fix#header span {display:inline-block;position:relative;top:-12px;left:-5px}
 
 /* */
 
