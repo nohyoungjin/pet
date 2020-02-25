@@ -19,7 +19,10 @@
 
 	<!-- header -->
 	<div id="header" class="fix">
-		<a href="https://nohyoungjin.github.io/pet/"><i class="ri-arrow-left-s-line"></i></a>
+		<a href="https://nohyoungjin.github.io/pet/">
+			<i class="ri-arrow-left-s-line"></i>
+			<span>뒤로가기</span>
+		</a>
 	</div>
 	<!-- //header -->
 
@@ -122,34 +125,30 @@
 					<!-- 지도를 표시할 div 입니다 -->
 					<div id="map"></div>
 
-					<link href='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
-					<script src='https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
-
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
 					<script>
 
-						mapboxgl.accessToken = 'pk.eyJ1IjoibnlqIiwiYSI6ImNqaTl3eWdrNTB5MmgzcW1sdjRpM3kyam8ifQ.j05LYsPyqT2v5LX69n5mHA';
+						var map_x = "35.8194912",
+							map_y = "128.536315"
 
-						var map_x = "128.536315",
-							map_y = "35.8194912"
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = { 
+								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
+								level: 6 // 지도의 확대 레벨
+							};
 
-						var map = new mapboxgl.Map({
-							container: 'map',
-							style: 'mapbox://styles/mapbox/streets-v9',
-							center: [map_x, map_y],
-							zoom: 13.15
+						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							position: markerPosition
 						});
 
-						var marker = new mapboxgl.Marker() 
-						  .setLngLat([map_x, map_y])
-						  .addTo(map);
-
-						var nav = new mapboxgl.NavigationControl();
-						map.addControl(nav, 'top-left');
-
-						var popup = new mapboxgl.Popup({closeOnClick: false})
-							.setLngLat([map_x, map_y])
-							// .setHTML('<span style="display:block;padding:15px 0;font-size:14px;">서울본사</span>')
-							.addTo(map);
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
 
 					</script>
 
