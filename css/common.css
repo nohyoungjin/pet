@@ -81,6 +81,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .cate_wrap .cate {display:inline-block;width:100px;margin:0 8px 0 0}
 .cate_wrap .cate:last-child {margin:0}
 .cate_wrap .cate a {display:block}
+.cate_wrap .cate a:hover {text-decoration:none}
 .cate_wrap .cate a span {display:block;overflow:hidden;position:relative;width:100%;padding-bottom:100%;font-size:0;border-radius:100%}
 .cate_wrap .cate a p {margin:12px 0 0;text-align:center}
 
@@ -94,6 +95,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .lst_shop li:nth-child(even) {margin:0 0 0 1.5%}
 
 .lst_shop li a {display:block;width:100%}
+.lst_shop li a:hover {text-decoration:none}
 
 .lst_shop li .thumb span {display:block;position:relative;width:100%;height:125px;margin:0 auto;padding-bottom:0;background-position:center;background-repeat:no-repeat;background-size:cover}
 
