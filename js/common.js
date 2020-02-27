@@ -4,9 +4,9 @@ $(function() {
 	
 	local();
 
-	swiper_list();
+	// swiper_list();
 	swiper_view();
-
+	scroll_move();
 
 	//
 
@@ -132,6 +132,34 @@ $(function() {
 				tween.resume();
 			}
 
+		});
+
+	}
+
+	// 
+
+	function scroll_move() {
+
+		$('.cate a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			  var target = $(this.hash);
+			  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+			  if (target.length) {
+
+				event.preventDefault();
+		
+				var win_w = $(window).width(),
+					scroll_top = 40;
+
+				$('html, body').animate({
+					scrollTop: target.offset().top - scroll_top
+				}, 500, function() {
+
+				});
+
+			  }
+			}
 		});
 
 	}
