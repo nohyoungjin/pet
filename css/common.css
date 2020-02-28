@@ -86,8 +86,8 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .cate_wrap .cate a p {margin:12px 0 0;text-align:center}
 
 .cate_wrap .cate a span img {display:block;position:absolute;top:50%;left:50%;margin:-50px 0 0 -50px;text-align:center}
-.cate_wrap .cate.last a span {border:1px solid #ccc}
-.cate_wrap .cate.last a span i {position:relative;top:22%;left:50%;margin:0 0 0 -27px;font-size:54px}
+.cate_wrap .cate.last a span {border:1px solid #eee}
+.cate_wrap .cate.last a span i {position:absolute;top:50%;left:50%;margin:-27px 0 0 -27px;font-size:54px}
 
 .lst_shop {margin:25px 0 0}
 .lst_shop:after {display:block;clear:both;content:''}
