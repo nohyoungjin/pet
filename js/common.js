@@ -165,4 +165,8 @@ $(function() {
 
 	}
 
+	// youtube
+
+	$( 'iframe[src^="https://www.youtube.com/"], iframe[src^="https://www.facebook.com/"], iframe[src^="https://goo.gl/"]' ).wrap( '<div class="youtubeWrap"></div>' );
+
 });
