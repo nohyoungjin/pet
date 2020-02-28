@@ -29,8 +29,8 @@
 /* */
 
 .pet .sec_inner {position:relative;margin:10px 0 0;padding:15px 20px;background:#fff}
-.pet .sec_inner h2 {display:block;margin:5px 0 10px;font-size:21px;font-weight:500;line-height:26px;letter-spacing:-1.2px}
-.pet .sec_inner h3 {display:block;margin:10px 0;font-size:20px;font-weight:500;line-height:25px;letter-spacing:-1.2px}
+.pet .sec_inner h2 {display:block;margin:5px 0 10px;font-size:21px;font-weight:500;line-height:27px;letter-spacing:-1.2px}
+.pet .sec_inner h3 {display:block;margin:10px 0;font-size:20px;font-weight:500;line-height:26px;letter-spacing:-1.2px}
 
 .t_b {display:table}
 .t_c {display:table-cell}
