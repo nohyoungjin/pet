@@ -18,7 +18,7 @@
 #header a {display:inline-block;position:relative;left:10px;text-decoration:none}
 #header a i {font-size:24px}
 
-.page #header a {top:-4px}
+.page #header a {top:-4px;left:6px}
 .page #header a i {font-size:32px}
 .page #header a i.ri-arrow-left-s-line {color:#ff5546}
 
