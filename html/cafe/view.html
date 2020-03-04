@@ -111,68 +111,13 @@
 
 					<ul class="lst_view">
 						<li>
-							<a href="../../cafe_1.html">
+							<a href="../../html/cafe/08.html">
 								<div class="thumb">
-									<span style="background-image:url(../../img/m_2_1.jpg)"></span>
+									<span style="background-image:url(../../img/thumb/m_2_8.jpg)"></span>
 								</div>
 								<div class="cont">
-									<p class="tit">다독인더시티</p>
-									<p class="txt">서울특별시 강남구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../cafe_2.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_2_2.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">독블레스</p>
-									<p class="txt">경기도 평택시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../cafe_3.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_2_3.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">루체인알티스</p>
-									<p class="txt">경기도 안양시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../cafe_4.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_2_4.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">방가댕댕</p>
-									<p class="txt">서울특별시 관악구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/05.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/m_2_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">독타곤</p>
-									<p class="txt">전라북도 전주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/06.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/m_2_6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">반달애견까페</p>
-									<p class="txt">전라북도 군산시</p>
+									<p class="tit">율산양봉 허니비</p>
+									<p class="txt">전라북도 익산시</p>
 								</div>
 							</a>
 						</li>
@@ -188,13 +133,71 @@
 							</a>
 						</li>
 						<li>
-							<a href="../../html/cafe/08.html">
+							<a href="../../html/cafe/06.html">
 								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/m_2_8.jpg)"></span>
+									<span style="background-image:url(../../img/thumb/m_2_6.jpg)"></span>
 								</div>
 								<div class="cont">
-									<p class="tit">율산양봉 허니비</p>
-									<p class="txt">전라북도 익산시</p>
+									<p class="tit">반달애견까페</p>
+									<p class="txt">전라북도 군산시</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="../../html/cafe/05.html">
+								<div class="thumb">
+									<span style="background-image:url(../../img/thumb/m_2_5.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">독타곤</p>
+									<p class="txt">전라북도 전주시</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+
+					<ul class="lst_view randam">
+						<li>
+							<a href="../../cafe_4.html">
+								<div class="thumb">
+									<span style="background-image:url(../../img/m_2_4.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">방가댕댕</p>
+									<p class="txt">서울특별시 관악구</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="../../cafe_3.html">
+								<div class="thumb">
+									<span style="background-image:url(../../img/m_2_3.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">루체인알티스</p>
+									<p class="txt">경기도 안양시</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="../../cafe_2.html">
+								<div class="thumb">
+									<span style="background-image:url(../../img/m_2_2.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">독블레스</p>
+									<p class="txt">경기도 평택시</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="../../cafe_1.html">
+								<div class="thumb">
+									<span style="background-image:url(../../img/m_2_1.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">다독인더시티</p>
+									<p class="txt">서울특별시 강남구</p>
 								</div>
 							</a>
 						</li>
@@ -202,11 +205,11 @@
 
 					<script>
 
-						var len = $('ul > li').length;
+						var len = $('ul.randam > li').length;
 
 						$(window).on('load', function() {
 
-							$('ul').each(function() {
+							$('ul.randam').each(function() {
 								var ul = $(this),
 									liArr = ul.children('li');
 
