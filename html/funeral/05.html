@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>THE 고마워</h2>
+					<p>경기도 양주시</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/5_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/5_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/5_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/5_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>THE 고마워 .. 반려동물은 ‘가슴으로 만든 가족’ 입니다. 우리와 삶을 함께하며 기쁨과 즐거움, 행복과 사랑을 안겨준 이 세상 무엇으로도 대신할 수 없는 소중한 선물입니다.</h3>
+
+					<div class="intro_cont">
+						
+						<p>반려가족들의 고마움을 담은 인사가 떠나는 아이들에게 잘 전달될 수 있도록, 마지막까지 반려동물과 반려가족에게 정성을 다하겠습니다. </p>
+						<p>THE 고마워는 정식 장례식장, 화장장, 납골시설을 갖춘합법 장례업체입니다.</p>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>THE고마워 장례  --------------- ￦ 200,000 *VAT별도</li>
+								<li>(염습 + 추모식진행(Private 단독추모실 제공) + 개별화장 및 참관 + 청자 유골함 + 석별함 무료제공)</li>
+								<li>(3kg 미만 반려동물 기준. 관, 수의 등은 미포함. 대형견 전용 친환경화장로가 준비되어 있습니다.)</li>
+							</ul>
+						</div>
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>연중무휴, 전화문의 24시간가능</li>
+								<li>장례예약 09시 ~ 20시까지</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+					<script>
+
+						var map_x = "126.921585",
+							map_y = "37.8092345"
+
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = { 
+								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
+								level: 6 // 지도의 확대 레벨
+							};
+
+						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							position: markerPosition
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">경기 양주시 광적면 비암리 583-4</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">031-878-7779</div>
+							</div>
+						</li>
+						<!-- <li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c"></div>
+							</div>
+						</li> -->
+					</ul>
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>

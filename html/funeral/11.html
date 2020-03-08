@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>펫바라기</h2>
+					<p>경기도 고양시</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/11_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/11_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/11_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/11_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>펫바라기는 국내 최대, 최고급 시설을 자부하며 장례식, 화장, 봉안당까지 모든 절차를 정성을 다하여 고객님과 함께하겠습니다.</h3>
+
+					<div class="intro_cont">
+						
+						<p>행복한 만남이 있었습니다. 이제 아름다운 이별을 준비하십시오.</p> 
+						<p>가족의 슬픔을 함께하는 마음으로 저희 펫바라기가 함께합니다.</p>
+						<p>경기도 일산에 위치한 아름다운 반려동물 장례식장!</p>
+						<p>가족의 일원을 함께 자라온 우리집 반려동물과의 마지막 이별의 장소!</p>
+						<p>아름다운 기억과 함께하는 평화로운 안식처 주식회사 펫바라기!</p>
+						<p>정부 농림부 정식 허가업체!</p>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>1인 커피류 -----------  6,000원</li>
+								<li>1인 스무디류 음료 ---- 7,000원</li>
+								<li>소.중형견 입장료 ------ 4,000원</li>
+							</ul>
+						</div>
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>매일 00:00 ~ 23:59</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+					<script>
+
+						var map_x = "37.7136786",
+							map_y = "126.805848"
+
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = { 
+								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
+								level: 6 // 지도의 확대 레벨
+							};
+
+						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							position: markerPosition
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">경기 고양시 일산동구 은마길63번길 25-2</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">031-976-3179</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c">http://www.petbaragi.com/</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>

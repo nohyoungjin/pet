@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>애견추모카페</h2>
+					<p>경기도 화성시</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/9_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/9_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/9_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/9_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>반려동물장례식장 애견추모카페는 20년 전통의 이용하신 많은 분들이 자신있게 추천해 주시는 신뢰할 수 있는 정식등록업체 입니다</h3>
+
+					<div class="intro_cont">
+						
+						<p>염습, 수시,삼베수의,빈소차림,개별화장,참관하에 예식이 이루어지며 화장후 유골은 나무함에 담아드리는 서비스를 받으실수 있습니다.</p> 
+						<p>국화장 페키지외 루비스톤,봉안당, 기능성 유골함 생화꽃장식등 고품격 서비스를 저렴하게 이용하실수 있습니다.</p>
+						<p>소중한 내 아이와의 마지막 이별예식, 정성껏 소중하게 진행해 드리겠습니다</p>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>국화장 (5kg미만기준, 부가세 별도) ---- 25만원</li>
+							</ul>
+						</div>
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>매일 00:00 ~ 24:00</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+					<script>
+
+						var map_x = "126.894590",
+							map_y = "37.1750161"
+
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = { 
+								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
+								level: 6 // 지도의 확대 레벨
+							};
+
+						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							position: markerPosition
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">경기 화성시 팔탄면 독곡길 24-42</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">031-354-4403</div>
+							</div>
+						</li>
+						<!-- <li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c"></div>
+							</div>
+						</li> -->
+					</ul>
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>

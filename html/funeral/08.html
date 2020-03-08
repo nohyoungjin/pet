@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>리멤버파크</h2>
+					<p>충청남도 논산시</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/8_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/8_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/8_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/funeral/8_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>리멤버파크는 반려동물을 잃고 슬픔에 잠겨있는 반려인들을 위로할 수 있는 카페를 비롯하여 장례식장, 화장장, 봉안당 등 모든 추모시설을 갖추고 있는 전국 최고의 반려동물 추모시설입니다.</h3>
+
+					<div class="intro_cont">
+						
+						<p>리멤버파크는 국가공인 장례지도사 자격증을 취득한 대전보건대학교 장례지도과 출강 교수들이 직접 상담 및 입관을 실시하고 있으며 상실감과 무력감의 위기에 놓여있는 아이들의 보호자들을 품격 있는 장례진행으로 위로하고, 하늘나라에서 영원을 기약할 수 있는 명당에 봉안하여 먼저 간 아이들의 행복을 기원 할 수 있는 곳입니다.</p> 
+						<p>아이들이 보고플 때면 언제든 찾아올 수 있고 아이들을 추억하며 아이들이 그동안 전해주었던 행복한 시간을 기억할 수 있는 사색의 산책로가 리멤버파크에 준비되어있습니다.</p>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>1인 커피류 -----------  6,000원</li>
+								<li>1인 스무디류 음료 ---- 7,000원</li>
+								<li>소.중형견 입장료 ------ 4,000원</li>
+							</ul>
+						</div>
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>매일 10:00 ~ 20:00 우천시 조기마감, 늦은시간 이용시 미리 전화주세요!</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+					<script>
+
+						var map_x = "127.213716",
+							map_y = "36.2100249"
+
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = { 
+								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
+								level: 6 // 지도의 확대 레벨
+							};
+
+						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							position: markerPosition
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">충남 논산시 연산면 계백로 2172-13</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">041-735-1700</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c">http://www.rememberpark.kr/</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>
