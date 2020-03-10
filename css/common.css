@@ -169,12 +169,12 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .intro_cont .price {margin:30px 0 0}
 .intro_cont .price strong {display:block;margin:10px 0;font-size:20px;font-weight:normal;line-height:28px;letter-spacing:-1.2px}
 .intro_cont .price p {margin:10px 0}
-.intro_cont .price ul li {padding:3px 0;line-height:20px}
+.intro_cont .price ul li {padding:2px 0;line-height:20px}
 
 .intro_cont .clock {margin:20px 0 0}
 .intro_cont .clock strong {display:block;margin:10px 0;font-size:20px;font-weight:normal;line-height:28px;letter-spacing:-1.2px}
 .intro_cont .clock p {margin:10px 0}
-.intro_cont .clock ul li {padding:3px 0;line-height:20px}
+.intro_cont .clock ul li {padding:2px 0;line-height:20px}
 
 /* .pet.v3 */
 
