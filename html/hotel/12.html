@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>도그락 애견펜션</h2>
+					<p>경상북도 안동시</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/12_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/12_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/12_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/12_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>도그락은 반려견과 함께 행복한 힐링타임을 선물합니다!</h3>
+
+					<div class="intro_cont">
+						
+						<p>도그락 애견펜션은 차분하고 여유로운 휴식을 지향합니다.</p>
+						<p>시끌벅적함 보다는 도란도란. 허겁지겁 보다는 차분함. 짧은 시간동안 많은것을 하기 보다는 짧은 시간동안 제대로 된 휴식을 위한 공간.. 도그락 애견파크는 반려견의 체중별로 체급을 나누고 있으며, 체급별 이용가능 시설이 상이합니다. 체중별 분류표와 유의사항을 꼭 확인하시고 이용해 주세요.</p>
+
+						<p>체중별 분류 / 이용가능 시설</p>
+						<p>- 조건부 가능 : 공격성향이 없고, 낯선 아이들과 함께 같은 공간에서 지낼수 있을 경우 가능</p>
+
+						<p>- 시간제놀이터, 호텔 : 100% 예약제</p>
+						<p>- 중형견 이상의 반려견이 호텔을 이용할 경우 [대형견 호텔 전용 운동장] 사용을 원칙으로 합니다.</p>
+						<p>- 간혹 실내 및 중소형견 운동장을 이용하는 대형견들이 있습니다. 이는 자체적인 테스트를 통해 소형견과도 잘 어울릴수 있다고 판단되어진 중대형견 및 스텝이 직접 통제 가능한 반려견 이니 놀라지 마시고, 혹여나 불편하실 경우 말씀해 주시면 분리보호 할 수 있도록 하겠습니다.</p>
+
+						<!-- <div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>홈페이지 참조</li>
+							</ul>
+						</div> -->
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>매일 10:00 ~ 19:30 연중무휴</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+					<script>
+
+						var map_x = "36.6185311",
+							map_y = "128.665695"
+
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = { 
+								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
+								level: 6 // 지도의 확대 레벨
+							};
+
+						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							position: markerPosition
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">경북 안동시 서후면 풍산태사로 2928-14</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">054-853-0709</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c">https://dogrock.modoo.at/</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>

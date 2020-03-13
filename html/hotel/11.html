@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>더블스테이 또또멍 펜션</h2>
+					<p>경기도 연천군</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/11_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/11_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/11_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/11_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>자연 경관 및 아름다운 강 이 어우려져 있는 애견 테마 타운하우스 또또멍 펜션 입니다.</h3>
+
+					<div class="intro_cont">
+						
+						<p>애완견동반 입실이 가능하며 소형견 중형견 대형견 모든 견종이 이용 가능합니다.</p>
+						<p>사계절 아름다운 풍경을 담는 프라이빗한 공간 야외시설 중 캠핑테마로 바베큐를 즐기며 연인,가족,단체,모임에서 소중한 추억을 만들어보세요</p>
+
+						<p>[1. 시설개요]</p>
+						<p>독채 / 신축 / 별장 / 애견 (대형견 가능)</p>
+
+						<p>[2. 애견동반:현장결제]</p>
+						<p>ㅁ 소형 >>> 10kg 미만 1마리 기준 10,000원</p>
+						<p>ㅁ 중형 >>> 10kg 이상 20kg 미만 1마리 기준 20,000원</p>
+						<p>ㅁ 대형 >>> 20kg 이상 40,000원 (대형견은 최대 2마리까지 입실 가능)</p>
+						<p>ㅁ 초대형 >>> 25kg 이상 50,000원 (대형견은 최대 2마리까지 입실 가능)</p>
+
+						<p>[3. 바비큐이용안내: 현장결제]</p>
+						<p>ㅁ 바베큐(숯+그릴) 이용요금</p>
+						<p>>>>2인, 20,000원/4인, 30,000원/6인, 40,000원 (1인추가시 5,000원/7세미만 무료)</p>
+
+						<p>[4. 수영장]</p>
+						<p>객실 바로 앞에 간이수영장이 있습니다. (하절기만 운영)</p>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>홈페이지 참조</li>
+							</ul>
+						</div>
+						
+						<!-- <div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+					<script>
+
+						var map_x = "38.0186242",
+							map_y = "126.963335"
+
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = { 
+								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
+								level: 6 // 지도의 확대 레벨
+							};
+
+						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							position: markerPosition
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">경기 연천군 미산면 노아로 670-71</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">1661-0990</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c">http://site.onda.me/52572</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<h2>꼬로몽 애견펜션</h2>
+					<p>강원도 양양군</p>
+
+					<div class="swiper-view swiper-container">
+
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/9_1.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/9_2.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/9_3.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hotel/9_4.jpg)"></span>
+								</div>	
+							</div>
+						</div>
+
+						<div class="swiper-pagination"></div>
+
+						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="ri-arrow-left-s-line"></i>
+						</button>
+
+						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="ri-arrow-right-s-line"></i>
+						</button>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>아름다운도시 양양에서 즐기는 설렘 가득한 여행.. 꼬로몽애견펜션과 함께하세요.</h3>
+
+					<div class="intro_cont">
+						
+						<p>- 전객실 모두 2인전용입니다.</p>
+						<p>영유아포함 추가인원 절대불가하며 노키즈존으로 운영하고 있습니다.</p>
+						<p>(중학생 이상 입실가능)</p>
+						<p>- 반려견을 펜션내에 두고 외출하실 분은 꼬로몽펜션 예약하지 말아 주세요.</p>
+						<p>* 위의 사항을 미준수시 환불없이 퇴실조치합니다.</p>
+						<p>이로 인한 손님과의 불미스런 마찰을 원치 않습니다.</p>
+						<p>* 각 객실에 7kg이하 2견 또는 8~13kg이하 1견 무료입실</p>
+						<p>(7kg 이하 3견 또는 7kg 이하 1견 + 8 ~ 13kg 이하 1견의 경우 2만원 추가금 현장결제, 8 ~ 13kg 이하 2견은 입실불가입니다.)</p>
+						<p>* 미온수 실내 수영장 무료 이용(공용)</p>
+						<p>* 보스턴테리어, 프렌치불독, 닥스훈트, 웰시코기, 스피츠, 폼스키, 시바견종은 객실청소가 힘든 부분이 많은 관계로 체중에 상관없이 각 객실당 1견만 입실 가능합니다.</p>
+						<p>* 예약시 요청사항란에 반려견의 몸무게와 견종, 이름을 꼭 기재하셔야 하며 기재하지 않을시 예약이 취소될 수 있습니다.</p>
+
+						<!-- <div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+						
+						<!-- <div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도를 표시할 div 입니다 -->
+					<div id="map"></div>
+
+					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+					<script>
+
+						var map_x = "38.0690301",
+							map_y = "128.567741"
+
+						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+							mapOption = { 
+								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
+								level: 6 // 지도의 확대 레벨
+							};
+
+						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+						// 마커가 표시될 위치입니다 
+						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+						// 마커를 생성합니다
+						var marker = new kakao.maps.Marker({
+							position: markerPosition
+						});
+
+						// 마커가 지도 위에 표시되도록 설정합니다
+						marker.setMap(map);
+
+					</script>
+
+					<ul class="lst_info">
+						<li>
+							<div class="t_b">
+								<div class="t_c">주소</div>
+								<div class="t_c">강원 양양군 서면 원당골길 111</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">문의</div>
+								<div class="t_c">010-3030-8817</div>
+							</div>
+						</li>
+						<li>
+							<div class="t_b">
+								<div class="t_c">홈페이지</div>
+								<div class="t_c">http://kkoromong.co.kr/</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>
