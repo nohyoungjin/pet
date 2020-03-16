@@ -7,9 +7,8 @@
 	<title>KOOZPET</title>
 	<link rel="stylesheet" href="../../css/font.css">
 	<link rel="stylesheet" href="../../css/reset.css">
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"> -->
 	<link rel="stylesheet" href="../../css/common.css">
-	<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 
 <body class="page"> 
@@ -195,27 +194,6 @@
 							</a>
 						</li>
 					</ul>
-
-					<script>
-
-						var len = $('ul.randam > li').length;
-
-						$(window).on('load', function() {
-
-							$('ul.randam').each(function() {
-								var ul = $(this),
-									liArr = ul.children('li');
-
-								liArr.sort(function() {
-									var temp = parseInt(Math.random()*len),
-										temp1 = parseInt(Math.random()*len);
-									return temp1-temp;
-								}).appendTo(ul);
-							});
-
-						});
-
-					</script>
 				</div>
 
 			</section>
@@ -235,7 +213,7 @@
 </div>
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
-<!-- <script src="../../js/common.js"></script> -->
+<script src="../../js/common.js"></script>
 
 </body> 
 </html>

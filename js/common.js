@@ -8,6 +8,8 @@ $(function() {
 	swiper_view();
 	scroll_move();
 
+	list_random();
+
 	//
 
 	function local() {
@@ -160,6 +162,29 @@ $(function() {
 				}
 
 			}
+
+		});
+
+	}
+
+	//
+
+	function list_random() {
+
+		var len = $('ul.randam > li').length;
+
+		$(window).on('load', function() {
+
+			$('ul.randam').each(function() {
+				var ul = $(this),
+					liArr = ul.children('li');
+
+				liArr.sort(function() {
+					var temp = parseInt(Math.random()*len),
+						temp1 = parseInt(Math.random()*len);
+					return temp1-temp;
+				}).appendTo(ul);
+			});
 
 		});
 
