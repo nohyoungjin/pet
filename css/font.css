@@ -24,7 +24,7 @@
     url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Light-Hestia.otf) format('opentype');
 }
 
-/* @font-face {
+@font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
@@ -33,7 +33,7 @@
     url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'),
     url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/woff/NotoSansKR-Regular-Hestia.woff) format('woff'),
     url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/fonts/otf/NotoSansKR-Regular-Hestia.otf) format('opentype');
-} */
+} 
 
 @font-face {
     font-family: 'Noto Sans KR';
