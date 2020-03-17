@@ -115,40 +115,44 @@
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul class="lst_view randam">
-						<li>
-							<a href="../../beauty_4.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_1_4.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">아트펫</p>
-									<p class="txt">인천시 부평구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../beauty_3.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_1_3.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">무지개좋아</p>
-									<p class="txt">경기도 양주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../beauty_2.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_1_2.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">라라캣</p>
-									<p class="txt">서울특별시 강남구</p>
-								</div>
-							</a>
-						</li>
+					<ul id="lst_view" class="lst_view randam">
+
+						<script>
+
+						$(function() {
+
+							var array = [
+
+								{num: '4',  tit : '아트펫',     add : '인천시 부평구'},
+								{num: '3',  tit : '무지개좋아', add : '경기도 양주시'},
+								{num: '2',  tit : '라라캣',     add : '서울특별시 강남구'},
+
+							];
+								
+							$.each(array, function(index, item) {
+
+								var output = '';
+
+								output += '	<li>';
+								output += '		<a href="../../beauty_' + item.num + '.html">';
+								output += '			<div class="thumb">';
+								output += '				<span style="background-image:url(../../img/m_1_' + item.num + '.jpg)"></span>';
+								output += '			</div>';
+								output += '			<div class="cont">';
+								output += '				<p class="tit">' + item.tit + '</p>';
+								output += '				<p class="txt">' + item.add + '</p>';
+								output += '			</div>';
+								output += '		</a>';
+								output += '	</li>';
+
+								document.getElementById('lst_view').innerHTML += output;
+
+							});
+
+						});
+
+						</script>
+
 						<li>
 							<a href="../../html/beauty/01.html">
 								<div class="thumb">
