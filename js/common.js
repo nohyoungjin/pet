@@ -235,6 +235,7 @@ function list_view(data, folder, insert) {
 
 }
 
+
 //
 
 function map_set(lat, lng) {
@@ -261,5 +262,44 @@ function map_set(lat, lng) {
 
 	// 마커가 지도 위에 표시되도록 설정합니다
 	marker.setMap(map);
+
+}
+
+
+//
+
+function list_info(data) {
+
+	$.each(data, function(index, item) {
+
+		var output = '';
+
+		output += '	<li>';
+		output += '		<div class="t_b">';
+		output += '			<div class="t_c">주소</div>';
+		output += '			<div class="t_c">' + item.add + '</div>';
+		output += '		</div>';
+		output += '	</li>';
+		output += '	<li>';
+		output += '		<div class="t_b">';
+		output += '			<div class="t_c">문의</div>';
+		output += '			<div class="t_c">' + item.tel + '</div>';
+		output += '		</div>';
+		output += '	</li>';
+		
+		if (item.ome) {
+			
+			output += '	<li>';
+			output += '		<div class="t_b">';
+			output += '			<div class="t_c">홈페이지</div>';
+			output += '			<div class="t_c">' + item.ome + '</div>';
+			output += '		</div>';
+			output += '	</li>';
+
+		}
+
+		document.getElementById('info').innerHTML += output;
+
+	});
 
 }

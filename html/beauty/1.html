@@ -132,25 +132,6 @@
 					</script>
 
 					<ul id="info" class="lst_info">
-					<!-- <li>
-							<div class="t_b">
-								<div class="t_c">주소</div>
-								<div class="t_c">서울시 강남구 봉은사로 55길 24 1F (삼성동 36-3)</div>
-							</div>
-						</li>
-						<li>
-							<div class="t_b">
-								<div class="t_c">문의</div>
-								<div class="t_c">02-408-1001</div>
-							</div>
-						</li>
-						<li>
-							<div class="t_b">
-								<div class="t_c">홈페이지</div>
-								<div class="t_c">http://blog~~~</div>
-							</div>
-						</li> -->
-					</ul> 
 
 					<script>
 
@@ -164,42 +145,9 @@
 
 						list_info(data);
 
-						//
-
-						function list_info(data) {
-
-							$.each(data, function(index, item) {
-
-								var output = '';
-
-								output += '	<li>';
-								output += '		<div class="t_b">';
-								output += '			<div class="t_c">주소</div>';
-								output += '			<div class="t_c">' + item.add + '</div>';
-								output += '		</div>';
-								output += '		<div class="t_b">';
-								output += '			<div class="t_c">문의</div>';
-								output += '			<div class="t_c">' + item.tel + '</div>';
-								output += '		</div>';
-								
-								if (item.ome) {
-
-									output += '		<div class="t_b">';
-									output += '			<div class="t_c">홈페이지</div>';
-									output += '			<div class="t_c">' + item.ome + '</div>';
-									output += '		</div>';
-
-								}
-
-								output += '	</li>';
-
-								document.getElementById('info').innerHTML += output;
-
-							});
-
-						}
-
 					</script>
+
+					</ul> 
 
 					<!-- <ul class="lst_share">
 						<li>
