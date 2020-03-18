@@ -215,7 +215,7 @@ function list_view(data, folder, insert) {
 	$.each(data, function(index, item) {
 
 		var output = '',
-			path = '../../';
+			path = $('body').hasClass('home') ? '' : '../../';
 
 		output += '	<li>';
 		output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
@@ -232,5 +232,34 @@ function list_view(data, folder, insert) {
 		document.getElementById(insert).innerHTML += output;
 
 	});
+
+}
+
+//
+
+function map_set(lat, lng) {
+
+	/* var lat = "37.5121388",
+		lng = "127.044182"; */
+
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
+			level: 6 // 지도의 확대 레벨
+		};
+
+	// 지도를 생성합니다
+	var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+	// 마커가 표시될 위치입니다 
+	var markerPosition = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커를 생성합니다
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커가 지도 위에 표시되도록 설정합니다
+	marker.setMap(map);
 
 }

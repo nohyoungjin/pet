@@ -92,8 +92,7 @@
 						<!-- <div class="price">
 							<strong>[가격정보]</strong>
 							<ul>
-								<li>크리스프 1kg 이하 1,000원</li>
-								<li>크리스프 1kg 이하 1,000원</li>
+								<li></li>
 							</ul>
 						</div> -->
 						
@@ -117,37 +116,19 @@
 					<h3>기본정보</h3>
 
 					<!-- 지도를 표시할 div 입니다 -->
+
 					<div id="map"></div>
 
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+
 					<script>
 
-						var map_x = "37.5121388",
-							map_y = "127.044182"
-
-						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-							mapOption = { 
-								center: new kakao.maps.LatLng(map_x, map_y), // 지도의 중심좌표
-								level: 6 // 지도의 확대 레벨
-							};
-
-						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-						// 마커가 표시될 위치입니다 
-						var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
-
-						// 마커를 생성합니다
-						var marker = new kakao.maps.Marker({
-							position: markerPosition
-						});
-
-						// 마커가 지도 위에 표시되도록 설정합니다
-						marker.setMap(map);
+							map_set("37.5121388", "127.044182");
 
 					</script>
 
-					<ul class="lst_info">
-						<li>
+					<ul id="info" class="lst_info">
+					<!-- <li>
 							<div class="t_b">
 								<div class="t_c">주소</div>
 								<div class="t_c">서울시 강남구 봉은사로 55길 24 1F (삼성동 36-3)</div>
@@ -159,13 +140,62 @@
 								<div class="t_c">02-408-1001</div>
 							</div>
 						</li>
-						<!-- <li>
+						<li>
 							<div class="t_b">
 								<div class="t_c">홈페이지</div>
 								<div class="t_c">http://blog~~~</div>
 							</div>
 						</li> -->
-					</ul>
+					</ul> 
+
+					<script>
+
+						var data = [{
+						
+							add  : '서울시 강남구 봉은사로 55길 24 1F (삼성동 36-3', 
+							tel  : '02-408-1001', 
+							ome  : ''
+						
+						}];
+
+						list_info(data);
+
+						//
+
+						function list_info(data) {
+
+							$.each(data, function(index, item) {
+
+								var output = '';
+
+								output += '	<li>';
+								output += '		<div class="t_b">';
+								output += '			<div class="t_c">주소</div>';
+								output += '			<div class="t_c">' + item.add + '</div>';
+								output += '		</div>';
+								output += '		<div class="t_b">';
+								output += '			<div class="t_c">문의</div>';
+								output += '			<div class="t_c">' + item.tel + '</div>';
+								output += '		</div>';
+								
+								if (item.ome) {
+
+									output += '		<div class="t_b">';
+									output += '			<div class="t_c">홈페이지</div>';
+									output += '			<div class="t_c">' + item.ome + '</div>';
+									output += '		</div>';
+
+								}
+
+								output += '	</li>';
+
+								document.getElementById('info').innerHTML += output;
+
+							});
+
+						}
+
+					</script>
 
 					<!-- <ul class="lst_share">
 						<li>

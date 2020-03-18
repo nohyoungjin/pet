@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/font.css">
 	<!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
-	<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 
 <body class="home"> 
@@ -189,51 +189,26 @@
 					<h2>우리 아이를 더 예쁘게!</h2>
 					<p>미용/훈련</p>
 
-					<ul class="lst_shop">
-						<li>
-							<a href="html/beauty/8.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/beauty/m_1_8.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">개털깎는 마리오</p>
-									<p class="txt">전라남도 순천시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/beauty/7.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/beauty/m_1_7.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">강아지 이발소</p>
-									<p class="txt">광주광역시 북구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/beauty/6.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/beauty/m_1_6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">반려동물훈련학교</p>
-									<p class="txt">경기도 용인시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/beauty/5.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/beauty/m_1_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">귀엽개</p>
-									<p class="txt">전라북도 익산시</p>
-								</div>
-							</a>
-						</li>
+					<ul id="lst_1" class="lst_shop">
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '8',  tit : '개털깎는 마리오',   add : '전라남도 순천시'},
+								{num : '7',  tit : '강아지 이발소',     add : '광주광역시 북구'},
+								{num : '6',  tit : '반려동물훈련학교',  add : '경기도 용인시'},
+								{num : '5',  tit : '귀엽개',            add : '전라북도 익산시'},
+
+							];
+
+							list_view(data, 'beauty', 'lst_1');
+
+						});
+
+						</script> 
 					</ul>
 
 					<div class="btn_box">
@@ -494,7 +469,7 @@
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
 <!-- <script src="js/swiper.min.js"></script> -->
-<!-- <script src="js/common.js"></script> -->
+<script src="js/common.js"></script>
 
 </body> 
 </html>

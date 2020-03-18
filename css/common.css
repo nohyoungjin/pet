@@ -97,6 +97,9 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .lst_shop li:nth-child(odd) {margin:0 1.5% 0 0}
 .lst_shop li:nth-child(even) {margin:0 0 0 1.5%}
 
+.lst_shop#lst_1 li:nth-child(odd) {margin:0 0 0 1.5%}
+.lst_shop#lst_1 li:nth-child(even) {margin:0 1.5% 0 0}
+
 .lst_shop li a {display:block;width:100%}
 .lst_shop li a:hover {text-decoration:none}
 
