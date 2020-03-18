@@ -11,6 +11,28 @@
 	<link rel="stylesheet" href="../../css/swiper.min.css">
 	<link rel="stylesheet" href="../../css/common.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+
+		$(function() {
+
+			var lat = '37.5121388';
+				lng = '127.044182';
+
+			//
+
+			var data = [{
+			
+				add  : '서울시 강남구 봉은사로 55길 24 1F (삼성동 36-3', 
+				tel  : '02-408-1001', 
+				ome  : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
 </head>
 
 <body class="page">
@@ -121,50 +143,33 @@
 
 					<script>
 
-						$(function() {
-
-							var lat = '37.5121388';
-								lng = '127.044182';
-
-								map_set(lat, lng);
-
-						});
+						$(function() { map_set(lat, lng); });
 
 					</script>
 
-					<ul id="info" class="lst_info">
+					<ul id="info" class="lst_info"></ul> 
 
-					<script>
+					<!--
 
-						$(function() {
-
-							var data = [{
-							
-								add  : '서울시 강남구 봉은사로 55길 24 1F (삼성동 36-3', 
-								tel  : '02-408-1001', 
-								ome  : ''
-							
-							}];
-
-							list_info(data);
-
-						});
-
-					</script>
-
-					</ul> 
-
-					<!-- <ul class="lst_share">
+					<ul class="lst_share">
 						<li>
-							<a href="javascript:">길찾기</a>
+							<a href="javascript:">
+								길찾기
+							</a>
 						</li>
 						<li>
-							<a href="javascript:">전화걸기</a>
+							<a href="javascript:">
+								전화걸기
+							</a>
 						</li>
 						<li>
-							<a href="javascript:">주소복사</a>
+							<a href="javascript:">
+								주소복사
+							</a>
 						</li>
-					</ul> -->
+					</ul>
+
+					-->
 
 				</div>
 			</section>
