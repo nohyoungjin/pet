@@ -64,8 +64,8 @@
 					<h2>우리 아이를 더 예쁘게!</h2>
 					<p>미용/훈련</p>
 
-					<ul class="lst_view">
-						<li>
+					<ul id="latest" class="lst_view">
+						<!-- <li>
 							<a href="../../html/beauty/8.html">
 								<div class="thumb">
 									<span style="background-image:url(../../img/thumb/beauty/m_1_8.jpg)"></span>
@@ -108,20 +108,40 @@
 									<p class="txt">전라북도 익산시</p>
 								</div>
 							</a>
-						</li>
+						</li> -->
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num: '8',  tit : '개털깎는 마리오',   add : '전라남도 순천시'},
+								{num: '7',  tit : '강아지 이발소',     add : '광주광역시 북구'},
+								{num: '6',  tit : '반려동물훈련학교',  add : '경기도 용인시'},
+								{num: '5',  tit : '귀엽개',            add : '전라북도 익산시'},
+
+							];
+
+							list_view(data, 'beauty', 'latest');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul id="lst_view" class="lst_view randam">
+					<ul id="list" class="lst_view randam">
 
 						<script>
 
 						$(function() {
 
-							var array = [
+							var data = [
 
 								{num: '4',  tit : '아트펫',     add : '인천시 부평구'},
 								{num: '3',  tit : '무지개좋아', add : '경기도 양주시'},
@@ -129,26 +149,8 @@
 								{num: '1',  tit : '개스타일',   add : '서울특별시 강남구'},
 
 							];
-								
-							$.each(array, function(index, item) {
 
-								var output = '';
-
-								output += '	<li>';
-								output += '		<a href="../../html/beauty/' + item.num + '.html">';
-								output += '			<div class="thumb">';
-								output += '				<span style="background-image:url(../../img/thumb/beauty/m_1_' + item.num + '.jpg)"></span>';
-								output += '			</div>';
-								output += '			<div class="cont">';
-								output += '				<p class="tit">' + item.tit + '</p>';
-								output += '				<p class="txt">' + item.add + '</p>';
-								output += '			</div>';
-								output += '		</a>';
-								output += '	</li>';
-
-								document.getElementById('lst_view').innerHTML += output;
-
-							});
+							list_view(data, 'beauty', 'list');
 
 						});
 

@@ -10,6 +10,8 @@ $(function() {
 
 	list_random();
 
+	youtube();
+
 	//
 
 	function local() {
@@ -68,6 +70,7 @@ $(function() {
 
 	}
 
+
 	//
 
 	function swiper_list() {
@@ -81,6 +84,7 @@ $(function() {
 		});
 
 	}
+
 
 	//
 
@@ -138,6 +142,7 @@ $(function() {
 
 	}
 
+
 	// 
 
 	function scroll_move() {
@@ -167,6 +172,7 @@ $(function() {
 
 	}
 
+
 	//
 
 	function list_random() {
@@ -190,8 +196,41 @@ $(function() {
 
 	}
 
+
 	// youtube
 
-	$( 'iframe[src^="https://www.youtube.com/"], iframe[src^="https://www.facebook.com/"], iframe[src^="https://goo.gl/"]' ).wrap( '<div class="youtubeWrap"></div>' );
+	function youtube() {
+
+		$( 'iframe[src^="https://www.youtube.com/"], iframe[src^="https://www.facebook.com/"], iframe[src^="https://goo.gl/"]' ).wrap( '<div class="youtubeWrap"></div>' );
+
+	}
 
 });
+
+
+//
+
+function list_view(data, folder, insert) {
+	
+	$.each(data, function(index, item) {
+
+		var output = '',
+			path = '../../';
+
+		output += '	<li>';
+		output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
+		output += '			<div class="thumb">';
+		output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/m_1_' + item.num + '.jpg)"></span>';
+		output += '			</div>';
+		output += '			<div class="cont">';
+		output += '				<p class="tit">' + item.tit + '</p>';
+		output += '				<p class="txt">' + item.add + '</p>';
+		output += '			</div>';
+		output += '		</a>';
+		output += '	</li>';
+
+		document.getElementById(insert).innerHTML += output;
+
+	});
+
+}
