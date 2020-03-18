@@ -145,6 +145,44 @@
 
 						list_info(data);
 
+						//
+
+						function list_info(data) {
+
+							$.each(data, function(index, item) {
+
+								var output = '';
+
+								output += '	<li>';
+								output += '		<div class="t_b">';
+								output += '			<div class="t_c">주소</div>';
+								output += '			<div class="t_c">' + item.add + '</div>';
+								output += '		</div>';
+								output += '	</li>';
+								output += '	<li>';
+								output += '		<div class="t_b">';
+								output += '			<div class="t_c">문의</div>';
+								output += '			<div class="t_c">' + item.tel + '</div>';
+								output += '		</div>';
+								output += '	</li>';
+								
+								if (item.ome) {
+									
+									output += '	<li>';
+									output += '		<div class="t_b">';
+									output += '			<div class="t_c">홈페이지</div>';
+									output += '			<div class="t_c">' + item.ome + '</div>';
+									output += '		</div>';
+									output += '	</li>';
+
+								}
+
+								document.getElementById('info').innerHTML += output;
+
+							});
+
+						}
+
 					</script>
 
 					</ul> 
