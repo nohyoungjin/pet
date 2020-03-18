@@ -234,6 +234,8 @@ function list_view(data, folder, insert) {
 
 function map_set(lat, lng) {
 
+	alert( $(location).attr('pathname') );
+
 	/* var lat = "37.5121388",
 		lng = "127.044182"; */
 
