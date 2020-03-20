@@ -210,12 +210,16 @@ function list_view(data, folder, insert) {
 	$.each(data, function(index, item) {
 
 		var output = '',
-			path = $('body').hasClass('home') ? '' : '../../';
+			path = $('body').hasClass('home') ? '' : '../../',
+			uniq = {
+				'beauty' : 'm_1',
+				'cafe' : 'm_2'
+			};
 
 		output += '	<li>';
 		output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
 		output += '			<div class="thumb">';
-		output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/m_1_' + item.num + '.jpg)"></span>';
+		output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
 		output += '			</div>';
 		output += '			<div class="cont">';
 		output += '				<p class="tit">' + item.tit + '</p>';

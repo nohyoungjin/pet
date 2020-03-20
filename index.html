@@ -19,7 +19,6 @@
 	<!-- header -->
 	<div id="header" class="fix">
 		<a href="https://nohyoungjin.github.io/pet/">
-			<!-- <i class="ri-home-3-line"></i> -->
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z"/></svg>
 		</a>
 	</div>
@@ -39,7 +38,6 @@
 					<div class="local">
 						<a href="javascript:">
 							메인 
-							<!-- <i class="ri-arrow-down-s-line"></i> -->
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 16.172l5.364-5.364 1.414 1.414L12 20l-7.778-7.778 1.414-1.414L11 16.172V4h2v12.172z"/></svg>
 						</a>
 					</div>
@@ -125,7 +123,6 @@
 						<div class="cate last">
 							<a href="m.html">
 								<span>
-									<!-- <i class="ri-youtube-line"></i> -->
 									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="54" height="54"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.606 6.995c-.076-.298-.292-.523-.539-.592C18.63 6.28 16.5 6 12 6s-6.628.28-7.069.403c-.244.068-.46.293-.537.592C4.285 7.419 4 9.196 4 12s.285 4.58.394 5.006c.076.297.292.522.538.59C5.372 17.72 7.5 18 12 18s6.629-.28 7.069-.403c.244-.068.46-.293.537-.592C19.715 16.581 20 14.8 20 12s-.285-4.58-.394-5.005zm1.937-.497C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
 								</span>
 								<p>동영상</p>
@@ -178,26 +175,6 @@
 								</div>
 							</a>
 						</li>
-						<!-- <li>
-							<a href="html/info/05.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/info/5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">우리 집 강아지 왜 핥는 걸까요?</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="info_4.html">
-								<div class="thumb">
-									<span style="background-image:url(img/info_4.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">강아지가 좋아하는 마사지, 부위와 방법을 알아봐요!</p>
-								</div>
-							</a>
-						</li> -->
 					</ul>
 
 					<div class="btn_box">
@@ -229,6 +206,7 @@
 						});
 
 						</script> 
+
 					</ul>
 
 					<div class="btn_box">
@@ -240,51 +218,27 @@
 					<h2>반려동물과 맛난음식 함께 먹을 수 있는곳</h2>
 					<p>까페/식당</p>
 
-					<ul class="lst_shop">
-						<li>
-							<a href="html/cafe/19.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/cafe/m_2_19.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">개린이 놀이터</p>
-									<p class="txt">전라북도 군산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/cafe/18.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/cafe/m_2_18.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">네이처독</p>
-									<p class="txt">경기도 양주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/cafe/17.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/cafe/m_2_17.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">펫스토리</p>
-									<p class="txt">경기도 평택시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/cafe/16.html">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/cafe/m_2_16.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">카페702</p>
-									<p class="txt">경기도 시흥시</p>
-								</div>
-							</a>
-						</li>
+					<ul id="lst_2" class="lst_shop">
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '19', tit : '개린이 놀이터', add : '전라북도 군산시'},
+								{num : '18', tit : '네이처독',      add : '경기도 양주시'},
+								{num : '17', tit : '펫스토리',      add : '경기도 평택시'},
+								{num : '16', tit : '카페702',       add : '경기도 시흥시'},
+
+							];
+
+							list_view(data, 'cafe', 'lst_2');
+
+						});
+
+						</script> 
+
 					</ul>
 
 					<div class="btn_box">
