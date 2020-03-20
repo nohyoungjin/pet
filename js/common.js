@@ -213,22 +213,22 @@ function list_view(data, folder, insert) {
 			path = $('body').hasClass('home') ? '' : '../../',
 			uniq = {
 				'beauty' : 'm_1',
-				'cafe' : 'm_2'
+				'cafe'   : 'm_2'
 			};
 
-		output += '	<li>';
-		output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
-		output += '			<div class="thumb">';
-		output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
-		output += '			</div>';
-		output += '			<div class="cont">';
-		output += '				<p class="tit">' + item.tit + '</p>';
-		output += '				<p class="txt">' + item.add + '</p>';
-		output += '			</div>';
-		output += '		</a>';
-		output += '	</li>';
+			output += '	<li>';
+			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
+			output += '			<div class="thumb">';
+			output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
+			output += '			</div>';
+			output += '			<div class="cont">';
+			output += '				<p class="tit">' + item.tit + '</p>';
+			output += '				<p class="txt">' + item.add + '</p>';
+			output += '			</div>';
+			output += '		</a>';
+			output += '	</li>';
 
-		document.getElementById(insert).innerHTML += output;
+			document.getElementById(insert).innerHTML += output;
 
 	});
 
