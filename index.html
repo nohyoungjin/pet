@@ -8,8 +8,7 @@
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/font.css">
-	<!-- <link rel="stylesheet" href="css/swiper.min.css"> -->
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
 </head>
 
 <body class="home"> 
@@ -131,6 +130,8 @@
 					</div>
 				</div>
 
+				<!-- 정보 -->
+
 				<div class="sec_inner">
 					<h2>반려동물의 정보콘텐츠</h2>
 
@@ -182,31 +183,57 @@
 					</div>
 				</div>
 
+				<!-- 미용/훈련 -->
+
 				<div id="sec-01" class="sec_inner">
 					<h2>우리 아이를 더 예쁘게!</h2>
 					<p>미용/훈련</p>
 
-					<ul id="lst_1" class="lst_shop">
-
-						<script>
-
-						$(function() {
-
-							var data = [
-
-								{num : '11',  tit : '애견동화',          add : '충청남도 천안시'},
-								{num : '10',  tit : '멍냥살롱',          add : '충청남도 당진시'},
-								{num : '9',   tit : '펫 꾸밈',           add : '서울특별시 강남구'},
-								{num : '8',   tit : '개털깎는 마리오',   add : '전라남도 순천시'},
-
-							];
-
-							list_view(data, 'beauty', 'lst_1');
-
-						});
-
-						</script> 
-
+					<ul class="lst_shop">
+						<li>
+							<a href="html/beauty/11.html">
+								<div class="thumb">
+									<span style="background-image:url(img/thumb/beauty/m_1_11.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">애견동화</p>
+									<p class="txt">충청남도 천안시</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="html/beauty/10.html">
+								<div class="thumb">
+									<span style="background-image:url(img/thumb/beauty/m_1_10.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">멍냥살롱</p>
+									<p class="txt">충청남도 당진시</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="html/beauty/9.html">
+								<div class="thumb">
+									<span style="background-image:url(img/thumb/beauty/m_1_9.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">펫 꾸밈</p>
+									<p class="txt">서울특별시 강남구</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="html/beauty/8.html">
+								<div class="thumb">
+									<span style="background-image:url(img/thumb/beauty/m_1_8.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">개털깎는 마리오</p>
+									<p class="txt">전라남도 순천시</p>
+								</div>
+							</a>
+						</li>
 					</ul>
 
 					<div class="btn_box">
@@ -214,38 +241,65 @@
 					</div> 
 				</div>
 
+				<!-- 까페/식당 -->
+
 				<div id="sec-02" class="sec_inner">
 					<h2>반려동물과 맛난음식 함께 먹을 수 있는곳</h2>
 					<p>까페/식당</p>
 
-					<ul id="lst_2" class="lst_shop">
-
-						<script>
-
-						$(function() {
-
-							var data = [
-
-								{num : '25', tit : '아띠애견카페',  add : '충청남도 보령시'},
-								{num : '19', tit : '개린이 놀이터', add : '전라북도 군산시'},
-								{num : '18', tit : '네이처독',      add : '경기도 양주시'},
-								{num : '17', tit : '펫스토리',      add : '경기도 평택시'},
-								// {num : '16', tit : '카페702',       add : '경기도 시흥시'},
-
-							];
-
-							list_view(data, 'cafe', 'lst_2');
-
-						});
-
-						</script> 
-
+					<ul class="lst_shop">
+						<li>
+							<a href="html/cafe/25.html">
+								<div class="thumb">
+									<span style="background-image:url(img/thumb/cafe/m_2_25.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">아띠애견카페</p>
+									<p class="txt">충청남도 보령시</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="html/cafe/19.html">
+								<div class="thumb">
+									<span style="background-image:url(img/thumb/cafe/m_2_19.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">개린이 놀이터</p>
+									<p class="txt">전라북도 군산시</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="html/cafe/18.html">
+								<div class="thumb">
+									<span style="background-image:url(img/thumb/cafe/m_2_18.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">네이처독</p>
+									<p class="txt">경기도 양주시</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="html/cafe/17.html">
+								<div class="thumb">
+									<span style="background-image:url(img/thumb/cafe/m_2_17.jpg)"></span>
+								</div>
+								<div class="cont">
+									<p class="tit">펫스토리</p>
+									<p class="txt">경기도 평택시</p>
+								</div>
+							</a>
+						</li>
 					</ul>
 
 					<div class="btn_box">
 						<a href="../pet/html/cafe/view.html">모두보기</a>
 					</div> 
 				</div>
+
+				<!-- 병원 -->
 
 				<div id="sec-03" class="sec_inner">
 					<h2>건강한 우리 아기를 위해!</h2>
@@ -302,6 +356,8 @@
 						<a href="../pet/html/hospital/view.html">모두보기</a>
 					</div> 
 				</div>
+
+				<!-- 펜션/호텔 -->
 
 				<div id="sec-04" class="sec_inner">
 					<h2>같이 놀러가자!</h2>
@@ -369,6 +425,8 @@
 						<a href="../pet/html/hotel/view.html">모두보기</a>
 					</div>
 				</div>
+
+				<!-- 장례식 -->
 
 				<div id="sec-05" class="sec_inner">
 					<h2>좋은곳으로 갈꺼야 잊지않을께</h2>
@@ -442,9 +500,7 @@
 
 </div>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
-<!-- <script src="js/swiper.min.js"></script> -->
-<script src="js/common.js"></script>
+<!-- <script src="js/common.js"></script> -->
 
 </body> 
 </html>

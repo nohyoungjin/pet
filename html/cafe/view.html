@@ -65,50 +65,26 @@
 					<p>까페/식당</p>
 
 					<ul id="latest" class="lst_view">
-						<li>
-							<a href="../../html/cafe/19.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_19.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">개린이 놀이터</p>
-									<p class="txt">전라북도 군산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/18.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_18.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">네이처독</p>
-									<p class="txt">경기도 양주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/17.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_17.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">펫스토리</p>
-									<p class="txt">경기도 평택시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/16.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_16.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">카페702</p>
-									<p class="txt">경기도 시흥시</p>
-								</div>
-							</a>
-						</li>
+
+						<script>
+
+						$(function() {
+
+							var data = [
+								
+								{num : '19',  tit : '개린이 놀이터',  add : '전라북도 군산시'},
+								{num : '18',  tit : '네이처독',       add : '경기도 양주시'},
+								{num : '17',  tit : '펫스토리',       add : '경기도 평택시'},
+								{num : '16',  tit : '카페702',        add : '경기도 시흥시'},
+
+							];
+
+							list_view(data, 'cafe', 'latest');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
@@ -116,88 +92,28 @@
 
 				<div class="sec_inner">
 					<ul id="list" class="lst_view randam">
-						<li>
-							<a href="../../html/cafe/15.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_15.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">옥상바람 커피맥주</p>
-									<p class="txt">경기도 수원시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/14.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_14.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">엘로디스</p>
-									<p class="txt">경기도 안산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/13.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_13.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">아지트리</p>
-									<p class="txt">경기도 광주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/12.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_12.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">샤라라네</p>
-									<p class="txt">경기도 수원시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/11.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_11.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">비커밍 스튜디오</p>
-									<p class="txt">경기도 용인시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/10.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_10.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">딩가댕가</p>
-									<p class="txt">경기도 포천시</p>
-								</div>
-							</a>
-						</li>
 
 						<script>
 
 						$(function() {
 
 							var data = [
-
-								{num : '9',  tit : '개떼놀이터',        add : '경기도 용인시'},
-								{num : '8',  tit : '율산양봉 허니비',   add : '전라북도 익산시'},
-								{num : '7',  tit : '유앤독',            add : '전라북도 익산시'},
-								{num : '6',  tit : '반달애견까페',      add : '전라북도 군산시'},
-								{num : '5',  tit : '독타곤',            add : '전라북도 전주시'},
-								{num : '4',  tit : '방가댕댕',          add : '서울특별시 관악구'},
-								{num : '3',  tit : '루체인알티스',      add : '경기도 안양시'},
-								{num : '2',  tit : '독블레스',          add : '경기도 평택시'},
-								{num : '1',  tit : '다독인더시티',      add : '서울특별시 강남구'},
+								
+								{num : '15',  tit : '옥상바람 커피맥주',  add : '경기도 수원시'},
+								{num : '14',  tit : '엘로디스',           add : '경기도 안산시'},
+								{num : '13',  tit : '아지트리',           add : '경기도 광주시'},
+								{num : '12',  tit : '샤라라네',           add : '경기도 수원시'},
+								{num : '11',  tit : '비커밍 스튜디오',    add : '경기도 용인시'},
+								{num : '10',  tit : '딩가댕가',			  add : '경기도 포천시'},
+								{num : '9',   tit : '개떼놀이터',         add : '경기도 용인시'},
+								{num : '8',   tit : '율산양봉 허니비',    add : '전라북도 익산시'},
+								{num : '7',   tit : '유앤독',             add : '전라북도 익산시'},
+								{num : '6',   tit : '반달애견까페',       add : '전라북도 군산시'},
+								{num : '5',   tit : '독타곤',             add : '전라북도 전주시'},
+								{num : '4',   tit : '방가댕댕',           add : '서울특별시 관악구'},
+								{num : '3',   tit : '루체인알티스',       add : '경기도 안양시'},
+								{num : '2',   tit : '독블레스',           add : '경기도 평택시'},
+								{num : '1',   tit : '다독인더시티',       add : '서울특별시 강남구'},
 
 							];
 
