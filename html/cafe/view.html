@@ -64,7 +64,7 @@
 					<h2>반려동물과 맛난음식 함께 먹을 수 있는곳</h2>
 					<p>까페/식당</p>
 
-					<ul class="lst_view">
+					<ul id="latest" class="lst_view">
 						<li>
 							<a href="../../html/cafe/19.html">
 								<div class="thumb">
@@ -115,7 +115,7 @@
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul class="lst_view randam">
+					<ul id="list" class="lst_view randam">
 						<li>
 							<a href="../../html/cafe/15.html">
 								<div class="thumb">
@@ -182,105 +182,31 @@
 								</div>
 							</a>
 						</li>
-						<li>
-							<a href="../../html/cafe/09.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/cafe/m_2_9.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">개떼놀이터</p>
-									<p class="txt">경기도 용인시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/08.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/m_2_8.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">율산양봉 허니비</p>
-									<p class="txt">전라북도 익산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/07.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/m_2_7.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">유앤독</p>
-									<p class="txt">전라북도 익산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/06.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/m_2_6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">반달애견까페</p>
-									<p class="txt">전라북도 군산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/cafe/05.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/m_2_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">독타곤</p>
-									<p class="txt">전라북도 전주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../cafe_4.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_2_4.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">방가댕댕</p>
-									<p class="txt">서울특별시 관악구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../cafe_3.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_2_3.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">루체인알티스</p>
-									<p class="txt">경기도 안양시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../cafe_2.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_2_2.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">독블레스</p>
-									<p class="txt">경기도 평택시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../cafe_1.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_2_1.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">다독인더시티</p>
-									<p class="txt">서울특별시 강남구</p>
-								</div>
-							</a>
-						</li>
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '9',  tit : '개떼놀이터',        add : '경기도 용인시'},
+								{num : '8',  tit : '율산양봉 허니비',   add : '전라북도 익산시'},
+								{num : '7',  tit : '유앤독',            add : '전라북도 익산시'},
+								{num : '6',  tit : '반달애견까페',      add : '전라북도 군산시'},
+								{num : '5',  tit : '독타곤',            add : '전라북도 전주시'},
+								{num : '4',  tit : '방가댕댕',          add : '서울특별시 관악구'},
+								{num : '3',  tit : '루체인알티스',      add : '경기도 안양시'},
+								{num : '2',  tit : '독블레스',          add : '경기도 평택시'},
+								{num : '1',  tit : '다독인더시티',      add : '서울특별시 강남구'},
+
+							];
+
+							list_view(data, 'cafe', 'list');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
