@@ -64,7 +64,7 @@
 					<h2>같이 놀러가자!</h2>
 					<p>펜션/호텔</p>
 
-					<ul class="lst_view">
+					<ul id="latest" class="lst_view">
 						<li>
 							<a href="../../html/hotel/15.html">
 								<div class="thumb">
@@ -109,134 +109,56 @@
 								</div>
 							</a>
 						</li>
-						<li>
-							<a href="../../html/hotel/11.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/hotel/m_4_11.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">더블스테이 또또멍 펜션</p>
-									<p class="txt">경기도 연천군</p>
-								</div>
-							</a>
-						</li>
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '11',  tit : '더블스테이 또또멍 펜션',     add : '경기도 연천군'},
+
+							];
+
+							list_view(data, 'hotel', 'latest');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul class="lst_view randam">
-						<li>
-							<a href="../../html/hotel/10.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/hotel/m_4_10.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">남쪽나라 애견펜션</p>
-									<p class="txt">전라남도 보성군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/hotel/09.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/hotel/m_4_9.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">꼬로몽 애견펜션</p>
-									<p class="txt">강원도 양양군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/hotel/08.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/hotel/m_4_8.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">까망베르&풀빌라</p>
-									<p class="txt">경기도 가평군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/hotel/07.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/hotel/m_4_7.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">그루브 펜션</p>
-									<p class="txt">부산시 기장군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/hotel/06.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/hotel/m_4_6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">바모스 애견펜션</p>
-									<p class="txt">제주도 제주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/hotel/05.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/hotel/m_4_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">개리비안베이</p>
-									<p class="txt">인천시 강화군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../hotel_4.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_4_4.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">하루인애견펜션</p>
-									<p class="txt">경상남도 남해군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../hotel_3.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_4_3.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">잘해줄게</p>
-									<p class="txt">인천시 강화군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../hotel_2.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_4_2.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">아띠랑스 스파펜션</p>
-									<p class="txt">강원도 강릉시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../hotel_1.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_4_1.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">달빛애견글램핑</p>
-									<p class="txt">경기도 포천시</p>
-								</div>
-							</a>
-						</li>
+					<ul id="list" class="lst_view randam">
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '10',  tit : '남쪽나라 애견펜션',     add : '전라남도 보성군'},
+								{num : '9',   tit : '꼬로몽 애견펜션',       add : '강원도 양양군'},
+								{num : '8',   tit : '까망베르&풀빌라',       add : '경기도 가평군'},
+								{num : '7',   tit : '그루브 펜션',           add : '부산시 기장군'},
+								{num : '6',   tit : '바모스 애견펜션',       add : '제주도 제주시'},
+								{num : '5',   tit : '개리비안베이',          add : '인천시 강화군'},
+								{num : '4',   tit : '하루인애견펜션',        add : '경상남도 남해군'},
+								{num : '3',   tit : '잘해줄게',              add : '인천시 강화군'},
+								{num : '2',   tit : '아띠랑스 스파펜션',     add : '강원도 강릉시'},
+								{num : '1',   tit : '달빛애견글램핑',        add : '경기도 포천시'},
+
+							];
+
+							list_view(data, 'hotel', 'list');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 

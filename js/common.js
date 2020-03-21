@@ -213,7 +213,8 @@ function list_view(data, folder, insert) {
 			path = $('body').hasClass('home') ? '' : '../../',
 			uniq = {
 				'beauty' : 'm_1',
-				'cafe'   : 'm_2'
+				'cafe'   : 'm_2',
+				'hotel'  : 'm_4'
 			};
 
 			output += '	<li>';
