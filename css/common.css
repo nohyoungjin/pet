@@ -163,6 +163,16 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 
 .slideshow_nav i {font-size:50px;color:#fff}
 
+/* */
+
+.slideshow_nav.slide_nav {margin-top:-10px;}
+
+.slideshow_nav.slide_nav.slideshow_prev {left:5px}
+.slideshow_nav.slide_nav.slideshow_next {right:5px}
+
+.slideshow_nav.slide_nav.slideshow_prev i.prev {display:block;width:20px;height:17px;background:url(../img/common/btn_prev.png) 0 0 no-repeat}
+.slideshow_nav.slide_nav.slideshow_next i.next {display:block;width:20px;height:17px;background:url(../img/common/btn_next.png) 0 0 no-repeat}
+
 .swiper-pagination {text-align:right;left:auto;right:10px}
 .swiper-pagination > span {display:inline-block;padding:5px 8px;background-color:rgba(0, 0, 0, 0.7);font-weight:normal;color:#fff;letter-spacing:0.8px;border-radius:14px}
 
