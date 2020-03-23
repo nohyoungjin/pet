@@ -97,7 +97,7 @@ $(function() {
 
 		var time = 4000,
 			transition_time = 1200,
-			time_with_trans = (time+transition_time)/1000,
+			time_with_trans = (time + transition_time) / 1000,
 			timer,
 			tween = null;
 
@@ -212,9 +212,13 @@ function list_view(data, folder, insert) {
 		var output = '',
 			path = $('body').hasClass('home') ? '' : '../../',
 			uniq = {
-				'beauty' : 'm_1',
-				'cafe'   : 'm_2',
-				'hotel'  : 'm_4'
+
+				'beauty'   : 'm_1',
+				'cafe'     : 'm_2',
+				'hospital' : 'm_3',
+				'hotel'    : 'm_4',
+				'funeral'  : 'm_5'
+
 			};
 
 			output += '	<li>';
@@ -237,29 +241,50 @@ function list_view(data, folder, insert) {
 
 //
 
-function map_set(lat, lng) {
+function h_title(data) {
+
+	$.each(data, function(index, item) {
+
+		var output = '';
+
+		output += '<h2>' + item.tit + '</h2>';
+		output += '<p>' + item.add + '</p>';
+
+		document.getElementById('h_wrap').innerHTML += output;
+
+	});
+
+}
+
+//
+
+function map_set() {
 
 	/* var lat = '',
-		lng = ''; */
+		   lng = ''; */
 
-	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
 		mapOption = { 
 			center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
 			level: 6 // 지도의 확대 레벨
 		};
 
-	// 지도를 생성합니다
+	// 지도를 생성
+
 	var map = new kakao.maps.Map(mapContainer, mapOption); 
 
-	// 마커가 표시될 위치입니다 
+	// 마커가 표시될 위치
+
 	var markerPosition = new kakao.maps.LatLng(lat, lng); 
 
-	// 마커를 생성합니다
+	// 마커를 생성
+
 	var marker = new kakao.maps.Marker({
 		position: markerPosition
 	});
 
-	// 마커가 지도 위에 표시되도록 설정합니다
+	// 마커가 지도 위에 표시
+
 	marker.setMap(map);
 
 }

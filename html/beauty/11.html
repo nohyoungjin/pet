@@ -21,11 +21,46 @@
 
 		$(function() {
 
+			// title
+
+			var core = [{
+			
+				tit : '애견동화', 
+				add : '충청남도 천안시'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			l_view();
+
+			function l_view() {
+
+				for (var i = 1; i < 5; i++) {
+				
+					var output = '';
+
+						output += '	<div class="swiper-slide">';
+						output += '		<div class="thumb">';
+						output += '			<span style="background-image:url(../../img/beauty/11_' + i + '.jpg)"></span>';
+						output += '		</div>';
+						output += '	</div>';
+
+						document.getElementById('swiper-wrap').innerHTML += output;
+
+				}
+
+			}
+
+			// info
+
 			var data = [{
 			
-				add  : '충남 천안시 서북구 쌍용9길 5', 
-				tel  : '041-578-2220', 
-				ome  : ''
+				add : '충남 천안시 서북구 쌍용9길 5', 
+				tel : '041-578-2220', 
+				ome : ''
 			
 			}];
 
@@ -57,13 +92,12 @@
 			<section class="pet v1">
 				<div class="sec_inner">
 
-					<h2>애견동화</h2>
-					<p>충청남도 천안시</p>
+					<div id="h_wrap"></div>
 
 					<div class="swiper-view swiper-container">
 
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
+						<div id="swiper-wrap" class="swiper-wrapper">
+							<!-- <div class="swiper-slide">
 								<div class="thumb">
 									<span style="background-image:url(../../img/beauty/11_1.jpg)"></span>
 								</div>	
@@ -82,7 +116,7 @@
 								<div class="thumb">
 									<span style="background-image:url(../../img/beauty/11_4.jpg)"></span>
 								</div>	
-							</div>
+							</div> -->
 						</div>
 
 						<div class="swiper-pagination"></div>
@@ -112,9 +146,9 @@
 						<p>1. 소개</p>
 
 						<ul>
-							<li>소형견 (~5kg)  2만원, 1시간당 1천원</li>
-							<li>중형견 (5.1kg~15kg)  2만 5천원, 1시간당 1.2천원</li>
-							<li>중대형견 (15.1kg~) 별도 문의</li>
+							<li>소형견 (~ 5kg)  2만원, 1시간당 1천원</li>
+							<li>중형견 (5.1kg ~ 15kg)  2만 5천원, 1시간당 1.2천원</li>
+							<li>중대형견 (15.1kg ~) 별도 문의</li>
 							<li>24시간 기준, 24시간 지나면 1시간당 추가요금, 저녁 8시 이후 퇴실 시 1박으로 간주합니다.</li>
 						</ul>
 
@@ -145,11 +179,11 @@
 						<div class="price">
 							<strong>[가격정보]</strong>
 							<ul>
-								<li>아메리카노 ------------ 7,000원</li>
-								<li>호텔 1박 -------------- 30,000원</li>
-								<li>셀프목욕 --------------  8,000원</li>
-								<li>놀이방 -----------------  2,000원</li>
-								<li>종일반 ----------------- 15,000원</li>
+								<li>아메리카노 ---- 7,000원</li>
+								<li>호텔 1박 ----- 30,000원</li>
+								<li>셀프목욕 ------ 8,000원</li>
+								<li>놀이방 -------- 2,000원</li>
+								<li>종일반 ------- 15,000원</li>
 							</ul>
 						</div>
 						
@@ -174,32 +208,9 @@
 				
 					<h3>기본정보</h3>
 
-					<!-- 지도를 표시할 div 입니다 -->
+					<!-- 지도 표시 div -->
 
 					<div id="map"></div>
-
-					<script>
-
-						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-							mapOption = { 
-								center: new kakao.maps.LatLng(lat, lng), // 지도의 중심좌표
-								level: 6 // 지도의 확대 레벨
-							};
-
-						var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-						// 마커가 표시될 위치입니다 
-						var markerPosition  = new kakao.maps.LatLng(lat, lng); 
-
-						// 마커를 생성합니다
-						var marker = new kakao.maps.Marker({
-							position: markerPosition
-						});
-
-						// 마커가 지도 위에 표시되도록 설정합니다
-						marker.setMap(map);
-
-					</script>
 
 					<ul id="info" class="lst_info"></ul> 
 
@@ -241,6 +252,14 @@
 	<!-- //footer -->
 
 </div>
+
+<script>
+
+	// 지도
+
+	map_set();
+
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 <script src="../../js/swiper.min.js"></script>
