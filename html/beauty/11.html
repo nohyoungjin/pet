@@ -34,25 +34,7 @@
 
 			// slider
 
-			l_view();
-
-			function l_view() {
-
-				for (var i = 1; i < 5; i++) {
-				
-					var output = '';
-
-						output += '	<div class="swiper-slide">';
-						output += '		<div class="thumb">';
-						output += '			<span style="background-image:url(../../img/beauty/11_' + i + '.jpg)"></span>';
-						output += '		</div>';
-						output += '	</div>';
-
-						document.getElementById('swiper-wrap').innerHTML += output;
-
-				}
-
-			}
+			swiper_slide('beauty', 4);
 
 			// info
 
@@ -100,21 +82,6 @@
 							<!-- <div class="swiper-slide">
 								<div class="thumb">
 									<span style="background-image:url(../../img/beauty/11_1.jpg)"></span>
-								</div>	
-							</div>
-							<div class="swiper-slide">
-								<div class="thumb">
-									<span style="background-image:url(../../img/beauty/11_2.jpg)"></span>
-								</div>	
-							</div>
-							<div class="swiper-slide">
-								<div class="thumb">
-									<span style="background-image:url(../../img/beauty/11_3.jpg)"></span>
-								</div>	
-							</div>
-							<div class="swiper-slide">
-								<div class="thumb">
-									<span style="background-image:url(../../img/beauty/11_4.jpg)"></span>
 								</div>	
 							</div> -->
 						</div>
@@ -255,9 +222,24 @@
 
 <script>
 
-	// 지도
+var mapContainer = document.getElementById('map'), // 지도 표시 div 
+	mapOption = { 
+		center: new kakao.maps.LatLng(map_x, map_y), // 지도 중심좌표
+		level: 6 // 지도 확대 레벨
+	};
 
-	map_set();
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+// 마커 표시 위치
+var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+
+// 마커 생성
+var marker = new kakao.maps.Marker({
+	position: markerPosition
+});
+
+// 마커 지도 위에 표시
+marker.setMap(map);
 
 </script>
 

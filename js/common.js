@@ -239,7 +239,7 @@ function list_view(data, folder, insert) {
 
 }
 
-//
+// title
 
 function h_title(data) {
 
@@ -253,6 +253,26 @@ function h_title(data) {
 		document.getElementById('h_wrap').innerHTML += output;
 
 	});
+
+}
+
+// slider
+
+function swiper_slide(sort, sum) {
+
+	for (var i = 1; i <= sum; i++) {
+	
+		var output = '';
+
+			output += '	<div class="swiper-slide">';
+			output += '		<div class="thumb">';
+			output += '			<span style="background-image:url(../../img/' + sort + '/11_' + i + '.jpg)"></span>';
+			output += '		</div>';
+			output += '	</div>';
+
+			document.getElementById('swiper-wrap').innerHTML += output;
+
+	}
 
 }
 
@@ -273,23 +293,23 @@ function map_set() {
 
 	var map = new kakao.maps.Map(mapContainer, mapOption); 
 
-	// 마커가 표시될 위치
+	// 마커 표시될 위치
 
 	var markerPosition = new kakao.maps.LatLng(lat, lng); 
 
-	// 마커를 생성
+	// 마커 생성
 
 	var marker = new kakao.maps.Marker({
 		position: markerPosition
 	});
 
-	// 마커가 지도 위에 표시
+	// 마커 지도 위에 표시
 
 	marker.setMap(map);
 
 }
 
-//
+// info
 
 function list_info(data) {
 
