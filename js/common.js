@@ -292,17 +292,14 @@ function map_set() {
 	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성 
 
 	// 마커 표시 위치
-
 	var markerPosition = new kakao.maps.LatLng(lat, lng); 
 
 	// 마커 생성
-
 	var marker = new kakao.maps.Marker({
 		position: markerPosition
 	});
 
 	// 마커 지도 위에 표시
-
 	marker.setMap(map);
 
 }
