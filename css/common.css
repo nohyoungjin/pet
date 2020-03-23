@@ -179,7 +179,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 /* .pet.v2 */
 
 .intro_cont {padding:0 5px}
-.intro_cont p {margin:20px 0;line-height:22px}
+.intro_cont p {margin:15px 0;line-height:22px}
 .intro_cont p.source {font-size:12px;color:rgb(153,153,153)}
 
 .intro_cont img {width:100%;height:auto;margin:10px 0}
