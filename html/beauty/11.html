@@ -224,14 +224,14 @@
 
 var mapContainer = document.getElementById('map'), // 지도 표시 div 
 	mapOption = { 
-		center: new kakao.maps.LatLng(map_x, map_y), // 지도 중심좌표
+		center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
 		level: 6 // 지도 확대 레벨
 	};
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
 
 // 마커 표시 위치
-var markerPosition  = new kakao.maps.LatLng(map_x, map_y); 
+var markerPosition  = new kakao.maps.LatLng(lat, lng); 
 
 // 마커 생성
 var marker = new kakao.maps.Marker({
