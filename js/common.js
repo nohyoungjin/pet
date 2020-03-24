@@ -213,6 +213,7 @@ function list_view(data, folder, insert) {
 			path = $('body').hasClass('home') ? '' : '../../',
 			uniq = {
 
+				'info'     : 'm',
 				'beauty'   : 'm_1',
 				'cafe'     : 'm_2',
 				'hospital' : 'm_3',
@@ -228,7 +229,13 @@ function list_view(data, folder, insert) {
 			output += '			</div>';
 			output += '			<div class="cont">';
 			output += '				<p class="tit">' + item.tit + '</p>';
-			output += '				<p class="txt">' + item.add + '</p>';
+
+			if (item.add) {
+
+				output += '			<p class="txt">' + item.add + '</p>';
+			
+			}
+
 			output += '			</div>';
 			output += '		</a>';
 			output += '	</li>';

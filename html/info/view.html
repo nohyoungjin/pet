@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../../css/font.css">
 	<link rel="stylesheet" href="../../css/reset.css">
 	<link rel="stylesheet" href="../../css/common.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 </head>
 
 <body class="page"> 
@@ -111,7 +111,7 @@
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul class="lst_view s2 randam">
+					<ul id="list" class="lst_view s2 randam">
 						<li>
 							<a href="../../html/info/05.html">
 								<div class="thumb">
@@ -142,7 +142,7 @@
 								</div>
 							</a>
 						</li>
-						<li>
+						<!-- <li>
 							<a href="../../info_2.html">
 								<div class="thumb">
 									<span style="background-image:url(../../img/info_2.jpg)"></span>
@@ -152,7 +152,7 @@
 								</div>
 							</a>
 						</li>
-						<li>
+						 <li>
 							<a href="../../html/info/01.html">
 								<div class="thumb">
 									<span style="background-image:url(../../img/thumb/info/1.jpg)"></span>
@@ -161,7 +161,25 @@
 									<p class="tit">우리 집 반려견도 맛을 느낄까요? 맛을 아는지 궁금해요!</p>
 								</div>
 							</a>
-						</li>
+						</li> -->
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '2',  tit : '반려견을 지켜요! 꼭 피해야 할 음식 6가지!'},
+								{num : '1',  tit : '우리 집 반려견도 맛을 느낄까요? 맛을 아는지 궁금해요!'},
+
+							];
+
+							list_view(data, 'info', 'list');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
