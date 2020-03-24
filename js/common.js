@@ -265,7 +265,7 @@ function h_title(data) {
 
 // slider
 
-function swiper_slide(sort, sum) {
+function swiper_slide(sort, uniq, sum) {
 
 	for (var i = 1; i <= sum; i++) {
 	
@@ -273,7 +273,7 @@ function swiper_slide(sort, sum) {
 
 			output += '	<div class="swiper-slide">';
 			output += '		<div class="thumb">';
-			output += '			<span style="background-image:url(../../img/' + sort + '/11_' + i + '.jpg)"></span>';
+			output += '			<span style="background-image:url(../../img/' + sort + '/' + uniq + '_' + i + '.jpg)"></span>';
 			output += '		</div>';
 			output += '	</div>';
 
