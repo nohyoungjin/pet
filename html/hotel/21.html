@@ -20,6 +20,23 @@
 
 		$(function() {
 
+			// title
+
+			var core = [{
+			
+				tit : '사랑가 펜션', 
+				add : '경상남도 남해군'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('hotel', 21, 4);
+
+			// info
+
 			var data = [{
 			
 				add  : '경남 남해군 상주면 남해대로 711', 
@@ -56,33 +73,11 @@
 			<section class="pet v1">
 				<div class="sec_inner">
 
-					<h2>사랑가 펜션</h2>
-					<p>경상남도 남해군</p>
+					<div id="h_wrap"></div>
 
 					<div class="swiper-view swiper-container">
 
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="thumb">
-									<span style="background-image:url(../../img/hotel/21_1.jpg)"></span>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="thumb">
-									<span style="background-image:url(../../img/hotel/21_2.jpg)"></span>
-								</div>	
-							</div>
-							<div class="swiper-slide">
-								<div class="thumb">
-									<span style="background-image:url(../../img/hotel/21_3.jpg)"></span>
-								</div>	
-							</div>
-							<div class="swiper-slide">
-								<div class="thumb">
-									<span style="background-image:url(../../img/hotel/21_4.jpg)"></span>
-								</div>	
-							</div>
-						</div>
+						<div id="swiper-wrap" class="swiper-wrapper"></div>
 
 						<div class="swiper-pagination"></div>
 
