@@ -5,12 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 	<title>KOOZPET</title>
-	<link rel="stylesheet" href="css/font.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<link rel="stylesheet" href="css/common.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 </head> 
 
 <body class="page">
@@ -19,7 +18,7 @@
 
 	<!-- header -->
 
-	<script src="inc/header.js"></script>
+	<script src="../../inc/header.js"></script>
 
 	<!-- //header -->
 
@@ -34,42 +33,42 @@
 			<section class="pet v1">
 				<div class="sec_inner">
 
-					<h2>청주온누리동물병원</h2>
-					<p>충청북도 청주시</p>
+					<h2>탑스동물메디컬센터</h2>
+					<p>대구시 달서구</p>
 
 					<div class="swiper-view swiper-container">
 
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/hospital_3_1.jpg)"></span>
+									<span style="background-image:url(../../img/hospital_4_1.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/hospital_3_2.jpg)"></span>
+									<span style="background-image:url(../../img/hospital_4_2.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/hospital_3_3.jpg)"></span>
+									<span style="background-image:url(../../img/hospital_4_3.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/hospital_3_4.jpg)"></span>
+									<span style="background-image:url(../../img/hospital_4_4.jpg)"></span>
 								</div>	
 							</div>
 						</div>
 
 						<div class="swiper-pagination"></div>
 
-						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
-							<i class="ri-arrow-left-s-line"></i>
+						<button class="slideshow_nav slide_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="prev"></i>
 						</button>
 
-						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
-							<i class="ri-arrow-right-s-line"></i>
+						<button class="slideshow_nav slide_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="next"></i>
 						</button>
 
 					</div>
@@ -82,26 +81,27 @@
 			<section class="pet v2">
 				<div class="sec_inner">
 				
-					<h3>청주 최대시설의 온누리동물메디컬센터입니다.</h3>
+					<h3>365일 연중무휴 운영, 전국 최고로 인정받은 대학병원출신 의료팀으로 운영되는 탑스동물메디컬센터</h3>
 
 					<div class="intro_cont">
 						
-						<p>연중무휴 각 항목별로 최고의 의료진과 스텝이 상시근무!</p>
-						<p>강아지와 고양이의 안전한 진료를 위해 각 대기실과 처치실 따로 구분 전문 의료진들이 친절히 진료합니다.</p>
+						<p>24시간 입원견 관리체제</p>
+						<p>주차 40여대 이상가능</p>
+						<p>항상 보호자를 위한 최소의 비용으로 최대의 진료서비스를 제공하고 노력하는 의료진및 테크니션팀 운영</p>
+						<p>24시간 첨단 CARE시스템 운영(소아병원 공조시스템 도입으로 쾌적한 환경조성 & 산소발생기 도입으로 전병원 산소방 환경조성)</p>
 
 						<!-- <div class="price">
 							<strong>[가격정보]</strong>
 							<ul>
-								<li>소형견미용 ------------- 30,000원</li>
-								<li>중형견미용 ------------- 35,000원</li>
+								<li></li>
 							</ul>
 						</div> -->
 						
 						<div class="clock">
 							<strong>[이용시간]</strong>
 							<ul>
-								<li>평일 09:00 ~ 21:00</li>
-								<li>점심시간 1시 ~ 2시까지</li>
+								<li>진료시간 : 10:00 ~ 20:00</li>
+								<li>야간진료 : 20:00 ~ 24:00</li>
 							</ul>
 						</div>
 
@@ -117,14 +117,14 @@
 				
 					<h3>기본정보</h3>
 
-					<!-- 지도를 표시할 div 입니다 -->
+					<!-- 지도 표시 div -->
 					<div id="map"></div>
 
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
 					<script>
 
-						var map_x = "36.6645876",
-							map_y = "127.496215"
+						var map_x = "35.8194912",
+							map_y = "128.536315"
 
 						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 							mapOption = { 
@@ -151,13 +151,13 @@
 						<li>
 							<div class="t_b">
 								<div class="t_c">주소</div>
-								<div class="t_c">청주시 청원구 1순환로 148</div>
+								<div class="t_c">대구시 달서구 월곡로 291 상인중석타운</div>
 							</div>
 						</li>
 						<li>
 							<div class="t_b">
 								<div class="t_c">문의</div>
-								<div class="t_c">043-716-0075</div>
+								<div class="t_c">032-283-1515</div>
 							</div>
 						</li>
 						<!-- <li>
@@ -167,24 +167,6 @@
 							</div>
 						</li> -->
 					</ul>
-
-					<!-- <ul class="lst_share">
-						<li>
-							<a href="">
-								길찾기
-							</a>
-						</li>
-						<li>
-							<a href="">
-								전화걸기
-							</a>
-						</li>
-						<li>
-							<a href="">
-								주소복사
-							</a>
-						</li>
-					</ul> -->
 
 				</div>
 			</section>
@@ -197,15 +179,15 @@
 
 	<!-- footer -->
 
-	<script src="inc/footer.js"></script>
+	<script src="../../inc/footer.js"></script>
 
 	<!-- //footer -->
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/common.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
 
 </body> 
 </html>

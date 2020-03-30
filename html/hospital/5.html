@@ -5,12 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 	<title>KOOZPET</title>
-	<link rel="stylesheet" href="css/font.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<link rel="stylesheet" href="css/common.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 </head> 
 
 <body class="page">
@@ -19,7 +18,7 @@
 
 	<!-- header -->
 
-	<script src="inc/header.js"></script>
+	<script src="../../inc/header.js"></script>
 
 	<!-- //header -->
 
@@ -34,42 +33,47 @@
 			<section class="pet v1">
 				<div class="sec_inner">
 
-					<h2>잠실 준 25시 동물병원</h2>
-					<p>서울특별시 송파구</p>
+					<h2>와우동물병원</h2>
+					<p>전라북도 익산시</p>
 
 					<div class="swiper-view swiper-container">
 
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/hospital_1_1.jpg)"></span>
+									<span style="background-image:url(../../img/hospital/5_1.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/hospital_1_2.jpg)"></span>
+									<span style="background-image:url(../../img/hospital/5_2.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/hospital_1_3.jpg)"></span>
+									<span style="background-image:url(../../img/hospital/5_3.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/hospital_1_4.jpg)"></span>
+									<span style="background-image:url(../../img/hospital/5_4.jpg)"></span>
+								</div>	
+							</div>
+							<div class="swiper-slide">
+								<div class="thumb">
+									<span style="background-image:url(../../img/hospital/5_5.jpg)"></span>
 								</div>	
 							</div>
 						</div>
 
 						<div class="swiper-pagination"></div>
 
-						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
-							<i class="ri-arrow-left-s-line"></i>
+						<button class="slideshow_nav slide_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="prev"></i>
 						</button>
 
-						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
-							<i class="ri-arrow-right-s-line"></i>
+						<button class="slideshow_nav slide_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="next"></i>
 						</button>
 
 					</div>
@@ -82,24 +86,27 @@
 			<section class="pet v2">
 				<div class="sec_inner">
 				
-					<h3>깨끗하고 쾌적한 진료환경 아래 정확하고 신속한 진단, 정성과 사랑을 담은 진료 잠실 준25시 동물병원</h3>
+					<h3>와우동물병원</h3>
 
 					<div class="intro_cont">
 						
-						<p>정성과 사랑을 담은 보살핌으로 항상 최선을 다하겠습니다.</p>
+						<p></p> 
 
 						<!-- <div class="price">
 							<strong>[가격정보]</strong>
 							<ul>
-								<li>소형견미용 ------------- 30,000원</li>
-								<li>중형견미용 ------------- 35,000원</li>
+								<li></li>
 							</ul>
 						</div> -->
 						
 						<div class="clock">
-							<strong>[이용시간]</strong>
+							<strong>[진료시간]</strong>
 							<ul>
-								<li>10:00 ~ 20:30</li>
+								<li>평일 9:00 ~ 19:00</li>
+								<li>토요일 9:00 ~ 5:00</li>
+								<li>일요일 휴무</li>
+								<li>공휴일 09:00 ~ 5:00</li>
+								<li>애견미용 10:00 ~ 19:00 (오후 5시39분 전까지 예약접수)</li>
 							</ul>
 						</div>
 
@@ -115,14 +122,14 @@
 				
 					<h3>기본정보</h3>
 
-					<!-- 지도를 표시할 div 입니다 -->
+					<!-- 지도 표시 div -->
 					<div id="map"></div>
 
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
 					<script>
 
-						var map_x = "37.5070931",
-							map_y = "127.092247"
+						var map_x = "35.9578152",
+							map_y = "126.972296"
 
 						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 							mapOption = { 
@@ -149,40 +156,17 @@
 						<li>
 							<div class="t_b">
 								<div class="t_c">주소</div>
-								<div class="t_c">서울시 송파구 석촌호수로 138</div>
+								<div class="t_c">전라북도 익산시 영등동 194-5</div>
 							</div>
 						</li>
 						<li>
 							<div class="t_b">
 								<div class="t_c">문의</div>
-								<div class="t_c">02-415-7580</div>
+								<div class="t_c">063-836-7587</div>
 							</div>
 						</li>
-						<!-- <li>
-							<div class="t_b">
-								<div class="t_c">홈페이지</div>
-								<div class="t_c">http://blog~~~</div>
-							</div>
-						</li> -->
-					</ul>
 
-					<!-- <ul class="lst_share">
-						<li>
-							<a href="">
-								길찾기
-							</a>
-						</li>
-						<li>
-							<a href="">
-								전화걸기
-							</a>
-						</li>
-						<li>
-							<a href="">
-								주소복사
-							</a>
-						</li>
-					</ul> -->
+					</ul>
 
 				</div>
 			</section>
@@ -195,15 +179,15 @@
 
 	<!-- footer -->
 
-	<script src="inc/footer.js"></script>
+	<script src="../../inc/footer.js"></script>
 
 	<!-- //footer -->
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/common.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
 
 </body> 
 </html>

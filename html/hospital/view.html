@@ -63,80 +63,52 @@
 					<h2>건강한 우리 아기를 위해!</h2>
 					<p>병원</p>
 
-					<ul class="lst_view">
-						<li>
-							<a href="../../html/hospital/06.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/hospital/m_3_6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">DR.K 종합동물병원</p>
-									<p class="txt">충청남도 아산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/hospital/05.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/m_3_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">와우동물병원</p>
-									<p class="txt">전라북도 익산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../hospital_4.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_3_4.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">탑스동물메디컬센터</p>
-									<p class="txt">대구시 달서구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../hospital_3.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_3_3.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">청주온누리동물병원</p>
-									<p class="txt">충청북도 청주시</p>
-								</div>
-							</a>
-						</li>
+					<ul id="latest" class="lst_view">
+
+						<script>
+
+						$(function() {
+
+							var data = [
+								
+								{num : '6',   tit : 'DR.K 종합동물병원',            add : '충청남도 아산시'},
+								{num : '5',   tit : '와우동물병원',                 add : '전라북도 익산시'},
+								{num : '4',   tit : '탑스동물메디컬센터',           add : '대구시 달서구'},
+								{num : '3',   tit : '청주온누리동물병원',           add : '충청북도 청주시'},
+
+							];
+
+							list_view(data, 'hospital', 'latest');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul class="lst_view randam">
-						<li>
-							<a href="../../hospital_2.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_3_2.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">중앙동물메디컬센터</p>
-									<p class="txt">서울특별시 강남구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../hospital_1.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_3_1.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">잠실 준 25시 동물병원</p>
-									<p class="txt">서울특별시 송파구</p>
-								</div>
-							</a>
-						</li>
+					<ul id="list" class="lst_view randam">
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '2',   tit : '중앙동물메디컬센터',              add : '서울특별시 강남구'},
+								{num : '1',   tit : '잠실 준 25시 동물병원',           add : '서울특별시 송파구'},
+
+							];
+
+							list_view(data, 'hospital', 'list');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
