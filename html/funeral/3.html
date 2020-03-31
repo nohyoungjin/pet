@@ -5,12 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 	<title>KOOZPET</title>
-	<link rel="stylesheet" href="css/font.css">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
-	<link rel="stylesheet" href="css/swiper.min.css">
-	<link rel="stylesheet" href="css/common.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 </head> 
 
 <body class="page">
@@ -19,7 +18,7 @@
 
 	<!-- header -->
 
-	<script src="inc/header.js"></script>
+	<script src="../../inc/header.js"></script>
 
 	<!-- //header -->
 
@@ -34,42 +33,42 @@
 			<section class="pet v1">
 				<div class="sec_inner">
 
-					<h2>한별리멤버파크</h2>
-					<p>경상남도 함안군</p>
+					<h2>펫로스엔젤</h2>
+					<p>충청북도 청주시</p>
 
 					<div class="swiper-view swiper-container">
 
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/funeral_4_1.jpg)"></span>
+									<span style="background-image:url(../../img/funeral_3_1.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/funeral_4_2.jpg)"></span>
+									<span style="background-image:url(../../img/funeral_3_2.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/funeral_4_3.jpg)"></span>
+									<span style="background-image:url(../../img/funeral_3_3.jpg)"></span>
 								</div>	
 							</div>
 							<div class="swiper-slide">
 								<div class="thumb">
-									<span style="background-image:url(img/funeral_4_4.jpg)"></span>
+									<span style="background-image:url(../../img/funeral_3_4.jpg)"></span>
 								</div>	
 							</div>
 						</div>
 
 						<div class="swiper-pagination"></div>
 
-						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
-							<i class="ri-arrow-left-s-line"></i>
+						<button class="slideshow_nav slide_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="prev"></i>
 						</button>
 
-						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
-							<i class="ri-arrow-right-s-line"></i>
+						<button class="slideshow_nav slide_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="next"></i>
 						</button>
 
 					</div>
@@ -82,20 +81,18 @@
 			<section class="pet v2">
 				<div class="sec_inner">
 				
-					<h3>리멤버파크는 아룸다운 공간에 자리잡은 무지개 다리입니다.</h3>
+					<h3>아기들이 마지막 한 순간까지도 편하게 잠들기를 바라는 마음으로 펫로스 엔젤은 함께하겠습니다.</h3>
 
 					<div class="intro_cont">
 						
-						<p>반려동물 전생애를 케어하는 한별의 계획데로 아이들의 추억을 동화처럼 영원히 기억할 수 있는 최적의 장소입니다.</p>
-						<p>아이와 이별한후 느끼는 허무함 공허함을 이곳 한별에서 힐링하며 아름다운 기억으로 간직 하실수 있습니다.</p>
+						<p>펫로스엔젤은 아기들을 위해 아기들의 영혼이 편하게 하늘로 돌아갈수 있도록 신개념의 친환경 개별건조화장법을 사용하여 이산화탄소, 발암물질, 미세먼지가 발생하지 않고 아기들의 영혼이 편하게 하늘나라로 갈 수 있도록 도와드리겠습니다.</p>
 
-						<!-- <div class="price">
+						<div class="price">
 							<strong>[가격정보]</strong>
 							<ul>
-								<li>소형견미용 ------------- 30,000원</li>
-								<li>중형견미용 ------------- 35,000원</li>
+								<li>기본장례비용 ------- 150,000원</li>
 							</ul>
-						</div> -->
+						</div>
 						
 						<div class="clock">
 							<strong>[이용시간]</strong>
@@ -116,14 +113,14 @@
 				
 					<h3>기본정보</h3>
 
-					<!-- 지도를 표시할 div 입니다 -->
+					<!-- 지도 표시 div -->
 					<div id="map"></div>
 
 					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
 					<script>
 
-						var map_x = "35.3359365",
-							map_y = "128.355785"
+						var map_x = "36.5668178",
+							map_y = "127.382806"
 
 						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 							mapOption = { 
@@ -150,13 +147,13 @@
 						<li>
 							<div class="t_b">
 								<div class="t_c">주소</div>
-								<div class="t_c">경남 함안군 법수면 이묵골로 135-3</div>
+								<div class="t_c">충북 청주시 서원구 남이면 구미1길 37-47</div>
 							</div>
 						</li>
 						<li>
 							<div class="t_b">
 								<div class="t_c">문의</div>
-								<div class="t_c">1899-2610</div>
+								<div class="t_c">1577-2518</div>
 							</div>
 						</li>
 						<!-- <li>
@@ -166,24 +163,6 @@
 							</div>
 						</li> -->
 					</ul>
-
-					<!-- <ul class="lst_share">
-						<li>
-							<a href="">
-								길찾기
-							</a>
-						</li>
-						<li>
-							<a href="">
-								전화걸기
-							</a>
-						</li>
-						<li>
-							<a href="">
-								주소복사
-							</a>
-						</li>
-					</ul> -->
 
 				</div>
 			</section>
@@ -196,15 +175,15 @@
 
 	<!-- footer -->
 
-	<script src="inc/footer.js"></script>
+	<script src="../../inc/footer.js"></script>
 
 	<!-- //footer -->
 
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-<script src="js/swiper.min.js"></script>
-<script src="js/common.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
 
 </body> 
 </html>

@@ -64,7 +64,7 @@
 					<h2>좋은곳으로 갈꺼야 잊지않을께</h2>
 					<p>장례식</p>
 
-					<ul class="lst_view">
+					<ul id="latest" class="lst_view">
 						<li>
 							<a href="../../html/funeral/11.html">
 								<div class="thumb">
@@ -87,112 +87,54 @@
 								</div>
 							</a>
 						</li>
-						<li>
-							<a href="../../html/funeral/09.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/funeral/m_5_9.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">애견추모카페</p>
-									<p class="txt">경기도 화성시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/funeral/08.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/funeral/m_5_8.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">리멤버파크</p>
-									<p class="txt">충청남도 논산시</p>
-								</div>
-							</a>
-						</li>
+
+						<script>
+
+						$(function() {
+
+							var data = [
+								
+								{num : '9',   tit : '애견추모카페',            add : '경기도 화성시'},
+								{num : '8',   tit : '리멤버파크',              add : '충청남도 논산시'},
+
+							];
+
+							list_view(data, 'funeral', 'latest');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul class="lst_view randam">
-						<li>
-							<a href="../../html/funeral/07.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/funeral/m_5_7.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">더소울펫</p>
-									<p class="txt">경상북도 구미시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/funeral/06.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/funeral/m_5_6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">강릉펫사랑</p>
-									<p class="txt">강원도 강릉시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/funeral/05.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/funeral/m_5_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">THE 고마워</p>
-									<p class="txt">경기도 양주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../funeral_4.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_5_4.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">한별리멤버파크</p>
-									<p class="txt">경상남도 함안군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../funeral_3.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_5_3.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">펫로스엔젤</p>
-									<p class="txt">충청북도 청주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../funeral_2.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_5_2.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">펫노블레스</p>
-									<p class="txt">경상남도 양산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../funeral_1.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/m_5_1.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">마스꼬따휴</p>
-									<p class="txt">경기도 김포시</p>
-								</div>
-							</a>
-						</li>
+					<ul id="list" class="lst_view randam">
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '7',   tit : '더소울펫',                add : '경상북도 구미시'},
+								{num : '6',   tit : '강릉펫사랑',              add : '강원도 강릉시'},
+								{num : '5',   tit : 'THE 고마워',              add : '경기도 양주시'},
+								{num : '4',   tit : '한별리멤버파크',          add : '경상남도 함안군'},
+								{num : '3',   tit : '펫로스엔젤',              add : '충청북도 청주시'},
+								{num : '2',   tit : '펫노블레스',              add : '경상남도 양산시'},
+								{num : '1',   tit : '마스꼬따휴',              add : '경기도 김포시'},
+
+							];
+
+							list_view(data, 'funeral', 'list');
+
+						});
+
+						</script>
+
 					</ul>
 				</div>
 
