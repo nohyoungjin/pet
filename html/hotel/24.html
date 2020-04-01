@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+	<script>
+
+		//
+
+		var lat = "36.6757457",
+			lng = "126.285448"
+
+		$(function() {
+
+			// title
+
+			var core = [{
+			
+				tit : '파인앤애플', 
+				add : '충남 태안군'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('hotel', 24, 4);
+
+			// info
+
+			var data = [{
+			
+				add  : '충남 태안군 남면 몽산포길 112-21 파인앤애플펜션', 
+				tel  : '010-3277-7027', 
+				ome  : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<div id="h_wrap"></div>
+
+					<script src="../../inc/slide.js"></script>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>안녕하세요 ~ 몽산포해수욕장에 위치한 파인앤 애플펜션입니다</h3>
+
+					<div class="intro_cont">
+						
+						<p>파란바다와 붉은 노을 그리고 소나무의 향기가 더해져 우리의 몸과 마음을 쉬게 합니다.</p> 
+						<p>파인앤애플은 반려동물 동반 가능한 펜션입니다.</p>
+
+						<p>바쁘고 지친 일상 잠시 내려 놓으시고 사랑하는 가족, 반려동물과 함께 행복하고 추억 가득한 여행 되시길 바라겠습니다.</p> 
+						<p>항상 노력하는 파인앤애플지기가 되겠습니다.</p> 
+						
+						<p>감사합니다.</p>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>예약안내</li>
+								<li>+ 예약을 하실경우에는 신중히 결정하여 주시길 부탁드립니다.</li>
+								<li>+ 환불은 입금자 확인 후 지정하신 계좌로 보내드립니다. (송금 수수료 제외)</li>
+								<li>+ 단, 예약이용일 변경은 예약취소에 해당됩니다. 예약취소 후 다시 예약해 주십시요.</li>
+								<li>+ 예약 후 취소 위약금은 숙박 금액을 기준으로 합니다.</li>
+								<li>+ 예약취소 수수료는 객실 요금 기준에 한합니다. 꼭 주의해주세요.</li>
+							</ul>
+						</div>
+						
+						<!-- <div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도 표시 div -->
+
+					<div id="map"></div>
+
+					<ul id="info" class="lst_info"></ul> 
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script>
+
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
+			level: 6 // 지도 확대 레벨
+		};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+	// 마커 표시 위치
+	var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커 생성
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커 지도 위에 표시
+	marker.setMap(map);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>

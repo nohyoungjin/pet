@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+	<script>
+
+		//
+
+		var lat = "37.2456760",
+			lng = "128.759831"
+
+		$(function() {
+
+			// title
+
+			var core = [{
+			
+				tit : '프로방스펜션', 
+				add : '강원 정선군'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('hotel', 25, 4);
+
+			// info
+
+			var data = [{
+			
+				add  : '강원 정선군 남면 무릉리 739-4', 
+				tel  : '010-5209-6422', 
+				ome  : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<div id="h_wrap"></div>
+
+					<script src="../../inc/slide.js"></script>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>프로방스펜션에서 최고의 휴식을 만끽하세요.~~</h3>
+
+					<div class="intro_cont">
+						
+						<p>강원랜드 & 하이원 스키장에서 가까운 대형 애견동반펜션으로 강아지와 함께 정선여행을 떠나려는 여행자에게 좋은 숙소입니다. 그리고 애견전용수영장이 일반수영장과 별도로 관리하고 있어 무더운 여름에 반려견과 함께 좋은 추억을 만들수 있고 강아지 놀이시설을 점차 준비하고 있으니 정선여행을 계획중이라면 놀러오시기 바랍니다.</p> 
+						<p>또한,단체 워크샵이나 세미나실로 30~40명 수용 가능하며 비용은 무료입니다.</p>
+
+						<p>[애견동반시 사전문의]</p> 
+
+						<ul>
+							<li>-.애견동반 가능 객실 : 베고니아A,B,C / 사루비아 A,B,C (그 외 객실 애견 동반 입실이 불가)</li>
+							<li>-.1마리 20,000원(1박기준) 현장결제 / 한 객실에 2마리까지만 입실가능</li>
+							<li>-.중대형견은 입실가능 (단,2마리이하)</li>
+							<li>-.애견을 침대위에 올려서는 절대 안됩니다</li>
+							<li>-.애견용품은 배변패드, 식기 준비 / 애견용 타월은 개별지참</li>
+							<li>-.현장 결제 및 추가비용 펜션 문의</li>
+						</ul>
+
+						<!-- <div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+						
+						<!-- <div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도 표시 div -->
+
+					<div id="map"></div>
+
+					<ul id="info" class="lst_info"></ul> 
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script>
+
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
+			level: 6 // 지도 확대 레벨
+		};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+	// 마커 표시 위치
+	var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커 생성
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커 지도 위에 표시
+	marker.setMap(map);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>
