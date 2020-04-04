@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+	<script>
+
+		//
+
+		var lat = "36.3557929",
+			lng = "127.389015"
+
+		$(function() {
+
+			// title
+
+			var core = [{
+			
+				tit : '해피독', 
+				add : '대전 서구'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('beauty', 34, 4);
+
+			// info
+
+			var data = [{
+			
+				add : '대전 서구 둔산동 589', 
+				tel : '010-5784-4560', 
+				ome : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<div id="h_wrap"></div>
+
+					<script src="../../inc/slide.js"></script>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>훈련사가 직접 찾아가는 가정방문훈련 업체 '해피독' 입니다!</h3>
+
+					<div class="intro_cont">
+
+						<p>일단 애견교육 방법은 크게 두가지로 나누어집니다.</p>
+						
+						<ul>
+							<li>1. 위탁교육(애견훈련소)</li>
+							<li>2. 가정방문교육</li>
+						</ul>
+
+						<p>각자의 장단점은 분명히 존재함으로 보호자님의 선택이 중요합니다</p>
+
+						<p>위탁교육의 장점은 보호자님이 직접 교육하지않아도 된다는것이지만 집으로 돌아왔을때 문제행동이 다시 생길수있다는건 큰 단점입니다</p>
+						<p>방문교육의 장점은 이렇습니다</p>
+
+						<ul>
+							<li>1. 반려견과 장기간 떨어져있지 않아도된다.</li>
+							<li>2. 함께 생활하는 공간에서 교육하므로 교정효과가 높고 재발할 가능성이 낮다.</li>
+							<li>3. 보호자와 반려견 사이의 잘못된 관계를 개선시킬수 있다</li>
+						</ul>
+
+						<p>단점이라면 보호자님이 꾸준히 교육을 해주셔야하기때문에 약간의 수고스러움과 정확한 교육방법을 숙지하고 계셔야한다는 된다는것이죠</p>
+						<p>저희 해피독반려견방문교육은 강압적인 훈련방식이아닌 반려견의 문제 행동에 대한 원인을 파악하여 해결,제거해 줄수있는 교감을통한 긍정교육 방식을 지향합니다</p>
+						<p>배변교육, 짖음교육(헛짖음), 분리불안, 사회성교육, 산책교육 등 반려견의 문제행동이 고민이신분들 교육문의 및 상담은 언제든 편하게 연락주세요</p>
+
+						<!-- <div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>매일 00:00 ~ 24:00</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도 표시 div -->
+
+					<div id="map"></div>
+
+					<ul id="info" class="lst_info"></ul> 
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script>
+
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
+			level: 6 // 지도 확대 레벨
+		};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+	// 마커 표시 위치
+	var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커 생성
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커 지도 위에 표시
+	marker.setMap(map);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>

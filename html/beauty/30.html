@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+	<script>
+
+		//
+
+		var lat = "38.0733796",
+			lng = "128.565828"
+
+		$(function() {
+
+			// title
+
+			var core = [{
+			
+				tit : '양이랑 콩이랑', 
+				add : '강원 양양군'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('beauty', 30, 4);
+
+			// info
+
+			var data = [{
+			
+				add : '강원 양양군 서면 원당골길 159', 
+				tel : '010-6354-3435', 
+				ome : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<div id="h_wrap"></div>
+
+					<script src="../../inc/slide.js"></script>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>양이랑콩이랑은 유기견과 길냥이를 돌보다 가족이 되었고, 그들에게 안락한 휴식처를 제공해주고 싶은 마음에서 시작되었습니다.<br>모든 아이들을 정성으로 돌보겠습니다. 방문전 전화주세요~</h3>
+
+					<div class="intro_cont">
+
+						<p>"참 좋은 인연입니다" 양이랑콩이랑은 유기견과 길냥이를 돌보다 가족이 되었고, 그들에게 안락한 휴식처를 제공해주고 싶은 마음에서 시작되었습니다.</p>
+						<p>짖고 싶을 때 짖고 먹고 싶을 때 먹을 수 있기를, 비가 와도 뛰어놀 수 있기를~ 이렇게 자그마한 소망을 하나씩 채워가고 있는 중입니다.</p>
+						
+						<p>비록 인테리어가 훌륭하거나 최신식시설로 꾸며진 곳은 아니지만 가족이 된 동물들과 진심어린 사랑으로 함께하는 곳입니다.</p>
+
+						<p>"유기동물은 동물을 좋아하는 사람들 때문에 생깁니다"</p>
+						<p>혹시 아이들이 고양이나 강아지를 키우자고 조르지는 않는지요? 우리 양이랑콩이랑 가족들이 동물을 좋아하는 아이들에게 좋은 친구가 되어줄 것입니다.</p>
+						<p>더욱 많은 분들이 동물들을 거두었으면 하는 바람이지만, 동물이 아닌 가족이 생기는 것이라 생각하시고 신중하고 신중하길 바랍니다.</p>
+						<p>한번 들인 가족은 어떠한 이유에서도 버리시면 안 됩니다.</p>
+
+						<p>이들로 인해 다른 가족이 불편해지거나 이들이 아파서 나의 시간과 손을 필요로 하게 되더라도, 꼭 이들을 끝까지 책임지겠다는 자신과의 약속이 필요합니다.</p>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>** 애견돌보미 **</li>
+								<li>기본2시간 ---------- 7,000원/10,000원</li>
+								<li>기본2시간이후 ------ 시간당 2,000원</li>
+								<li>** 애견호텔링 **</li>
+								<li>24시간 기준 --------- 2.5만원/3.5만원</li>
+								<li>24시간 초과시 ------- 돌보미가격적용</li>
+							</ul>
+						</div>
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>애견돌보미 -- 오전9시 ~ 오후9시</li>
+								<li>애견호텔링 -- 오후 9시 이후부터 적용</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도 표시 div -->
+
+					<div id="map"></div>
+
+					<ul id="info" class="lst_info"></ul> 
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script>
+
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
+			level: 6 // 지도 확대 레벨
+		};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+	// 마커 표시 위치
+	var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커 생성
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커 지도 위에 표시
+	marker.setMap(map);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>
