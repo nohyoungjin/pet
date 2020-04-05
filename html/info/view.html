@@ -63,47 +63,30 @@
 				<div class="sec_inner">
 					<h2>반려동물의 정보콘텐츠</h2>
 
-					<ul class="lst_view s2">
-						<li>
-							<a href="../../html/info/09.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/info/9.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">고슴도치를 키우기 위한 기본적인 정보</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/info/08.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/info/8.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">고양이가 높은 곳을 좋아하는 이유!</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/info/07.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/info/7.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">돌고래의 지능! 어느 정도일까요?</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/info/06.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/info/6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">고양이가 좋아하는 행동 5가지</p>
-								</div>
-							</a>
-						</li>
+					<ul id="latest" class="lst_view s2">
+
+						<script>
+
+						$(function() {
+
+							var data = [
+
+								{num : '13',  tit : '강아지 발톱 자주 잘라야 할까요?'},
+								{num : '12',  tit : '앵무새의 수명은 얼마나 될까요?'},
+								{num : '11',  tit : '강아지도 우울증에 걸릴까요?'},
+								{num : '10',  tit : '반려동물로 돼지를? 키울 수 있을까?'},
+								{num : '9',   tit : '고슴도치를 키우기 위한 기본적인 정보'},
+								{num : '8',   tit : '고양이가 높은 곳을 좋아하는 이유!'},
+								{num : '7',   tit : '돌고래의 지능! 어느 정도일까요?'},
+								{num : '6',   tit : '고양이가 좋아하는 행동 5가지'},
+
+							];
+
+							list_view(data, 'info', 'latest');
+
+						});
+
+						</script>
 
 					</ul>
 				</div>
