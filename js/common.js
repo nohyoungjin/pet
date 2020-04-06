@@ -12,9 +12,6 @@ $(function() {
 
 	youtube();
 
-	list_sort();
-
-
 	//
 
 	function local() {
@@ -37,6 +34,30 @@ $(function() {
 
 				new TweenLite.fromTo($popup, .5, {y: '-100%'}, {y: '0%', ease: Power4.easeOut});
 				new TweenLite.fromTo($close_btn, .2, {autoAlpha: 0}, {autoAlpha: 1, ease: Power0.easeNone,delay: .1});
+
+
+				//
+
+				$('.filters a').on('click',function() {
+
+					var toFilter = $(this).data('filters');
+
+					$('.lst_view li').removeClass('on');
+
+					$('.lst_view li').each(function(i, elem) {
+
+						var filters = $(this).data('filters');
+						
+						$('.lst_view li').addClass('sort').addClass('off');
+
+						if ( filters == toFilter ) {
+							$(this).addClass('on');
+							close_action();
+						}
+
+					});
+
+				});
 
 			} else {
 
@@ -200,35 +221,6 @@ $(function() {
 	function youtube() {
 
 		$( 'iframe[src^="https://www.youtube.com/"], iframe[src^="https://www.facebook.com/"], iframe[src^="https://goo.gl/"]' ).wrap( '<div class="youtubeWrap"></div>' );
-
-	}
-
-
-
-	//
-
-	function list_sort() {
-
-		$('.filters a').on('click',function() {
-
-			var toFilter = $(this).data('filters');
-
-			close_action();
-
-			$('#list li').removeClass('on');
-
-			$('#list li').each(function(i,elem) {
-
-				var filters = $(this).data('filters');
-				
-				$('#list li').addClass('sort').addClass('off');
-
-				if ( filters == toFilter ) {
-					$(this).addClass('on');
-				}
-
-			});
-		});
 
 	}
 
