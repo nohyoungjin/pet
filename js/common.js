@@ -12,6 +12,8 @@ $(function() {
 
 	youtube();
 
+	list_sort();
+
 
 	//
 
@@ -201,6 +203,35 @@ $(function() {
 
 	}
 
+
+
+	//
+
+	function list_sort() {
+
+		$('.filters a').on('click',function() {
+
+			var toFilter = $(this).data('filters');
+
+			close_action();
+
+			$('#list li').removeClass('on');
+
+			$('#list li').each(function(i,elem) {
+
+				var filters = $(this).data('filters');
+				
+				$('#list li').addClass('sort').addClass('off');
+
+				if ( filters == toFilter ) {
+					$(this).addClass('on');
+				}
+
+			});
+		});
+
+	}
+
 });
 
 //
@@ -222,7 +253,7 @@ function list_view(data, folder, insert) {
 
 			};
 
-			output += '	<li>';
+			output += '	<li data-filters=' + item.filter + '>';
 			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
 			output += '			<div class="thumb">';
 			output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
