@@ -183,9 +183,9 @@ $(function() {
 					liArr = ul.children('li');
 
 				liArr.sort(function() {
-					var temp = parseInt(Math.random()*len),
-						temp1 = parseInt(Math.random()*len);
-					return temp1-temp;
+					var temp = parseInt(Math.random() * len),
+						temp1 = parseInt(Math.random() * len);
+					return temp1 - temp;
 				}).appendTo(ul);
 			});
 
