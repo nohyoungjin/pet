@@ -41,7 +41,7 @@
 .pet.l1 .sec_inner {margin:0;padding:15px 20px}
 
 .pet.l1 .local {margin:8px 0;padding:0 0 18px;border-bottom:1px solid #eee;text-align:center}
-.pet.l1 .local a {font-size:15px}
+.pet.l1 .local a {display:inline-block;font-size:15px}
 
 
 /* local */
