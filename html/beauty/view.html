@@ -40,32 +40,9 @@
 			<section class="pet l1">
 
 				<div class="sec_inner">
-					<div class="local">
-						<a href="javascript:">
-							전체 
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 16.172l5.364-5.364 1.414 1.414L12 20l-7.778-7.778 1.414-1.414L11 16.172V4h2v12.172z"/></svg>
-						</a>
-					</div>
+					
+					<script src="../../inc/local.js"></script>
 
-					<!-- local -->
-
-					<div id="popup" class="popup">
-						<div class="popup_inner">
-							<div class="keyword">
-								<ul class="filters">
-									<!-- <li><a href="javascript:>#전체</a></li> -->
-									<li><a href="javascript:" data-filters="서울">#서울</a></li>
-									<li><a href="javascript:" data-filters="경기">#경기</a></li>
-									<!-- <li><a href="javascript:">#인천</a></li>
-									<li><a href="javascript:">#부산</a></li> -->
-								</ul>
-							</div>
-						</div>
-
-						<button id="popup_close" class="popup_close">
-							<span>팝업 닫기</span>
-						</button>
-					</div>
 				</div>
 
 				<div class="sec_inner">
@@ -112,7 +89,7 @@
 							var data = [
 
 							    {num : '27',  tit : '개차반',                add : '전남 목포시',},
-							    {num : '26',  tit : '모두펫',                add : '서울 송파구',        filter : '서울'},
+							    {num : '26',  tit : '모두펫',                add : '서울 송파구',        area : '서울'},
 							    {num : '25',  tit : '캣츠앤독스',            add : '제주 서귀포시'},
 							    {num : '24',  tit : '댕댕유치원',            add : '충남 아산시'},
 							    {num : '23',  tit : '개스트하우스',          add : '전라북도 전주시'},
@@ -121,23 +98,23 @@
 								{num : '20',  tit : '멍멍애견출장훈련소',    add : '경기도 안양시'},
 								{num : '19',  tit : '디어멍',                add : '울산 남구'},
 								{num : '18',  tit : '돌봄 개린이집',         add : '부산 남구'},
-								{num : '17',  tit : '도고네',                add : '경기도 수원시',       filter : '경기'},
-								{num : '16',  tit : '깜군이네애견호텔',      add : '경기도 광주시',       filter : '경기'},
+								{num : '17',  tit : '도고네',                add : '경기도 수원시',       area : '경기'},
+								{num : '16',  tit : '깜군이네애견호텔',      add : '경기도 광주시',       area : '경기'},
 								{num : '15',  tit : '김쌤애견방문훈련소',    add : '경기도 남양주'},
 								{num : '14',  tit : '개와사람을잇다',        add : '전라북도 진안군'},
 								{num : '13',  tit : '개밥컴퍼니',            add : '전라남도 순천시'},
 								{num : '12',  tit : '개뭉치애견파크',        add : '전라남도 여수시'},
 								{num : '11',  tit : '애견동화',              add : '충청남도 천안시'},
 								{num : '10',  tit : '멍냥살롱',              add : '충청남도 당진시'},
-								{num : '9',   tit : '펫 꾸밈',               add : '서울특별시 강남구',   filter : '서울'},
+								{num : '9',   tit : '펫 꾸밈',               add : '서울특별시 강남구',   area : '서울'},
 								{num : '8',   tit : '개털깎는 마리오',       add : '전라남도 순천시'},
 								{num : '7',   tit : '강아지 이발소',         add : '광주광역시 북구'},
-								{num : '6',   tit : '반려동물훈련학교',      add : '경기도 용인시',       filter : '경기'},
+								{num : '6',   tit : '반려동물훈련학교',      add : '경기도 용인시',       area : '경기'},
 								{num : '5',   tit : '귀엽개',                add : '전라북도 익산시'},
 								{num : '4',   tit : '아트펫',                add : '인천시 부평구'},
-								{num : '3',   tit : '무지개좋아',            add : '경기도 양주시',       filter : '경기'},
-								{num : '2',   tit : '라라캣',                add : '서울특별시 강남구',   filter : '서울'},
-								{num : '1',   tit : '개스타일',              add : '서울특별시 강남구',   filter : '서울'},
+								{num : '3',   tit : '무지개좋아',            add : '경기도 양주시',       area : '경기'},
+								{num : '2',   tit : '라라캣',                add : '서울특별시 강남구',   area : '서울'},
+								{num : '1',   tit : '개스타일',              add : '서울특별시 강남구',   area : '서울'},
 
 							];
 

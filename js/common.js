@@ -245,7 +245,7 @@ function list_view(data, folder, insert) {
 
 			};
 
-			output += '	<li data-filters=' + item.filter + '>';
+			output += '	<li data-filters=' + item.area + '>';
 			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
 			output += '			<div class="thumb">';
 			output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
