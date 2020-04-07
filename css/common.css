@@ -254,7 +254,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 /* */
 
 .btn_box {width:100%;text-align:center}
-.btn_box a {display:inline-block;width:100%;padding:13px 10px;border:1px solid #c4c4c4;font-size:15px;font-weight:300;color:#333;text-align:center;vertical-align:middle;letter-spacing:-0.5px;border-radius:5px}
+.btn_box a {display:inline-block;width:100%;padding:13px 10px;border:1px solid #c4c4c4;font-size:15px;font-weight:400;color:#333;text-align:center;vertical-align:middle;letter-spacing:-0.5px;border-radius:5px}
 
 /* footer */
 
