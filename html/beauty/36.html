@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+	<script>
+
+		//
+
+		var lat = "37.6625885",
+			lng = "126.768343"
+
+		$(function() {
+
+			// title
+
+			var core = [{
+			
+				tit : '오늘의개스트', 
+				add : '경기 고양시'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('beauty', 36, 4);
+
+			// info
+
+			var data = [{
+			
+				add : '경기 고양시 일산동구 무궁화로 34 남정씨티프라자2 6층 606호', 
+				tel : '010-2740-9977', 
+				ome : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<div id="h_wrap"></div>
+
+					<script src="../../inc/slide.js"></script>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>*일산 라페스타 근처 애견호텔 / 유치원 / 카페 오늘의개스트 오픈했습니다 ! *</h3>
+
+					<div class="intro_cont">
+
+						<p>>서비스 사항</p>
+						
+						<p>1. 애견호텔</p>
+
+						<ul>
+							<li>- 소형견 전문 , 오늘의 개스트 애견친구들과 함께 즐거운 시간</li>
+							<li>- 고객님들의 댕댕이 안전과 걱정을 덜어드리고자 귀찮다고 느끼실만큼 실시간 사진 / 동영상 발송 서비스까지 !</li>
+						</ul>
+
+						<p>2. 애견유치원</p>
+
+						<ul>
+							<li>- 댕댕이들의 지능향상을 위한 교육 !</li>
+						</ul>
+
+						<p>3. 애견카페</p>
+
+						<ul>
+							<li>- 댕댕이들이 마음껏 뛰어 놀 수 있는 넓은 공간.</li>
+							<li>- 맛있고 향 좋은 커피</li>
+							<li>- 애견이 없더라도 오늘의개스트 친구들와 즐거운시간</li>
+						</ul>
+
+						<p>4. 애견분양</p>
+
+						<ul>
+							<li>- 출생이 확실하며 건강하고 귀여운 댕댕이 친구들을 만나보실수 있습니다 !</li>
+						</ul>
+
+						<p>5. 세부사항</p>
+
+						<ul>
+							<li>- 댕댕이의 건강을 위한 서비스를 제공하고 있습니다 !</li>
+							<li>- 미세먼지와 매장내 쾌적한 환경을 위한 LG 퓨리케어 공기청정기 설치 !</li>
+							<li>- 댕댕이들의 건강과 완벽한 해충방제를 위한 세스코 운용 !</li>
+							<li>- 사람이 들어가서 쉴 수 있을 정도의 충분한 호텔링 룸</li>
+							<li>- 댕댕이들의 안전과 사고 예방을 위한 CCTV</li>
+						</ul>
+
+						<p>새로 오픈한 만큼 우리 댕댕이들도 내방해주시는 고객분들도 넓고 쾌적한 환경에서 애견이 없더라도 오늘의 개스트 댕댕이 친구들과 즐거운 시간을 보내실수 있습니다! 많은 이용 부탁드려요 ~~</p>
+
+						<!-- <div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>매일 09:00 ~ 21:00</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도 표시 div -->
+
+					<div id="map"></div>
+
+					<ul id="info" class="lst_info"></ul> 
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script>
+
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
+			level: 6 // 지도 확대 레벨
+		};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+	// 마커 표시 위치
+	var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커 생성
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커 지도 위에 표시
+	marker.setMap(map);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>
