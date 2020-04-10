@@ -35,27 +35,40 @@ $(function() {
 				new TweenLite.fromTo($popup, .5, {y: '-100%'}, {y: '0%', ease: Power4.easeOut});
 				new TweenLite.fromTo($close_btn, .2, {autoAlpha: 0}, {autoAlpha: 1, ease: Power0.easeNone,delay: .1});
 
-
 				//
 
-				$('.filters a').on('click',function() {
+				$('.filters a').on('click', function() {
 
 					var toFilter = $(this).data('filters');
+					
+					if ( toFilter == "전체" ) {
+						
+						$('.local a span').text(toFilter);
+						$('.lst_view li').removeClass('sort').removeClass('on').removeClass('off');
+						
+						close_action();
+						
+						return;
+					
+					} else {
 
-					$('.lst_view li').removeClass('on');
+						$('.local a span').text(toFilter);
+						$('.lst_view li').removeClass('on');
+						
+					}
 
 					$('.lst_view li').each(function(i, elem) {
 
 						var filters = $(this).data('filters');
-						
 						$('.lst_view li').addClass('sort').addClass('off');
 
 						if ( filters == toFilter ) {
 							$(this).addClass('on');
-							close_action();
 						}
 
 					});
+					
+					close_action();
 
 				});
 
