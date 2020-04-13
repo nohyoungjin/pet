@@ -5,14 +5,15 @@ $(function() {
 	local();
 
 	// swiper_list();
-	swiper_view();
-	scroll_move();
+	// scroll_move();
 
 	list_random();
 
+	swiper_view();
 	youtube();
 
-	//
+
+	// area search
 
 	function local() {
 
@@ -107,7 +108,8 @@ $(function() {
 
 	}
 
-	//
+
+	// category roll
 
 	function swiper_list() {
 
@@ -121,7 +123,62 @@ $(function() {
 
 	}
 
-	//
+
+	// position move
+
+	function scroll_move() {
+
+		$('.cate a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+				if (target.length) {
+
+					event.preventDefault();
+
+					var win_w = $(window).width(),
+						scroll_top = 40;
+
+					$('html, body').animate({
+						scrollTop: target.offset().top - scroll_top
+					}, 500, function() {});
+
+				}
+
+			}
+
+		});
+
+	}
+
+
+	// random output
+
+	function list_random() {
+
+		var len = $('ul.randam > li').length;
+
+		$(window).on('load', function() {
+
+			$('ul.randam').each(function() {
+				var ul = $(this),
+					liArr = ul.children('li');
+
+				liArr.sort(function() {
+					var temp = parseInt(Math.random() * len),
+						temp1 = parseInt(Math.random() * len);
+					return temp1 - temp;
+				}).appendTo(ul);
+			});
+
+		});
+
+	}
+
+
+	// slider
 
 	function swiper_view() {
 
@@ -177,57 +234,6 @@ $(function() {
 
 	}
 
-	// 
-
-	function scroll_move() {
-
-		$('.cate a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
-
-			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-				if (target.length) {
-
-					event.preventDefault();
-
-					var win_w = $(window).width(),
-						scroll_top = 40;
-
-					$('html, body').animate({
-						scrollTop: target.offset().top - scroll_top
-					}, 500, function() {});
-
-				}
-
-			}
-
-		});
-
-	}
-
-	//
-
-	function list_random() {
-
-		var len = $('ul.randam > li').length;
-
-		$(window).on('load', function() {
-
-			$('ul.randam').each(function() {
-				var ul = $(this),
-					liArr = ul.children('li');
-
-				liArr.sort(function() {
-					var temp = parseInt(Math.random() * len),
-						temp1 = parseInt(Math.random() * len);
-					return temp1 - temp;
-				}).appendTo(ul);
-			});
-
-		});
-
-	}
 
 	// youtube
 
@@ -238,6 +244,7 @@ $(function() {
 	}
 
 });
+
 
 //
 
@@ -282,10 +289,19 @@ function list_view(data, folder, insert) {
 
 }
 
+
 //
 
 function list_view2(data, folder, insert) {
+
+	// 위부터 4개 Output Hold
 	
+	if ( insert == "latest" ) {
+		
+		data.splice( -8, 4 );
+
+	}
+
 	$.each(data, function(index, item) {
 
 		var output = '',
@@ -325,6 +341,7 @@ function list_view2(data, folder, insert) {
 
 }
 
+
 // title
 
 function h_title(data) {
@@ -342,7 +359,8 @@ function h_title(data) {
 
 }
 
-// slider
+
+// slider setting
 
 function swiper_slide(sort, uniq, sum) {
 
@@ -362,33 +380,6 @@ function swiper_slide(sort, uniq, sum) {
 
 }
 
-//
-
-function map_set() {
-
-	/* var lat = '',
-		   lng = ''; */
-
-	var mapContainer = document.getElementById('map'), // 지도 표시 div 
-		mapOption = { 
-			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
-			level: 6 // 지도 확대 레벨
-		};
-
-	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성 
-
-	// 마커 표시 위치
-	var markerPosition = new kakao.maps.LatLng(lat, lng); 
-
-	// 마커 생성
-	var marker = new kakao.maps.Marker({
-		position: markerPosition
-	});
-
-	// 마커 지도 위에 표시
-	marker.setMap(map);
-
-}
 
 // info
 
