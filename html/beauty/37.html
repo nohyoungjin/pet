@@ -35,6 +35,26 @@
 
 			swiper_slide('beauty', 37, 4);
 
+			// price
+
+			var row = [
+			
+				// { lst : '' }, 
+			
+			];
+
+			list_price(row);
+
+			// clock
+
+			var cell = [
+			
+				{ lst : '매일 00:00 ~ 24:00' },
+			
+			];
+
+			list_clock(cell);
+
 			// info
 
 			var data = [{
@@ -85,27 +105,17 @@
 			<section class="pet v2">
 				<div class="sec_inner">
 				
-					<h3>안녕하세요 조이런 애견호텔입니다. <br>조이런 (한국애견대학) 40년 이상의 전통을 자랑하는 애견훈련학교 입니다.</h3>
+					<h3>안녕하세요 조이런 애견호텔입니다.</h3>
 
 					<div class="intro_cont">
 
+						<p>조이런 (한국애견대학) 40년 이상의 전통을 자랑하는 애견훈련학교 입니다.</p>
+
 						<p>반려견 전문 훈련사분들이 24시간 상주로 아이들을 케어하고 있으며 실내 공간에선 1견 1실로 관리됩니다.</p>
+						<p>호텔링 이용중인 아이들은 성격에 따라 그룹별로 야외운동장에서 자유운동 시간이 있으며, 야외운동으로 스트레스 해소에 큰 도움을 주고 있습니다.</p>
 
-						<p>호텔링 이용중인 아이들은 성격에 따라 그룹별로 야외운동장에서 자유운동시간이 있으며, 야외운동으로 스트레스 해소에 큰 도움을 주고 있습니다.</p>
-
-						<!-- <div class="price">
-							<strong>[가격정보]</strong>
-							<ul>
-								<li></li>
-							</ul>
-						</div> -->
-						
-						<div class="clock">
-							<strong>[이용시간]</strong>
-							<ul>
-								<li>매일 00:00 ~ 24:00</li>
-							</ul>
-						</div>
+						<div id="price" class="price"></div>
+						<div id="clock" class="clock"></div>
 
 					</div>
 

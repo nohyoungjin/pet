@@ -42,7 +42,7 @@ $(function() {
 
 					var toFilter = $(this).data('filters');
 					
-					if ( toFilter == "전체" ) {
+					if ( toFilter == '전체' ) {
 						
 						$('.local a span').text(toFilter);
 						$('.lst_view li').removeClass('sort').removeClass('on').removeClass('off');
@@ -296,7 +296,7 @@ function list_view2(data, folder, insert) {
 
 	// 위부터 4개 Output Hold
 	
-	if ( insert == "latest" ) {
+	if ( insert == 'latest' ) {
 		
 		data.splice( -8, 4 );
 
@@ -377,6 +377,64 @@ function swiper_slide(sort, uniq, sum) {
 			document.getElementById('swiper-wrap').innerHTML += output;
 
 	}
+
+}
+
+
+// price
+
+function list_price(data) {
+
+	if ( data == '' ) {
+		return;
+	}
+
+	var out = '';
+
+	out += ' <strong>[가격정보]</strong>';
+	out += ' <ul id="lst_price">';
+	out += ' </ul>';
+
+	document.getElementById('price').innerHTML += out;
+
+	$.each(data, function(index, item) {
+
+		var output = '';
+
+		output += '	<li>' + item.lst + '</li>';
+
+		document.getElementById('lst_price').innerHTML += output;
+
+	});
+
+}
+
+
+// clock
+
+function list_clock(data) {
+
+	if ( data == '' ) {
+		return;
+	}
+
+	var out = '';
+
+	out += ' <strong>[이용시간]</strong>';
+	out += ' <ul id="lst_clock">';
+	out += ' </ul>';
+
+	document.getElementById('clock').innerHTML += out;
+
+	$.each(data, function(index, item) {
+
+		var output = '';
+
+		output += '	<li>' + item.lst + '</li>';
+
+		document.getElementById('lst_clock').innerHTML += output;
+
+	});
 
 }
 
