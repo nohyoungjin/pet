@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+
+    <div id='content'></div>
+
+    <script>
+
+    $.ajax({
+      url: "../../data/data.json",
+      dataType: "json"
+    })
+      .done(function(data) {
+        var newContent = '';
+        newContent += '<div id="tours">';
+        newContent += '<h1>Guided Tours</h1>';
+        newContent += '<ul>';
+        for (var i = 0; i < data.tours.length; i++) {
+          newContent += '<li class="' + data.tours[i].region + ' tour">';
+          newContent += '<h2>' + data.tours[i].location + '</h2>';
+          newContent += '<span class="details">' + data.tours[i].details + '</span>';
+          newContent += '<button class="book">Book Now</button>';
+          newContent += '</li>';
+        }
+        newContent += '</ul></div>';
+
+        $("#content").html(newContent);
+      })
+      .fail(function(jqXHR, textStatus, errorThrown){
+        console.log("fail: ", jqXHR);
+      })
+      .always(function(data, textStatus, jqXHR){
+        console.log("always: ", data);
+      });
+
+    </script>
+
+  </body>
+</html>
