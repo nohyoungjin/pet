@@ -32,32 +32,9 @@
 			<section class="pet l1">
 
 				<div class="sec_inner">
-					<div class="local">
-						<a href="javascript:">
-							전체 
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 16.172l5.364-5.364 1.414 1.414L12 20l-7.778-7.778 1.414-1.414L11 16.172V4h2v12.172z"/></svg>
-						</a>
-					</div>
 
-					<!-- local -->
+					<script src="../../inc/local.js"></script>
 
-					<!-- <div id="popup" class="popup">
-						<div class="popup_inner">
-							<div class="keyword">
-								<ul>
-									<li><a href="/?s=1">#전체</a></li>
-									<li><a href="/?s=2">#서울</a></li>
-									<li><a href="/?s=3">#경기</a></li>
-									<li><a href="/?s=4">#인천</a></li>
-									<li><a href="/?s=5">#부산</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<button id="popup_close" class="popup_close">
-							<span>팝업 닫기</span>
-						</button>
-					</div> -->
 				</div>
 
 				<div class="sec_inner">
@@ -65,41 +42,26 @@
 					<p>장례식</p>
 
 					<ul id="latest" class="lst_view">
-						<li>
-							<a href="../../html/funeral/11.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/funeral/m_5_11.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">펫바라기</p>
-									<p class="txt">경기도 고양시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="../../html/funeral/10.html">
-								<div class="thumb">
-									<span style="background-image:url(../../img/thumb/funeral/m_5_10.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">이별공간</p>
-									<p class="txt">울산시 울주군</p>
-								</div>
-							</a>
-						</li>
 
 						<script>
 
 						$(function() {
 
 							var data = [
-								
-								{num : '9',   tit : '애견추모카페',            add : '경기도 화성시'},
-								{num : '8',   tit : '리멤버파크',              add : '충청남도 논산시'},
+			
+								{num : '11',   tit : '펫바라기',            area : '경기',    add : '고양시'},
+								{num : '10',   tit : '이별공간',            area : '울산',    add : '울주군'},
+								{num : '9',    tit : '애견추모카페',        area : '경기',    add : '화성시'},
+								{num : '8',    tit : '리멤버파크',          area : '충남',    add : '논산시'},
+
+								{num : '7',    tit : '더소울펫',            area : '경북',    add : '구미시'},
+								{num : '6',    tit : '강릉펫사랑',          area : '강원',    add : '강릉시'},
+								{num : '5',    tit : 'THE 고마워',          area : '경기',    add : '양주시'},
+								{num : '4',    tit : '한별리멤버파크',      area : '경남',    add : '함안군'},
 
 							];
 
-							list_view(data, 'funeral', 'latest');
+							list_view2(data, 'funeral', 'latest');
 
 						});
 
@@ -119,17 +81,13 @@
 
 							var data = [
 
-								{num : '7',   tit : '더소울펫',                add : '경상북도 구미시'},
-								{num : '6',   tit : '강릉펫사랑',              add : '강원도 강릉시'},
-								{num : '5',   tit : 'THE 고마워',              add : '경기도 양주시'},
-								{num : '4',   tit : '한별리멤버파크',          add : '경상남도 함안군'},
-								{num : '3',   tit : '펫로스엔젤',              add : '충청북도 청주시'},
-								{num : '2',   tit : '펫노블레스',              add : '경상남도 양산시'},
-								{num : '1',   tit : '마스꼬따휴',              add : '경기도 김포시'},
+								{num : '3',    tit : '펫로스엔젤',          area : '충북',    add : '청주시'},
+								{num : '2',    tit : '펫노블레스',          area : '경남',    add : '양산시'},
+								{num : '1',    tit : '마스꼬따휴',          area : '경기',    add : '김포시'},
 
 							];
 
-							list_view(data, 'funeral', 'list');
+							list_view2(data, 'funeral', 'list');
 
 						});
 
@@ -154,7 +112,7 @@
 
 </div>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 <script src="../../js/common.js"></script>
 
 </body> 
