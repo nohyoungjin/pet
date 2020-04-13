@@ -7,10 +7,10 @@
 	<title>KOOZPET</title>
 	<link rel="stylesheet" href="../../css/font.css">
 	<link rel="stylesheet" href="../../css/reset.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css">
 	<link rel="stylesheet" href="../../css/swiper.min.css">
 	<link rel="stylesheet" href="../../css/common.css">
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
 </head>
 
 <body class="page">
@@ -64,12 +64,12 @@
 
 						<div class="swiper-pagination"></div>
 
-						<button class="slideshow_nav slideshow_prev" role="button" aria-label="Previous slide">
-							<i class="ri-arrow-left-s-line"></i>
+						<button class="slideshow_nav slide_nav slideshow_prev" role="button" aria-label="Previous slide">
+							<i class="prev"></i>
 						</button>
 
-						<button class="slideshow_nav slideshow_next" role="button" aria-label="Next slide">
-							<i class="ri-arrow-right-s-line"></i>
+						<button class="slideshow_nav slide_nav slideshow_next" role="button" aria-label="Next slide">
+							<i class="next"></i>
 						</button>
 
 					</div>
@@ -132,9 +132,9 @@
 					<h3>기본정보</h3>
 
 					<!-- 지도를 표시할 div 입니다 -->
+
 					<div id="map"></div>
 
-					<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
 					<script>
 
 						var map_x = "38.0186242",
