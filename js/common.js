@@ -342,6 +342,65 @@ function list_view2(data, folder, insert) {
 }
 
 
+//
+
+function lst_view(folder, insert) {
+
+	$.ajax({
+		dataType: 'json',
+		url: '../../data/' + folder + '.json'
+		}).done(function(data) {
+
+		var output = '',
+			path = $('body').hasClass('home') ? '' : '../../',
+			uniq = {
+
+				'info'     : 'm',
+				'beauty'   : 'm_1',
+				'cafe'     : 'm_2',
+				'hospital' : 'm_3',
+				'hotel'    : 'm_4',
+				'funeral'  : 'm_5'
+
+			};
+
+			for (var i = 0; i < data.info.length; i++) {
+
+				output += ' <li data-filters=' + data.info[i].area + '>';
+				output += '		<a href=' + path + 'html/' + folder + '/' + data.info[i].num + '.html>';
+				output += '			<div class="thumb">';
+				output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + data.info[i].num + '.jpg)"></span>';
+				output += '			</div>';
+				output += '			<div class="cont">';
+				output += '				<p class="tit">' + data.info[i].tit + '</p>';
+
+				if (data.info[i].add) {
+
+					output += '			<p class="txt">' + data.info[i].area + ' ' + data.info[i].add + '</p>';
+				
+				}
+
+				output += '			</div>';
+				output += '		</a>';
+				output += '	</li>';
+
+			}
+
+			$('#' + insert).html(output);
+
+			}).fail(function(jqXHR, textStatus, errorThrown) {
+
+				console.log("fail: ", jqXHR);
+
+			}).always(function(data, textStatus, jqXHR) {
+
+				console.log("always: ", data);
+
+			});
+
+}
+
+
 // title
 
 function h_title(data) {

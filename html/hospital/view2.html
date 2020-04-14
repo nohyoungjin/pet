@@ -43,51 +43,6 @@
 
 					<ul id="latest" class="lst_view">
 
-						<script>
-
-						$.ajax({
-							url: "../../data/data.json",
-							dataType: "json"
-						}).done(function(data) {
-
-							var output = '',
-								path = $('body').hasClass('home') ? '' : '../../';
-
-							for (var i = 0; i < data.tours.length; i++) {
-
-								output += ' <li data-filters="' + data.tours[i].area + '">';
-								output += '		<a href=../../html/hospital/' + data.tours[i].num + '.html>';
-								output += '			<div class="thumb">';
-								output += '				<span style="background-image:url(' + path + 'img/thumb/hospital/m_3_' + data.tours[i].num + '.jpg)"></span>';
-								output += '			</div>';
-								output += '			<div class="cont">';
-								output += '				<p class="tit">' + data.tours[i].tit + '</p>';
-
-								if (data.tours[i].add) {
-
-									output += '			<p class="txt">' + data.tours[i].add + '</p>';
-								
-								}
-
-								output += '			</div>';
-								output += '		</a>';
-								output += '	</li>';
-
-							}
-
-							$("#latest").html(output);
-
-							}).fail(function(jqXHR, textStatus, errorThrown) {
-
-								console.log("fail: ", jqXHR);
-
-							}).always(function(data, textStatus, jqXHR) {
-
-								console.log("always: ", data);
-
-							});
-
-						</script>
 
 					</ul>
 				</div>
@@ -99,18 +54,11 @@
 
 						<script>
 
-						/* $(function() {
+						$(function() {
 
-							var data = [
+							lst_view('hospital', 'list');
 
-								{num : '2',   tit : '중앙동물메디컬센터',        area : '서울',      add : '강남구'},
-								{num : '1',   tit : '잠실 준 25시 동물병원',     area : '서울',      add : '송파구'},
-
-							];
-
-							list_view2(data, 'hospital', 'list');
-
-						}); */
+						});
 
 						</script>
 
