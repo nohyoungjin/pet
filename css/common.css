@@ -32,6 +32,9 @@
 .pet .sec_inner h2 {display:block;margin:5px 0 10px;font-size:21px;font-weight:500;line-height:27px;letter-spacing:-1.2px}
 .pet .sec_inner h3 {display:block;margin:10px 0;font-size:20px;font-weight:500;line-height:26px;letter-spacing:-1.2px}
 
+.pet .sec_inner p.key {font-size:14px;font-weight:300}
+#h_wrap p {font-size:14px;font-weight:300}
+
 .t_b {display:table}
 .t_c {display:table-cell}
 
@@ -195,22 +198,22 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 /* .pet.v2 */
 
 .intro_cont {padding:0 5px}
-.intro_cont p {margin:15px 0;line-height:22px}
+.intro_cont p {margin:15px 0;font-weight:300;line-height:22px}
 .intro_cont p.source {font-size:12px;color:rgb(153,153,153)}
 
 .intro_cont img {width:100%;height:auto;margin:10px 0}
 
-.intro_cont ul li {padding:2px 0;line-height:20px}
+.intro_cont ul li {padding:2px 0;font-weight:300;line-height:20px}
 
 .intro_cont .price {margin:30px 0 0}
 .intro_cont .price strong {display:block;margin:10px 0;font-size:20px;font-weight:normal;line-height:28px;letter-spacing:-1.2px}
 .intro_cont .price p {margin:10px 0}
-.intro_cont .price ul li {padding:2px 0;line-height:20px}
+.intro_cont .price ul li {padding:2px 0;font-weight:300;line-height:20px}
 
 .intro_cont .clock {margin:20px 0 0}
 .intro_cont .clock strong {display:block;margin:10px 0;font-size:20px;font-weight:normal;line-height:28px;letter-spacing:-1.2px}
 .intro_cont .clock p {margin:10px 0}
-.intro_cont .clock ul li {padding:2px 0;line-height:20px}
+.intro_cont .clock ul li {padding:2px 0;font-weight:300;line-height:20px}
 
 /* .pet.v3 */
 
@@ -222,7 +225,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 
 .pet.v3 .lst_info li .t_b {width:100%}
 .pet.v3 .lst_info li .t_c {width:20%}
-.pet.v3 .lst_info li .t_c + .t_c {width:80%;line-height:20px}
+.pet.v3 .lst_info li .t_c + .t_c {width:80%;font-weight:300;line-height:20px}
 
 .pet.v3 .lst_share {padding:30px 0 15px}
 .pet.v3 .lst_share:after {display:block;clear:both;content:''}
@@ -254,7 +257,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 /* */
 
 .btn_box {width:100%;text-align:center}
-.btn_box a {display:inline-block;width:100%;padding:13px 10px;border:1px solid #c4c4c4;font-size:15px;font-weight:400;color:#333;text-align:center;vertical-align:middle;letter-spacing:-0.5px;border-radius:5px}
+.btn_box a {display:inline-block;width:100%;padding:13px 10px;border:1px solid #c4c4c4;font-size:15px;font-weight:300;color:#333;text-align:center;vertical-align:middle;letter-spacing:-0.5px;border-radius:5px}
 
 /* footer */
 
