@@ -1,11 +1,5 @@
 {
   "tours": [
-    { "region": "usa",     "location": "이현준",    "details": "$1,899 for 7 nights" },
-    {
-      "region": "europe",  "location": "Paris, France",    "details": "$2,299 for 7 nights"
-    },
-    {
-      "region": "asia",    "location": "Tokyo, Japan",     "details": "$3,799 for 7 nights"
-    }
+    { "num" : "2",     "tit" : "중앙동물메디컬센터",  "area" : "서울",   "add" : "강남구" }
   ]
 }
