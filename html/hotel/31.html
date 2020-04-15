@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+	<script>
+
+		//
+
+		var lat = '34.9702169',
+			lng = '126.385697'
+
+		$(function() {
+
+			// title
+
+			var core = [{
+			
+				tit : '공항펜션', 
+				add : '전남 무안군'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('hotel', 31, 4);
+
+			// info
+
+			var data = [{
+			
+				add  : '전남 무안군 망운면 청운로 763', 
+				tel  : '010-6615-8996', 
+				ome  : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<div id="h_wrap"></div>
+
+					<script src="../../inc/slide.js"></script>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>무안 톱머리해수욕장 근처에 위치한 공항펜션입니다. <br>주변에 먹거리, 볼거리, 즐길거리가 풍부해서 행복한 여행이 되실거예요.~</h3>
+
+					<div class="intro_cont">
+						
+						<ul>
+							<li>픽업안내</li>
+							<li>픽업 가능-무안터미널,무안공항</li>
+							<li>사전예약 및 문의필수 (미예약시 이용불가)</li>
+						</ul>
+
+						<ul>
+							<li>바베큐</li>
+							<li>숯+그릴 이용: 그릴당 20,000원 / 숯 무한리필</li>
+							<li>현장결제</li>
+						</ul>
+
+						<ul>
+							<li>유아기준</li>
+							<li>영유아 기준인원 포함 / 최대인원 초과불가</li>
+							<li>8세 이상부터 추가요금 발생</li>
+							<li>현장결제</li>
+						</ul>
+
+						<p>인터넷/무료 wi-fi</p> 
+						
+						<ul>
+							<li>애견입실</li>
+							<li>애견동반을 원할경우 사전문의 및 상담필수</li>
+							<li>마리수제한없음 / 1마리당 10,000원 / 애견용품지참</li>
+							<li>입실가능 객실: 101호, 102호, 103호</li>
+							<li>현장결제</li>
+						</ul>
+
+						<!-- <div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li></li>
+							</ul>
+						</div> -->
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>입실 : 14:00</li>
+								<li>퇴실 : 11:00</li>
+								<li>22시 이후 체크인 시 사전문의 필수</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도 표시 div -->
+
+					<div id="map"></div>
+
+					<ul id="info" class="lst_info"></ul> 
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script>
+
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
+			level: 6 // 지도 확대 레벨
+		};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+	// 마커 표시 위치
+	var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커 생성
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커 지도 위에 표시
+	marker.setMap(map);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>

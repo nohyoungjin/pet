@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+	<script>
+
+		//
+
+		var lat = '37.8080348',
+			lng = '128.885708'
+
+		$(function() {
+
+			// title
+
+			var core = [{
+			
+				tit : '경포도도펜션', 
+				add : '강원 강릉시'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('hotel', 28, 4);
+
+			// info
+
+			var data = [{
+			
+				add  : '강원 강릉시 하남길 197-15', 
+				tel  : '010-5158-5833', 
+				ome  : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<div id="h_wrap"></div>
+
+					<script src="../../inc/slide.js"></script>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>2019년 1월 전객실 인테리어를 리모델링해서 새로 오픈하여 최상의 룸을 유지하고 있습니다. 애견동반가능한 룸까지 보유하여 최상의 서비스를 선물하겠습니다.</h3>
+
+					<div class="intro_cont">
+						
+						<p>*Special</p>
+
+						<ul>
+							<li>전객실 리모델링</li>
+							<li>- 2019년 1월 전객실 리모델링</li>
+							<li>- 모든 집기류 교체(티비,냉장고,침대,전자렌지,식기류,침구류)</li>
+						</ul>
+
+						<p>도도 정원</p>
+
+						<ul>
+							<li>- 넓은 잔디밭에서 아이들 또는 애견들과 즐거운 시간을 보내세요</li>
+						</ul>
+
+						<p>바베큐장 보유</p>
+
+						<ul>
+							<li>- 테라스에서 참숯을 이용한 바비큐를 만끽하세요.</li>
+						</ul>
+
+						<p>경포 해변 차량5분거리 위치</p>
+
+						<ul>
+							<li>- 펜션에서 경포해변까지 차량5분이면 충분합니다.</li>
+							<li>- 시원하게 펼쳐진 경포해변에서 잊지못할 추억을 만들어 보세요.</li>
+							<li>- 산책로도 준비되어 있습니다.</li>
+						</ul>
+
+						<p>반려견동반 가능</p>
+
+						<ul>
+							<li>- 소형견 1마리 10,000원(10kg 미만, 최대 2마리)</li>
+							<li>- 입실가능 객실: 전 객실</li>
+							<li>- 현장결제</li>
+						</ul>
+
+						<p>주차장 완비</p>
+
+						<ul>
+							<li>- 무료주차가 가능한 대형주차장이 준비되어 있습니다.</li>
+						</ul>
+
+						<p>강릉아산병원 차량 5분거리</p>
+
+						<ul>
+							<li>- 강릉에서 제일 큰 종합병원도 가까운곳에 위치하고 있습니다.</li>
+						</ul>
+
+						<p>경포해변 차량 5분거리</p>
+
+						<!-- <div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>/li>
+							</ul>
+						</div> -->
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>- 입실 : 15:00</li>
+								<li>- 퇴실 : 11:00</li>
+								<li>20시 이후 체크인 시 사전문의 필수</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도 표시 div -->
+
+					<div id="map"></div>
+
+					<ul id="info" class="lst_info"></ul> 
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script>
+
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
+			level: 6 // 지도 확대 레벨
+		};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+	// 마커 표시 위치
+	var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커 생성
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커 지도 위에 표시
+	marker.setMap(map);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>
