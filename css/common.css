@@ -62,7 +62,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .keyword {position:relative;text-align:left}
 .keyword ul:after {display:block;clear:both;content:''}
 .keyword li {float:left;width:25%;margin:2.5px 0 11px;padding:0 8px;text-align:center}
-.keyword li a {display:block;border:1px solid #ddd;border-radius:30px;padding: 6px 14px;font-size:14px;color:#666;letter-spacing:-0.01em;-webkit-transition: background .3s, border .3s;transition: background .3s, border .3s;}
+.keyword li a {display:block;border:1px solid #ddd;border-radius:30px;padding:6px 14px;font-size:14px;font-weight:300;color:#666;letter-spacing:-0.01em;-webkit-transition: background .3s, border .3s;transition: background .3s, border .3s;}
 
 .popup_close > span {display:block;overflow:hidden;position:relative;width:25px;height:25px;margin:0 auto;text-indent:-9999em}
 .popup_close > span:before,
@@ -200,13 +200,13 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 /* .pet.v2 */
 
 .intro_cont {padding:0 5px}
-.intro_cont p {margin:15px 0;font-weight:300;color:#000;line-height:22px}
+.intro_cont p {margin:15px 0;font-size:13.5px;font-weight:300;color:#000;line-height:22px}
 .intro_cont p.source {font-size:12px;color:rgb(153,153,153)}
 
 .intro_cont img {width:100%;height:auto;margin:10px 0}
 
 .intro_cont > ul {margin:15px 0}
-.intro_cont ul li {padding:2px 0;font-weight:300;color:#000;line-height:20px}
+.intro_cont ul li {padding:2px 0;font-size:13.5px;font-weight:300;color:#000;line-height:20px}
 
 .intro_cont .price {margin:30px 0 0}
 .intro_cont .price strong {display:block;margin:10px 0;font-size:20px;font-weight:normal;line-height:28px;letter-spacing:-1.2px}
@@ -260,7 +260,7 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 /* */
 
 .btn_box {width:100%;text-align:center}
-.btn_box a {display:inline-block;width:100%;padding:13px 10px;border:1px solid #c4c4c4;font-size:15px;font-weight:300;color:#333;text-align:center;vertical-align:middle;letter-spacing:-0.5px;border-radius:5px}
+.btn_box a {display:inline-block;width:100%;padding:12px 10px;border:1px solid #c4c4c4;font-size:14px;font-weight:300;color:#333;text-align:center;vertical-align:middle;letter-spacing:-0.5px;border-radius:5px}
 
 /* footer */
 
