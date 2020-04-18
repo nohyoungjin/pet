@@ -45,7 +45,7 @@ $(function() {
 					if ( toFilter == '전체' ) {
 						
 						$('.local a span').text(toFilter);
-						$('.lst_view li').removeClass('sort').removeClass('on').removeClass('off');
+						$('.lst_filter li').removeClass('sort').removeClass('on').removeClass('off');
 						
 						close_action();
 						
@@ -54,14 +54,14 @@ $(function() {
 					} else {
 
 						$('.local a span').text(toFilter);
-						$('.lst_view li').removeClass('on');
+						$('.lst_filter li').removeClass('on');
 						
 					}
 
-					$('.lst_view li').each(function(i, elem) {
+					$('.lst_filter li').each(function(i, elem) {
 
 						var filters = $(this).data('filters');
-						$('.lst_view li').addClass('sort').addClass('off');
+						$('.lst_filter li').addClass('sort').addClass('off');
 
 						if ( filters == toFilter ) {
 							$(this).addClass('on');

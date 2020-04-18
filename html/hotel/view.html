@@ -38,84 +38,84 @@
 				</div>
 
 				<div class="sec_inner">
+
 					<h2>같이 놀러가자!</h2>
 					<p class="key">펜션/호텔</p>
 
-					<ul id="latest" class="lst_view">
+					<ul id="latest" class="lst_view lst_filter"></ul>
 
-						<script>
+					<script>
 
-						$(function() {
+					$(function() {
 
-							var data = [
+						var data = [
 
-								{num : '33',  tit : '그린비팬션',              area : '경기',    add : '가평군'},
-								{num : '32',  tit : '귀농멍위키',              area : '경북',    add : '예천군'},
-								{num : '31',  tit : '공항펜션',                area : '전남',    add : '무안군'},
-								{num : '30',  tit : '곰나루펜션',              area : '충남',    add : '공주시'},
+							{num : '33',  tit : '그린비팬션',              area : '경기',    add : '가평군'},
+							{num : '32',  tit : '귀농멍위키',              area : '경북',    add : '예천군'},
+							{num : '31',  tit : '공항펜션',                area : '전남',    add : '무안군'},
+							{num : '30',  tit : '곰나루펜션',              area : '충남',    add : '공주시'},
 
-								{num : '29',  tit : '골드독펜션',              area : '충남',    add : '태안군'},
-								{num : '28',  tit : '경포도도펜션',            area : '강원',    add : '강릉시'},
-								{num : '27',  tit : '힐스카이',                area : '경북',    add : '문경시'},
-								{num : '26',  tit : '하늘창펜션',              area : '충남',    add : '논산시'},
+							{num : '29',  tit : '골드독펜션',              area : '충남',    add : '태안군'},
+							{num : '28',  tit : '경포도도펜션',            area : '강원',    add : '강릉시'},
+							{num : '27',  tit : '힐스카이',                area : '경북',    add : '문경시'},
+							{num : '26',  tit : '하늘창펜션',              area : '충남',    add : '논산시'},
 
-							];
+						];
 
-							list_view2(data, 'hotel', 'latest');
+						list_view2(data, 'hotel', 'latest');
 
-						});
+					});
 
-						</script>
+					</script>
 
-					</ul>
 				</div>
 
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul id="list" class="lst_view randam">
 
-						<script>
+					<ul id="list" class="lst_view lst_filter randam"></ul>
 
-						$(function() {
+					<script>
 
-							var data = [
+					$(function() {
 
-								{num : '25',  tit : '프로방스펜션',            area : '강원',    add : '정선군'},
-								{num : '24',  tit : '파인앤애플',              area : '충남',    add : '태안군'},
-								{num : '23',  tit : '투게독펜션',              area : '경남',    add : '남해군'},
-								{num : '22',  tit : '토리푸하우스',            area : '전북',    add : '완주군'},
-								{num : '21',  tit : '사랑가 펜션',             area : '경남',    add : '남해군'},
-								{num : '20',  tit : '코코애견펜션',            area : '강원',    add : '홍천군'},
-								{num : '19',  tit : '유니애견풀빌라',          area : '경북',    add : '포항시'},
-								{num : '18',  tit : '엘까미노',                area : '강원',    add : '강릉시'},
-								{num : '17',  tit : '아름다운동행',            area : '전남',    add : '여수시'},
-								{num : '16',  tit : '개편한세상',              area : '경기',    add : '양평군'},
-								{num : '15',  tit : '멍스테이',                area : '강원',    add : '고성군'},
-								{num : '14',  tit : '랑랑&랑개',               area : '전북',    add : '전주시'},
-								{num : '13',  tit : '도기더스테이',            area : '충남',    add : '홍성군'},
-								{num : '12',  tit : '도그락 애견펜션',         area : '경북',    add : '안동시'},
-								{num : '11',  tit : '더블스테이 또또멍 펜션',  area : '경기',    add : '연천군'},
-								{num : '10',  tit : '남쪽나라 애견펜션',       area : '전남',    add : '보성군'},
-								{num : '9',   tit : '꼬로몽 애견펜션',         area : '강원',    add : '양양군'},
-								{num : '8',   tit : '까망베르&풀빌라',         area : '경기',    add : '가평군'},
-								{num : '7',   tit : '그루브 펜션',             area : '부산',    add : '기장군'},
-								{num : '6',   tit : '바모스 애견펜션',         area : '제주',    add : '제주시'},
-								{num : '5',   tit : '개리비안베이',            area : '인천',    add : '강화군'},
-								{num : '4',   tit : '하루인애견펜션',          area : '경남',    add : '남해군'},
-								{num : '3',   tit : '잘해줄게',                area : '인천',    add : '강화군'},
-								{num : '2',   tit : '아띠랑스 스파펜션',       area : '강원',    add : '강릉시'},
-								{num : '1',   tit : '달빛애견글램핑',          area : '경기',    add : '포천시'},
+						var data = [
 
-							];
+							{num : '25',  tit : '프로방스펜션',            area : '강원',    add : '정선군'},
+							{num : '24',  tit : '파인앤애플',              area : '충남',    add : '태안군'},
+							{num : '23',  tit : '투게독펜션',              area : '경남',    add : '남해군'},
+							{num : '22',  tit : '토리푸하우스',            area : '전북',    add : '완주군'},
+							{num : '21',  tit : '사랑가 펜션',             area : '경남',    add : '남해군'},
+							{num : '20',  tit : '코코애견펜션',            area : '강원',    add : '홍천군'},
+							{num : '19',  tit : '유니애견풀빌라',          area : '경북',    add : '포항시'},
+							{num : '18',  tit : '엘까미노',                area : '강원',    add : '강릉시'},
+							{num : '17',  tit : '아름다운동행',            area : '전남',    add : '여수시'},
+							{num : '16',  tit : '개편한세상',              area : '경기',    add : '양평군'},
+							{num : '15',  tit : '멍스테이',                area : '강원',    add : '고성군'},
+							{num : '14',  tit : '랑랑&랑개',               area : '전북',    add : '전주시'},
+							{num : '13',  tit : '도기더스테이',            area : '충남',    add : '홍성군'},
+							{num : '12',  tit : '도그락 애견펜션',         area : '경북',    add : '안동시'},
+							{num : '11',  tit : '더블스테이 또또멍 펜션',  area : '경기',    add : '연천군'},
+							{num : '10',  tit : '남쪽나라 애견펜션',       area : '전남',    add : '보성군'},
+							{num : '9',   tit : '꼬로몽 애견펜션',         area : '강원',    add : '양양군'},
+							{num : '8',   tit : '까망베르&풀빌라',         area : '경기',    add : '가평군'},
+							{num : '7',   tit : '그루브 펜션',             area : '부산',    add : '기장군'},
+							{num : '6',   tit : '바모스 애견펜션',         area : '제주',    add : '제주시'},
+							{num : '5',   tit : '개리비안베이',            area : '인천',    add : '강화군'},
+							{num : '4',   tit : '하루인애견펜션',          area : '경남',    add : '남해군'},
+							{num : '3',   tit : '잘해줄게',                area : '인천',    add : '강화군'},
+							{num : '2',   tit : '아띠랑스 스파펜션',       area : '강원',    add : '강릉시'},
+							{num : '1',   tit : '달빛애견글램핑',          area : '경기',    add : '포천시'},
 
-							list_view2(data, 'hotel', 'list');
+						];
 
-						});
+						list_view2(data, 'hotel', 'list');
 
-						</script>
+					});
 
-					</ul>
+					</script>
+
 				</div>
 
 			</section>

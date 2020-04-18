@@ -38,61 +38,61 @@
 				</div>
 
 				<div class="sec_inner">
+
 					<h2>건강한 우리 아기를 위해!</h2>
 					<p class="key">병원</p>
 
-					<ul id="latest" class="lst_view">
+					<ul id="latest" class="lst_view lst_filter"></ul>
 
-						<script>
+					<script>
 
-						$(function() {
+					$(function() {
 
-							var data = [
+						var data = [
 
-								{num : '10',   tit : '',           area : '',      add : ''},
-								{num : '9',    tit : '',           area : '',      add : ''},
-								{num : '8',    tit : '',           area : '',      add : ''},
-								{num : '7',    tit : '',           area : '',      add : ''},
+							{num : '10',   tit : '',           area : '',      add : ''},
+							{num : '9',    tit : '',           area : '',      add : ''},
+							{num : '8',    tit : '',           area : '',      add : ''},
+							{num : '7',    tit : '',           area : '',      add : ''},
 
-								{num : '6',    tit : 'DR.K 종합동물병원',      area : '충남',      add : '아산시'},
-								{num : '5',    tit : '와우동물병원',           area : '전북',      add : '익산시'},
-								{num : '4',    tit : '탑스동물메디컬센터',     area : '대구',      add : '달서구'},
-								{num : '3',    tit : '청주온누리동물병원',     area : '충북',      add : '청주시'},
+							{num : '6',    tit : 'DR.K 종합동물병원',      area : '충남',      add : '아산시'},
+							{num : '5',    tit : '와우동물병원',           area : '전북',      add : '익산시'},
+							{num : '4',    tit : '탑스동물메디컬센터',     area : '대구',      add : '달서구'},
+							{num : '3',    tit : '청주온누리동물병원',     area : '충북',      add : '청주시'},
 
-							];
+						];
 
-							list_view2(data, 'hospital', 'latest');
+						list_view2(data, 'hospital', 'latest');
 
-						});
+					});
 
-						</script>
+					</script>
 
-					</ul>
 				</div>
 
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul id="list" class="lst_view randam">
 
-						<script>
+					<ul id="list" class="lst_view lst_filter randam"></ul>
 
-						$(function() {
+					<script>
 
-							var data = [
+					$(function() {
 
-								{num : '2',   tit : '중앙동물메디컬센터',        area : '서울',      add : '강남구'},
-								{num : '1',   tit : '잠실 준 25시 동물병원',     area : '서울',      add : '송파구'},
+						var data = [
 
-							];
+							{num : '2',   tit : '중앙동물메디컬센터',        area : '서울',      add : '강남구'},
+							{num : '1',   tit : '잠실 준 25시 동물병원',     area : '서울',      add : '송파구'},
 
-							list_view2(data, 'hospital', 'list');
+						];
 
-						});
+						list_view2(data, 'hospital', 'list');
 
-						</script>
+					});
 
-					</ul>
+					</script>
+
 				</div>
 
 			</section>
