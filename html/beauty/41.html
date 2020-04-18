@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<title>KOOZPET</title>
+	<link rel="stylesheet" href="../../css/font.css">
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="../../css/swiper.min.css">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b35f37c42ba04cf0f4e445f457e52190"></script>
+	<script>
+
+		//
+
+		var lat = '35.2364692',
+			lng = '128.667467'
+
+		$(function() {
+
+			// title
+
+			var core = [{
+			
+				tit : '카밍독', 
+				add : '경남 창원시'
+			
+			}];
+
+			h_title(core);
+
+			// slider
+
+			swiper_slide('beauty', 41, 4);
+
+			// info
+
+			var data = [{
+			
+				add : '경남 창원시 성산구 원이대로 449', 
+				tel : '010-8893-7882', 
+				ome : ''
+			
+			}];
+
+			list_info(data);
+
+		});
+
+	</script>
+</head>
+
+<body class="page">
+
+<div id="wrap">
+
+	<!-- header -->
+
+	<script src="../../inc/header.js"></script>
+
+	<!-- //header -->
+
+	<!-- container -->
+	<div id="container">
+		
+		<!-- content -->
+		<div id="content">
+
+			<!--  -->
+			
+			<section class="pet v1">
+				<div class="sec_inner">
+
+					<div id="h_wrap"></div>
+
+					<script src="../../inc/slide.js"></script>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v2">
+				<div class="sec_inner">
+				
+					<h3>혼내지않는 강아지 방문훈련 카밍독입니다. 방문훈련을 결정하기 전 연락주시면 친절하게 상담 도와드리겠습니다.</h3>
+
+					<div class="intro_cont">
+
+						<p>주요교육내용은 아래와 같습니다.</p>
+
+						<ul>
+							<li>- 분리불안과 짖음</li>
+							<li>- 산책과 배변문제</li>
+							<li>- 다른 강아지 또는 사람에 대한 공격성</li>
+							<li>- 6개월 미만의 강아지를 위한 터치 트레이닝</li>
+							<li>- 현대사회에서 꼭 필요한 예절교육과 규칙</li>
+							<li>- 유기견, 노견, 다견가정등 모든 분야의 교육</li>
+							<li>- 다른 강아지에 대한 공격성 또는 사람에 대한 공격성</li>
+							<li>- 산책과 배변 문제</li>
+							<li>- 마법같은 사회와 시기를 보내고 있는 6개월 미만의 강아지를 위한 터치 트레이닝</li>
+							<li>- 지금도 충분히 잘 키우고 있지만, 조금 더 내 강아지를 위하는 것이 무엇일지 고민하는 분</li>
+							<li>- 복잡한 도시에서 공존하기 위해 강아지가 지켜야 할 규칙, 예절교육</li>
+						</ul>
+
+						<div class="price">
+							<strong>[가격정보]</strong>
+							<ul>
+								<li>2회 방문훈련 패키지 ------ 변동가격(업주문의)</li>
+							</ul>
+						</div>
+						
+						<div class="clock">
+							<strong>[이용시간]</strong>
+							<ul>
+								<li>매일 10:00 ~ 22:00</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!--  -->
+
+			<section class="pet v3">
+				<div class="sec_inner">
+				
+					<h3>기본정보</h3>
+
+					<!-- 지도 표시 div -->
+
+					<div id="map"></div>
+
+					<ul id="info" class="lst_info"></ul> 
+
+				</div>
+			</section>
+
+		</div>
+		<!-- //content -->
+
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+
+	<script src="../../inc/footer.js"></script>
+
+	<!-- //footer -->
+
+</div>
+
+<script>
+
+	var mapContainer = document.getElementById('map'), // 지도 표시 div 
+		mapOption = { 
+			center: new kakao.maps.LatLng(lat, lng), // 지도 중심좌표
+			level: 6 // 지도 확대 레벨
+		};
+
+	var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+
+	// 마커 표시 위치
+	var markerPosition  = new kakao.maps.LatLng(lat, lng); 
+
+	// 마커 생성
+	var marker = new kakao.maps.Marker({
+		position: markerPosition
+	});
+
+	// 마커 지도 위에 표시
+	marker.setMap(map);
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script src="../../js/common.js"></script>
+
+</body> 
+</html>
