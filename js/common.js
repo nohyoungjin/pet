@@ -7,10 +7,10 @@ $(function() {
 	// swiper_list();
 	// scroll_move();
 
-	list_random();
-
 	swiper_view();
 	youtube();
+
+	$('ul.randam').randomize('li');
 
 
 	// area search
@@ -148,30 +148,6 @@ $(function() {
 				}
 
 			}
-
-		});
-
-	}
-
-
-	// random output
-
-	function list_random() {
-
-		var len = $('ul.randam > li').length;
-
-		$(window).on('load', function() {
-
-			$('ul.randam').each(function() {
-				var ul = $(this),
-					liArr = ul.children('li');
-
-				liArr.sort(function() {
-					var temp = parseInt(Math.random() * len),
-						temp1 = parseInt(Math.random() * len);
-					return temp1 - temp;
-				}).appendTo(ul);
-			});
 
 		});
 
@@ -535,3 +511,19 @@ function list_info(data) {
 	});
 
 }
+
+
+// random output
+
+$.fn.randomize = function(selector) {
+    var $elems = selector ? $(this).find(selector) : $(this).children(),
+        $parents = $elems.parent();
+ 
+    $parents.each(function() {
+        $(this).children(selector).sort(function(){
+            return Math.round(Math.random()) - 0.5;
+        }).detach().appendTo(this);
+    });
+ 
+    return this;
+};
