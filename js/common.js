@@ -293,8 +293,8 @@ function list_view2(data, folder, insert) {
 
 			};
 
-			output += '	<li data-filters=' + item.area + '>';
-			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
+			output += '	<li id=' + item.num + ' data-filters=' + item.area + '>';
+			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
 			output += '			<div class="thumb">';
 			output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
 			output += '			</div>';
@@ -527,3 +527,28 @@ $.fn.randomize = function(selector) {
  
     return this;
 };
+
+
+// get parameter
+
+var getParameter = function(param) { 
+	
+	var returnValue, 
+		url = location.href,
+		parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&'); 
+	
+	for (var i = 0; i < parameters.length; i++) { 
+		
+		var varName = parameters[i].split('=')[0]; 
+		
+		if (varName.toUpperCase() == param.toUpperCase()) { 
+			
+			returnValue = parameters[i].split('=')[1]; 
+			return decodeURIComponent(returnValue); 
+		
+		} 
+	} 
+
+};
+
+
