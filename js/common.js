@@ -225,50 +225,6 @@ $(function() {
 //
 
 function list_view(data, folder, insert) {
-	
-	$.each(data, function(index, item) {
-
-		var output = '',
-			path = $('body').hasClass('home') ? '' : '../../',
-			uniq = {
-
-				'info'     : 'm',
-				'beauty'   : 'm_1',
-				'cafe'     : 'm_2',
-				'hospital' : 'm_3',
-				'hotel'    : 'm_4',
-				'funeral'  : 'm_5'
-
-			};
-
-			output += '	<li data-filters=' + item.area + '>';
-			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html">';
-			output += '			<div class="thumb">';
-			output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
-			output += '			</div>';
-			output += '			<div class="cont">';
-			output += '				<p class="tit">' + item.tit + '</p>';
-
-			if (item.add) {
-
-				output += '			<p class="txt">' + item.add + '</p>';
-			
-			}
-
-			output += '			</div>';
-			output += '		</a>';
-			output += '	</li>';
-
-			document.getElementById(insert).innerHTML += output;
-
-	});
-
-}
-
-
-//
-
-function list_view2(data, folder, insert) {
 
 	// 위부터 4개 Output Hold
 	
@@ -293,7 +249,12 @@ function list_view2(data, folder, insert) {
 
 			};
 
-			output += '	<li id=' + item.num + ' data-filters=' + item.area + '>';
+			if (item.area) {
+				output += '	<li id=' + item.num + ' data-filters=' + item.area + '>';
+			} else {
+				output += '	<li id=' + item.num + '>';
+			}
+
 			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
 			output += '			<div class="thumb">';
 			output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
@@ -302,9 +263,7 @@ function list_view2(data, folder, insert) {
 			output += '				<p class="tit">' + item.tit + '</p>';
 
 			if (item.add) {
-
 				output += '			<p class="txt">' + item.area + ' ' + item.add + '</p>';
-			
 			}
 
 			output += '			</div>';
