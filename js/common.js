@@ -252,7 +252,7 @@ function list_view(data, folder, insert) {
 			if (item.area) {
 				output += '	<li id=' + item.num + ' data-filters=' + item.area + '>';
 			} else {
-				output += '	<li id=' + item.num + '>';
+				output += '	<li id=' + item.num + ' data-filters=' + item.ani + '>';
 			}
 
 			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';

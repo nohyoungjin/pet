@@ -32,119 +32,99 @@
 			<section class="pet l1">
 
 				<div class="sec_inner">
-					<div class="local">
-						<a href="javascript:">
-							전체 
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 16.172l5.364-5.364 1.414 1.414L12 20l-7.778-7.778 1.414-1.414L11 16.172V4h2v12.172z"/></svg>
-						</a>
-					</div>
 
-					<!-- local -->
+					<script src="../../inc/ani.js"></script>
 
-					<!-- <div id="popup" class="popup">
-						<div class="popup_inner">
-							<div class="keyword">
-								<ul>
-									<li><a href="/?s=1">#전체</a></li>
-									<li><a href="/?s=2">#서울</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<button id="popup_close" class="popup_close">
-							<span>팝업 닫기</span>
-						</button>
-					</div> -->
 				</div>
 
 				<div class="sec_inner">
+
 					<h2>반려동물의 정보콘텐츠</h2>
 
-					<ul id="latest" class="lst_view s2">
+					<ul id="latest" class="lst_view lst_filter s2"></ul>
 
-						<script>
+					<script>
 
-						$(function() {
+					$(function() {
 
-							var data = [
+						var data = [
 
-								{num : '28',   tit : ''},
-						        {num : '27',   tit : ''},
-						        {num : '26',   tit : ''},
-							    {num : '25',   tit : ''},
+							{num : '28',  ani : '',  tit : ''},
+							{num : '27',  ani : '',  tit : ''},
+							{num : '26',  ani : '',  tit : ''},
+							{num : '25',  ani : '',  tit : ''},
 
-								// {num : '38',   tit : '고양이가 스트레스받을 때 보이는 행동!'},
-								// {num : '37',   tit : '아우우-! 강아지가 하울링 하는 이유!'},
-								// {num : '36',   tit : '누가 제일 똑똑할까? 동물계의 아인슈타인!'},
-								// {num : '35',   tit : '관상용 새우? 새우도 키우는 시대! 종류를 알아보자!'},
-								// {num : '34',   tit : '고양이 모래, 어떤 것으로 준비하면 될까요?'},
-								// {num : '33',   tit : '강아지와 고양이 같이 키울 수 있나요?'},
+							// {num : '38',  ani : '고양이',   tit : '고양이가 스트레스받을 때 보이는 행동!'},
+							// {num : '37',  ani : '강아지',   tit : '아우우-! 강아지가 하울링 하는 이유!'},
+							// {num : '36',  ani : '물고기',   tit : '누가 제일 똑똑할까? 동물계의 아인슈타인!'},
+							// {num : '35',  ani : '물고기',   tit : '관상용 새우? 새우도 키우는 시대! 종류를 알아보자!'},
+							// {num : '34',  ani : '고양이',   tit : '고양이 모래, 어떤 것으로 준비하면 될까요?'},
+							// {num : '33',  ani : '강아지',   tit : '강아지와 고양이 같이 키울 수 있나요?'},
 
-								{num : '32',   tit : '가정에서 기르는 미니돼지! 종류에 대해 알아봐요.'},
-								{num : '31',   tit : '열대어 키우기, 초보자에게 쉬운 구피! 어떻게 키우면 될까요?'},
-								{num : '30',   tit : '잠만 자는 고양이, 수면 시간 왜 이렇게 긴 걸까요'},
-								{num : '29',   tit : '반려동물을 키우면 좋은 이유'},
-								
-							];
+							{num : '32',  ani : '돼지',       tit : '가정에서 기르는 미니돼지! 종류에 대해 알아봐요.'},
+							{num : '31',  ani : '열대어',     tit : '열대어 키우기, 초보자에게 쉬운 구피! 어떻게 키우면 될까요?'},
+							{num : '30',  ani : '고양이',     tit : '잠만 자는 고양이, 수면 시간 왜 이렇게 긴 걸까요'},
+							{num : '29',  ani : '반려동물',   tit : '반려동물을 키우면 좋은 이유'},
+							
+						];
 
-							list_view(data, 'info', 'latest');
+						list_view(data, 'info', 'latest');
 
-						});
+					});
 
-						</script>
+					</script>
 
-					</ul>
 				</div>
 
 				<div class="line">&nbsp;</div>
 
 				<div class="sec_inner">
-					<ul id="list" class="lst_view s2 randam">
 
-						<script>
+					<ul id="list" class="lst_view lst_filter s2 randam"></ul>
 
-						$(function() {
+					<script>
 
-							var data = [
+					$(function() {
 
-								{num : '28',   tit : '강아지도 수혈하는 시대! 혈액형이 있을까?'},
-								{num : '27',   tit : '다람쥐를 반려동물로 키울 수 있을까?'},
-								{num : '26',   tit : '고양이 스크래쳐 어떤 기능을 하는 걸까?'},
-								{num : '25',   tit : '반려동물로 거북이를 선택했다면, 주의해야 할 점!'},
-								{num : '24',   tit : '강아지 사회화 꼭 필요해요!'},
-								{num : '23',   tit : '이색 반려동물 도마뱀, 대표적인 종류를 알아봐요!'},
-								{num : '22',   tit : '고양이가 좋아하는 소리! 집사님들 주목!'},
-								{num : '21',   tit : '이색 반려동물, 달팽이에 대해 알아봐요!'}, 
-								{num : '20',   tit : '강아지가 코를 골아요! 이유가 뭘까요?'},
-								{num : '19',   tit : '페럿, 키우기 전 알아야 할 사항!'},
-								{num : '18',   tit : '말캉말캉 귀여운 고양이 젤리, 발바닥의 비밀!'},
-								{num : '17',   tit : '고양이가 배를 보일 때!'},
-								{num : '16',   tit : '강아지 심장사상충! 증상부터 예방법까지!'},
-								{num : '15',   tit : '초보자도 쉽게 키울 수 있는 열대어 종류!'},
-								{num : '14',   tit : '도마뱀 꼬리가 잘려도 괜찮을까?'},
-								{num : '13',   tit : '강아지 발톱 자주 잘라야 할까요?'},
-								{num : '12',   tit : '앵무새의 수명은 얼마나 될까요?'},
-								{num : '11',   tit : '강아지도 우울증에 걸릴까요?'},
-								{num : '10',   tit : '반려동물로 돼지를? 키울 수 있을까?'}, 
-								{num : '9',    tit : '고슴도치를 키우기 위한 기본적인 정보'},
-								{num : '8',    tit : '고양이가 높은 곳을 좋아하는 이유!'},
-								{num : '7',    tit : '돌고래의 지능! 어느 정도일까요?'},
-								{num : '6',    tit : '고양이가 좋아하는 행동 5가지'},
-								{num : '5',    tit : '우리 집 강아지 왜 핥는 걸까요?'},
-								{num : '4',    tit : '강아지가 좋아하는 마사지, 부위와 방법을 알아봐요!'},
-								{num : '3',    tit : '고양이가 캣닙을 사랑하는 이유!'},
-								{num : '2',    tit : '반려견을 지켜요! 꼭 피해야 할 음식 6가지!'},
-								{num : '1',    tit : '우리 집 반려견도 맛을 느낄까요? 맛을 아는지 궁금해요!'},
+						var data = [
 
-							];
+							{num : '28',  ani : '강아지',    tit : '강아지도 수혈하는 시대! 혈액형이 있을까?'},
+							{num : '27',  ani : '다람쥐',    tit : '다람쥐를 반려동물로 키울 수 있을까?'},
+							{num : '26',  ani : '고양이',    tit : '고양이 스크래쳐 어떤 기능을 하는 걸까?'},
+							{num : '25',  ani : '거북이',    tit : '반려동물로 거북이를 선택했다면, 주의해야 할 점!'},
+							{num : '24',  ani : '강아지',    tit : '강아지 사회화 꼭 필요해요!'},
+							{num : '23',  ani : '도마뱀',    tit : '이색 반려동물 도마뱀, 대표적인 종류를 알아봐요!'},
+							{num : '22',  ani : '고양이',    tit : '고양이가 좋아하는 소리! 집사님들 주목!'},
+							{num : '21',  ani : '달팽이',    tit : '이색 반려동물, 달팽이에 대해 알아봐요!'}, 
+							{num : '20',  ani : '강아지',    tit : '강아지가 코를 골아요! 이유가 뭘까요?'},
+							{num : '19',  ani : '페럿',      tit : '페럿, 키우기 전 알아야 할 사항!'},
+							{num : '18',  ani : '고양이',    tit : '말캉말캉 귀여운 고양이 젤리, 발바닥의 비밀!'},
+							{num : '17',  ani : '고양이',    tit : '고양이가 배를 보일 때!'},
+							{num : '16',  ani : '강아지',    tit : '강아지 심장사상충! 증상부터 예방법까지!'},
+							{num : '15',  ani : '열대어',    tit : '초보자도 쉽게 키울 수 있는 열대어 종류!'},
+							{num : '14',  ani : '도마뱀',    tit : '도마뱀 꼬리가 잘려도 괜찮을까?'},
+							{num : '13',  ani : '강아지',    tit : '강아지 발톱 자주 잘라야 할까요?'},
+							{num : '12',  ani : '앵무새',    tit : '앵무새의 수명은 얼마나 될까요?'},
+							{num : '11',  ani : '강아지',    tit : '강아지도 우울증에 걸릴까요?'},
+							{num : '10',  ani : '돼지',      tit : '반려동물로 돼지를? 키울 수 있을까?'}, 
+							{num : '9',   ani : '고슴도치',  tit : '고슴도치를 키우기 위한 기본적인 정보'},
+							{num : '8',   ani : '고양이',    tit : '고양이가 높은 곳을 좋아하는 이유!'},
+							{num : '7',   ani : '돌고래',    tit : '돌고래의 지능! 어느 정도일까요?'},
+							{num : '6',   ani : '고양이',    tit : '고양이가 좋아하는 행동 5가지'},
+							{num : '5',   ani : '강아지',    tit : '우리 집 강아지 왜 핥는 걸까요?'},
+							{num : '4',   ani : '강아지',    tit : '강아지가 좋아하는 마사지, 부위와 방법을 알아봐요!'},
+							{num : '3',   ani : '고양이',    tit : '고양이가 캣닙을 사랑하는 이유!'},
+							{num : '2',   ani : '반려동물',  tit : '반려견을 지켜요! 꼭 피해야 할 음식 6가지!'},
+							{num : '1',   ani : '반려동물',  tit : '우리 집 반려견도 맛을 느낄까요? 맛을 아는지 궁금해요!'},
 
-							list_view(data, 'info', 'list');
+						];
 
-						});
+						list_view(data, 'info', 'list');
 
-						</script>
+					});
 
-					</ul>
+					</script>
+
 				</div>
 
 			</section>
@@ -163,7 +143,7 @@
 
 </div>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 <script src="../../js/common.js"></script>
 
 </body> 
