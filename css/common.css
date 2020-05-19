@@ -62,7 +62,9 @@ body._open .popup_close:focus {outline:-webkit-focus-ring-color auto 5px}
 .keyword {position:relative;text-align:left}
 .keyword ul:after {display:block;clear:both;content:''}
 .keyword li {float:left;width:25%;margin:2.5px 0 11px;padding:0 8px;text-align:center}
-.keyword li a {display:block;border:1px solid #ddd;border-radius:30px;padding:6px 14px;font-size:14px;font-weight:300;color:#666;letter-spacing:-0.01em;-webkit-transition: background .3s, border .3s;transition: background .3s, border .3s;}
+.keyword li a {display:block;border:1px solid #ddd;border-radius:30px;padding:6px 14px;font-size:14px;font-weight:300;color:#666;letter-spacing:-0.01em;-webkit-transition:background .3s, border .3s;transition:background .3s, border .3s;}
+
+.keyword.k2 li {width:auto}
 
 .popup_close > span {display:block;overflow:hidden;position:relative;width:25px;height:25px;margin:0 auto;text-indent:-9999em}
 .popup_close > span:before,
