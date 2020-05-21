@@ -10,7 +10,7 @@ $(function() {
 	swiper_view();
 	youtube();
 
-	$('ul.randam').randomize('li');
+	// $('ul.randam').randomize('li');
 
 
 	// area search
@@ -270,7 +270,8 @@ function list_view(data, folder, insert) {
 			output += '		</a>';
 			output += '	</li>';
 
-			document.getElementById(insert).innerHTML += output;
+			// document.getElementById(insert).innerHTML += output;
+			$("#"+insert).append(output);
 
 	});
 
@@ -485,7 +486,7 @@ $.fn.randomize = function(selector) {
     });
  
     return this;
-};
+}; 
 
 
 // get parameter
