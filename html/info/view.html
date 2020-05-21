@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../../css/font.css">
 	<link rel="stylesheet" href="../../css/reset.css">
 	<link rel="stylesheet" href="../../css/common.css">
-	<script src="https://nohyoungjin.github.io/plasma/js/jquery-3.4.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 </head>
 
 <body class="page"> 
@@ -134,20 +134,17 @@
 						$('ul.randam').randomize('li');
 
 
-						function getUrlParams() {
-							var params = {};
-							window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
-							return params;
-						}
+						// alert( getParameter('id') );
 
-						oParams = getUrlParams();
+						/* $('html, body').animate({
+							scrollTop: $('#' + getParameter('id')).offset().top
+						}, 'slow'); */
 
-						// alert('#' + oParams.id);
 
-						$('html, body').animate({
-							scrollTop: $('#' + oParams.id).offset().top
-						}, 'slow');
+						//
 
+						$(document).scrollTop( $('#' + getParameter('id')).offset().top );  
+						
 					});
 
 					</script>
