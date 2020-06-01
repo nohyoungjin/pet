@@ -233,6 +233,7 @@ function list_view(data, folder, insert) {
 	}
 
 	var output = '',
+		fragment = document.createDocumentFragment(),
 		path = $('body').hasClass('home') ? '' : '../../',
 		uniq = {
 
@@ -270,8 +271,55 @@ function list_view(data, folder, insert) {
 
 	});
 
-	// document.getElementById(insert).innerHTML += output;
-	$("#"+insert).append(output);
+	document.getElementById(insert).innerHTML += output;
+	// $("#"+insert).append(output);
+
+}
+
+
+//
+
+function list_view2(data, folder, insert) {
+
+	// 위부터 4개 Output Hold
+	
+	if ( insert == 'latest' ) {
+		
+		data.splice( -8, 4 );
+
+	}
+
+	var output = '',
+		fragment = document.createDocumentFragment(),
+		path = $('body').hasClass('home') ? '' : '../../',
+		uniq = {
+
+			'info'     : 'm',
+			'beauty'   : 'm_1',
+			'cafe'     : 'm_2',
+			'hospital' : 'm_3',
+			'hotel'    : 'm_4',
+			'funeral'  : 'm_5'
+
+		};
+
+	data.forEach(function(item, index) {
+
+		var li = document.createElement('li');
+
+		li.classList.add('item');
+
+		li.innerHTML += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
+		li.innerHTML += '			<div id="thumb" class="thumb">';
+		li.innerHTML += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
+		li.innerHTML += '			</div>';
+		li.innerHTML += '		</a>';
+
+		fragment.appendChild(li);
+
+	});
+
+	document.getElementById(insert).appendChild(fragment.cloneNode(true));
 
 }
 
