@@ -10,8 +10,6 @@ $(function() {
 	swiper_view();
 	youtube();
 
-	// $('ul.randam').randomize('li');
-
 
 	// area search
 
@@ -33,8 +31,8 @@ $(function() {
 				$body.addClass('_open');
 				_open = false;
 
-				new TweenLite.fromTo($popup, .5, {y: '-100%'}, {y: '0%', ease: Power4.easeOut});
-				new TweenLite.fromTo($close_btn, .2, {autoAlpha: 0}, {autoAlpha: 1, ease: Power0.easeNone,delay: .1});
+				TweenLite.fromTo($popup, .5, {y: '-100%'}, {y: '0%', ease: Power4.easeOut});
+				TweenLite.fromTo($close_btn, .2, {autoAlpha: 0}, {autoAlpha: 1, ease: Power0.easeNone,delay: .1});
 
 				//
 
@@ -94,7 +92,7 @@ $(function() {
 
 		function close_action() {
 
-			new TweenLite.to($popup, .4, {
+			TweenLite.to($popup, .4, {
 				y: '-100%',
 				ease: Power4.easeOut,
 				onComplete: function() {
@@ -234,46 +232,46 @@ function list_view(data, folder, insert) {
 
 	}
 
-	$.each(data, function(index, item) {
+	var output = '',
+		path = $('body').hasClass('home') ? '' : '../../',
+		uniq = {
 
-		var output = '',
-			path = $('body').hasClass('home') ? '' : '../../',
-			uniq = {
+			'info'     : 'm',
+			'beauty'   : 'm_1',
+			'cafe'     : 'm_2',
+			'hospital' : 'm_3',
+			'hotel'    : 'm_4',
+			'funeral'  : 'm_5'
 
-				'info'     : 'm',
-				'beauty'   : 'm_1',
-				'cafe'     : 'm_2',
-				'hospital' : 'm_3',
-				'hotel'    : 'm_4',
-				'funeral'  : 'm_5'
+		};
 
-			};
+	data.forEach(function(item, index) {
 
-			if (item.area) {
-				output += '	<li id=' + item.num + ' data-filters=' + item.area + '>';
-			} else {
-				output += '	<li id=' + item.num + ' data-filters=' + item.ani + '>';
-			}
+		if (item.area) {
+			output += '	<li id=' + item.num + ' data-filters=' + item.area + '>';
+		} else {
+			output += '	<li id=' + item.num + ' data-filters=' + item.ani + '>';
+		}
 
-			output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
-			output += '			<div class="thumb">';
-			output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
-			output += '			</div>';
-			output += '			<div class="cont">';
-			output += '				<p class="tit">' + item.tit + '</p>';
+		output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
+		output += '			<div class="thumb">';
+		output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
+		output += '			</div>';
+		output += '			<div class="cont">';
+		output += '				<p class="tit">' + item.tit + '</p>';
 
-			if (item.add) {
-				output += '			<p class="txt">' + item.area + ' ' + item.add + '</p>';
-			}
+		if (item.add) {
+			output += '			<p class="txt">' + item.area + ' ' + item.add + '</p>';
+		}
 
-			output += '			</div>';
-			output += '		</a>';
-			output += '	</li>';
-
-			// document.getElementById(insert).innerHTML += output;
-			$("#"+insert).append(output);
+		output += '			</div>';
+		output += '		</a>';
+		output += '	</li>';
 
 	});
+
+	// document.getElementById(insert).innerHTML += output;
+	$("#"+insert).append(output);
 
 }
 
@@ -341,16 +339,16 @@ function lst_view(folder, insert) {
 
 function h_title(data) {
 
-	$.each(data, function(index, item) {
+	var output = '';
 
-		var output = '';
+	data.forEach(function(item, index) {
 
 		output += '<h2>' + item.tit + '</h2>';
 		output += '<p>' + item.add + '</p>';
 
-		document.getElementById('h_wrap').innerHTML += output;
-
 	});
+
+	document.getElementById('h_wrap').innerHTML += output;
 
 }
 
@@ -359,19 +357,21 @@ function h_title(data) {
 
 function swiper_slide(sort, uniq, sum) {
 
+	// 빈 문자열 변수를 선언하여 해당 문자열에만 추가하는 것이 좋은 방법
+
+	var output = '';
+
 	for (var i = 1; i <= sum; i++) {
-	
-		var output = '';
 
-			output += '	<div class="swiper-slide">';
-			output += '		<div class="thumb">';
-			output += '			<span style="background-image:url(../../img/' + sort + '/' + uniq + '_' + i + '.jpg)"></span>';
-			output += '		</div>';
-			output += '	</div>';
-
-			document.getElementById('swiper-wrap').innerHTML += output;
+		output += '	<div class="swiper-slide">';
+		output += '		<div class="thumb">';
+		output += '			<span style="background-image:url(../../img/' + sort + '/' + uniq + '_' + i + '.jpg)"></span>';
+		output += '		</div>';
+		output += '	</div>';
 
 	}
+
+	$('#swiper-wrap').append(output);
 
 }
 
@@ -384,7 +384,8 @@ function list_price(data) {
 		return;
 	}
 
-	var out = '';
+	var out = '',
+		output = '';
 
 	out += ' <strong>[가격정보]</strong>';
 	out += ' <ul id="lst_price">';
@@ -392,15 +393,13 @@ function list_price(data) {
 
 	document.getElementById('price').innerHTML += out;
 
-	$.each(data, function(index, item) {
-
-		var output = '';
+	data.forEach(function(item, index) {
 
 		output += '	<li>' + item.lst + '</li>';
 
-		document.getElementById('lst_price').innerHTML += output;
-
 	});
+
+	document.getElementById('lst_price').innerHTML += output;
 
 }
 
@@ -413,7 +412,8 @@ function list_clock(data) {
 		return;
 	}
 
-	var out = '';
+	var out = '',
+		output = '';
 
 	out += ' <strong>[이용시간]</strong>';
 	out += ' <ul id="lst_clock">';
@@ -421,15 +421,13 @@ function list_clock(data) {
 
 	document.getElementById('clock').innerHTML += out;
 
-	$.each(data, function(index, item) {
-
-		var output = '';
+	data.forEach(function(item, index) {
 
 		output += '	<li>' + item.lst + '</li>';
 
-		document.getElementById('lst_clock').innerHTML += output;
-
 	});
+
+	document.getElementById('lst_clock').innerHTML += output;
 
 }
 
@@ -438,9 +436,10 @@ function list_clock(data) {
 
 function list_info(data) {
 
-	$.each(data, function(index, item) {
+	var output = '';
 
-		var output = '';
+	// $.each(data, function(index, item) {
+	data.forEach(function(item, index) {
 
 		output += '	<li>';
 		output += '		<div class="t_b">';
@@ -466,9 +465,10 @@ function list_info(data) {
 
 		}
 
-		document.getElementById('info').innerHTML += output;
-
 	});
+
+	// document.getElementById('info').innerHTML += output;
+	$('#info').append(output);
 
 }
 
@@ -476,6 +476,7 @@ function list_info(data) {
 // random output
 
 $.fn.randomize = function(selector) {
+
     var $elems = selector ? $(this).find(selector) : $(this).children(),
         $parents = $elems.parent();
  
@@ -486,6 +487,7 @@ $.fn.randomize = function(selector) {
     });
  
     return this;
+
 }; 
 
 
@@ -510,5 +512,3 @@ var getParameter = function(param) {
 	} 
 
 };
-
-
