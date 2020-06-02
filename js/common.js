@@ -232,8 +232,8 @@ function list_view(data, folder, insert) {
 
 	}
 
-	var output = '',
-		fragment = document.createDocumentFragment(),
+	var insert = document.getElementById(insert),
+		output = '',
 		path = $('body').hasClass('home') ? '' : '../../',
 		uniq = {
 
@@ -271,7 +271,7 @@ function list_view(data, folder, insert) {
 
 	});
 
-	document.getElementById(insert).innerHTML += output;
+	insert.innerHTML += output;
 	// $("#"+insert).append(output);
 
 }
@@ -387,7 +387,8 @@ function lst_view(folder, insert) {
 
 function h_title(data) {
 
-	var output = '';
+	var output = '',
+		h_wrap = document.getElementById('h_wrap');
 
 	data.forEach(function(item, index) {
 
@@ -396,7 +397,7 @@ function h_title(data) {
 
 	});
 
-	document.getElementById('h_wrap').innerHTML += output;
+	h_wrap.innerHTML += output;
 
 }
 
@@ -407,7 +408,8 @@ function swiper_slide(sort, uniq, sum) {
 
 	// 빈 문자열 변수를 선언하여 해당 문자열에만 추가하는 것이 좋은 방법
 
-	var output = '';
+	var output = '',
+		swiper_wrap = $('#swiper-wrap');
 
 	for (var i = 1; i <= sum; i++) {
 
@@ -419,7 +421,7 @@ function swiper_slide(sort, uniq, sum) {
 
 	}
 
-	$('#swiper-wrap').append(output);
+	swiper_wrap.append(output);
 
 }
 
@@ -433,13 +435,15 @@ function list_price(data) {
 	}
 
 	var out = '',
-		output = '';
+		output = '',
+		price = document.getElementById('price'),
+		lst_price = document.getElementById('lst_price');
 
 	out += ' <strong>[가격정보]</strong>';
 	out += ' <ul id="lst_price">';
 	out += ' </ul>';
 
-	document.getElementById('price').innerHTML += out;
+	price.innerHTML += out;
 
 	data.forEach(function(item, index) {
 
@@ -447,7 +451,7 @@ function list_price(data) {
 
 	});
 
-	document.getElementById('lst_price').innerHTML += output;
+	lst_price.innerHTML += output;
 
 }
 
@@ -461,13 +465,15 @@ function list_clock(data) {
 	}
 
 	var out = '',
-		output = '';
+		output = '',
+		clock = document.getElementById('clock'),
+		lst_clock = document.getElementById('lst_clock');
 
 	out += ' <strong>[이용시간]</strong>';
 	out += ' <ul id="lst_clock">';
 	out += ' </ul>';
 
-	document.getElementById('clock').innerHTML += out;
+	clock.innerHTML += out;
 
 	data.forEach(function(item, index) {
 
@@ -475,7 +481,7 @@ function list_clock(data) {
 
 	});
 
-	document.getElementById('lst_clock').innerHTML += output;
+	lst_clock.innerHTML += output;
 
 }
 
@@ -484,9 +490,9 @@ function list_clock(data) {
 
 function list_info(data) {
 
-	var output = '';
+	var output = '',
+		info = document.getElementById('info');
 
-	// $.each(data, function(index, item) {
 	data.forEach(function(item, index) {
 
 		output += '	<li>';
@@ -515,8 +521,7 @@ function list_info(data) {
 
 	});
 
-	// document.getElementById('info').innerHTML += output;
-	$('#info').append(output);
+	info.innerHTML += output;
 
 }
 
@@ -529,7 +534,7 @@ $.fn.randomize = function(selector) {
         $parents = $elems.parent();
  
     $parents.each(function() {
-        $(this).children(selector).sort(function(){
+        $(this).children(selector).sort(function() {
             return Math.round(Math.random()) - 0.5;
         }).detach().appendTo(this);
     });
