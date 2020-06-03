@@ -1,13 +1,35 @@
 <html>
 <head>
-  <meta charset="UTF-8">
-  <style></style>
+<meta charset="UTF-8">
+<style></style>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
 </head>
 <body>
 
 <span id="counter" style="font-size: 24px">0</span>
 
 <ul id="list"></ul>
+
+<script>
+
+$(function() {
+
+	var data = [
+
+		{num : '4',  ani : '아이템',  tit : '4'},
+		{num : '3',  ani : '아이템',  tit : '3'},
+		{num : '2',  ani : '아이템',  tit : '2'},
+		{num : '1',  ani : '아이템',  tit : '1'},
+
+	];
+
+	list_view(data, 'info', 'list');
+
+});
+
+</script>
 
 <script src="js/ChangeQueue.js"></script>
 <script src="js/scripts.js"></script>
