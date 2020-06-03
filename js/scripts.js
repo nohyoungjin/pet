@@ -157,35 +157,43 @@ function list_view(data, folder, insert) {
 				output += '		</a>';
 				output += '	</li>';
 
-				insert.innerHTML = output;
+				// random output
 
+				$('ul.randam').randomize('li');
+
+				insert.innerHTML = output;
+				
 			}
 		
 		});
 
 	});
 
-}
+	// 반복적으로 큐를 체크하여 ?개씩 실행
 
-// 반복적으로 큐를 체크하여 ?개씩 실행
+	setInterval(function() {
 
-setInterval(function() {
+		for (var i = 0; i < 10 && !changeQueue.isEmpty(); i++) {
 
-	for (var i = 0; i < 1 && !changeQueue.isEmpty(); i++) {
+			var c = changeQueue.dequeue();
 
-		var c = changeQueue.dequeue();
+			if (c) {
+				requestAnimationFrame(c.execute);
+			}
 
-		if (c) {
-			requestAnimationFrame(c.execute);
+			if (changeQueue.isEmpty()) {
+
+				// alert(getParameter('id'));
+
+				$(document).scrollTop($('#' + getParameter('id')).offset().top - 60 );  
+			
+			}
+
 		}
 
-		if (changeQueue.isEmpty()) {}
+	}, 0);
 
-	}
-
-}, 100);
-
-
+}
 
 // random output
 
@@ -203,7 +211,6 @@ $.fn.randomize = function(selector) {
     return this;
 
 }; 
-
 
 // get parameter
 

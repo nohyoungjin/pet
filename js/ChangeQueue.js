@@ -1,6 +1,7 @@
 var changeQueue = (function() {
 
 	var list = [];
+		index = 0;
 
 	return {
 
@@ -9,11 +10,14 @@ var changeQueue = (function() {
 		},
 
 		dequeue: function() {
-			return list.shift();
+			var o = list[index];
+			index++;
+
+			return o;
 		},
 
 		isEmpty: function() {
-			return list.length === 0;
+			return list.length - index === 0;
 		}
 
 	}
