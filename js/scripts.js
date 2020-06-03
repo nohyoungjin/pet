@@ -157,11 +157,15 @@ function list_view(data, folder, insert) {
 				output += '		</a>';
 				output += '	</li>';
 
+				insert.innerHTML = output;
+				
 				// random output
 
 				$('ul.randam').randomize('li');
 
-				insert.innerHTML = output;
+				// alert( getParameter('id') );
+
+				$(document).scrollTop($('#' + getParameter('id')).offset().top - 60);
 				
 			}
 		
@@ -182,10 +186,6 @@ function list_view(data, folder, insert) {
 			}
 
 			if (changeQueue.isEmpty()) {
-
-				// alert(getParameter('id'));
-
-				$(document).scrollTop($('#' + getParameter('id')).offset().top - 60);  
 			
 			}
 
