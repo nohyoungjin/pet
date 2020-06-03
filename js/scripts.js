@@ -173,7 +173,7 @@ function list_view(data, folder, insert) {
 
 	setInterval(function() {
 
-		for (var i = 0; i < 10 && !changeQueue.isEmpty(); i++) {
+		for (var i = 0; i < 1 && !changeQueue.isEmpty(); i++) {
 
 			var c = changeQueue.dequeue();
 
@@ -185,7 +185,7 @@ function list_view(data, folder, insert) {
 
 				// alert(getParameter('id'));
 
-				$(document).scrollTop($('#' + getParameter('id')).offset().top - 60 );  
+				$(document).scrollTop($('#' + getParameter('id')).offset().top - 60);  
 			
 			}
 
