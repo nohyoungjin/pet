@@ -161,7 +161,7 @@ function list_view(data, folder, insert) {
 				
 				// random output
 
-				$('ul.randam').randomize('li');
+				// $('ul.randam').randomize('li');
 
 				// alert( getParameter('id') );
 
