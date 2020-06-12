@@ -128,6 +128,8 @@ function list_view(data, folder, insert) {
 
 		};
 
+	console.time();
+
 	// 데이터로 항목 만들기
 
 	data.forEach(function(item, index) {
@@ -158,10 +160,6 @@ function list_view(data, folder, insert) {
 				output += '	</li>';
 
 				insert.innerHTML = output;
-				
-				// random output
-
-				// $('ul.randam').randomize('li');
 
 				// alert( getParameter('id') );
 
@@ -173,12 +171,13 @@ function list_view(data, folder, insert) {
 
 	});
 
+	requestIdleCallback(processChanges);
+
 	// 반복적으로 큐를 체크하여 ?개씩 실행
 
-	setInterval(function() {
+	/* setInterval(function() {
 
 		for (var i = 0; i < 1 && !changeQueue.isEmpty(); i++) {
-
 			var c = changeQueue.dequeue();
 
 			if (c) {
@@ -186,12 +185,29 @@ function list_view(data, folder, insert) {
 			}
 
 			if (changeQueue.isEmpty()) {
-			
+				 console.timeEnd();
 			}
-
 		}
 
-	}, 0);
+	}, 0); */
+
+	function processChanges(deadline) {
+
+		while (deadline.timeRemaining() > 0 && !changeQueue.isEmpty()) {
+			var c = changeQueue.dequeue();
+
+			if (c) {
+				requestAnimationFrame(c.execute);
+			}
+		}
+
+		if (!changeQueue.isEmpty()) {
+			requestIdleCallback(processChanges);
+		} else {
+			console.timeEnd();
+		}
+
+	}
 
 }
 
