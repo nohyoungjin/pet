@@ -18,7 +18,7 @@ $(function() {
 		var $body = $('body'),
 			$close_btn = $('#popup_close'),
 			$popup = $('#popup'),
-			_open = true;
+			open = true;
 
 		// open
 
@@ -26,13 +26,13 @@ $(function() {
 
 			e.preventDefault();
 
-			if ( _open ) {
+			if (open) {
 
 				$body.addClass('_open');
-				_open = false;
+				open = false;
 
-				TweenLite.fromTo($popup, .5, {y: '-100%'}, {y: '0%', ease: Power4.easeOut});
-				TweenLite.fromTo($close_btn, .2, {autoAlpha: 0}, {autoAlpha: 1, ease: Power0.easeNone,delay: .1});
+				TweenLite.fromTo($popup, .5, { y: '-100%' }, { y: '0%', ease: Power4.easeOut });
+				TweenLite.fromTo($close_btn, .2, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power0.easeNone, delay: .1 });
 
 				//
 
@@ -40,8 +40,8 @@ $(function() {
 
 					var toFilter = $(this).data('filters');
 					
-					if ( toFilter == '전체' ) {
-						
+					if (toFilter == '전체') {
+
 						$('.local a span').text(toFilter);
 						$('.lst_filter li').removeClass('sort').removeClass('on').removeClass('off');
 						
@@ -61,7 +61,7 @@ $(function() {
 						var filters = $(this).data('filters');
 						$('.lst_filter li').addClass('sort').addClass('off');
 
-						if ( filters == toFilter ) {
+						if (filters == toFilter) {
 							$(this).addClass('on');
 						}
 
@@ -98,7 +98,7 @@ $(function() {
 				onComplete: function() {
 					$body.removeClass('_open');
 
-					_open = true;
+					open = true;
 				}
 			});
 
@@ -139,9 +139,7 @@ $(function() {
 					var win_w = $(window).width(),
 						scroll_top = 40;
 
-					$('html, body').animate({
-						scrollTop: target.offset().top - scroll_top
-					}, 500, function() {});
+					$('html, body').animate({ scrollTop: target.offset().top - scroll_top }, 500, function() {});
 
 				}
 
@@ -158,7 +156,7 @@ $(function() {
 
 		var $slider = $('.swiper-wrapper');
 
-		if ( !$slider.length ) return;
+		if (!$slider.length) return;
 
 		// Timer
 
@@ -170,7 +168,7 @@ $(function() {
 
 		// Slider init
 
-		if ( $('.swiper-slide').length > 1 ) {
+		if ($('.swiper-slide').length > 1) {
 
 			var main_visual_swiper = new Swiper('.swiper-view.swiper-container', {
 				parallax: true,
@@ -198,7 +196,7 @@ $(function() {
 
 			$(this).toggleClass('paused');
 
-			if ( tween.isActive() ) {
+			if (tween.isActive()) {
 				tween.pause();
 			} else {
 				tween.resume();
@@ -226,25 +224,24 @@ function list_view(data, folder, insert) {
 
 	// 위부터 4개 Output Hold
 	
-	if ( insert == 'latest' ) {
-		
-		data.splice( -8, 4 );
-
+	if (insert == 'latest') {
+		data.splice( -8, 4);
 	}
 
 	var insert = document.getElementById(insert),
 		output = '',
-		path = $('body').hasClass('home') ? '' : '../../',
-		uniq = {
+		path = $('body').hasClass('home') ? '' : '../../';
 
-			'info'     : 'm',
-			'beauty'   : 'm_1',
-			'cafe'     : 'm_2',
-			'hospital' : 'm_3',
-			'hotel'    : 'm_4',
-			'funeral'  : 'm_5'
+	const uniq = {
 
-		};
+		'info'     : 'm',
+		'beauty'   : 'm_1',
+		'cafe'     : 'm_2',
+		'hospital' : 'm_3',
+		'hotel'    : 'm_4',
+		'funeral'  : 'm_5'
+
+	};
 
 	data.forEach(function(item, index) {
 
@@ -283,10 +280,8 @@ function list_view2(data, folder, insert) {
 
 	// 위부터 4개 Output Hold
 	
-	if ( insert == 'latest' ) {
-		
-		data.splice( -8, 4 );
-
+	if (insert == 'latest') {
+		data.splice( -8, 4);
 	}
 
 	var output = '',
@@ -309,11 +304,11 @@ function list_view2(data, folder, insert) {
 
 		li.classList.add('item');
 
-		li.innerHTML += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
-		li.innerHTML += '			<div id="thumb" class="thumb">';
-		li.innerHTML += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
-		li.innerHTML += '			</div>';
-		li.innerHTML += '		</a>';
+		li.innerHTML += '	<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
+		li.innerHTML += '		<div id="thumb" class="thumb">';
+		li.innerHTML += '			<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
+		li.innerHTML += '		</div>';
+		li.innerHTML += '	</a>';
 
 		fragment.appendChild(li);
 
@@ -430,7 +425,7 @@ function swiper_slide(sort, uniq, sum) {
 
 function list_price(data) {
 
-	if ( data == '' ) {
+	if (data == '') {
 		return;
 	}
 
@@ -460,7 +455,7 @@ function list_price(data) {
 
 function list_clock(data) {
 
-	if ( data == '' ) {
+	if (data == '') {
 		return;
 	}
 

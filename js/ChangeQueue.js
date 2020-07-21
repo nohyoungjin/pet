@@ -1,7 +1,7 @@
 var changeQueue = (function() {
 
 	var list = [];
-		index = 0;
+	var index = 0;
 
 	return {
 

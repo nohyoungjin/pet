@@ -11,7 +11,7 @@ $(function() {
 		var $body = $('body'),
 			$close_btn = $('#popup_close'),
 			$popup = $('#popup'),
-			_open = true;
+			open = true;
 
 		// open
 
@@ -19,13 +19,13 @@ $(function() {
 
 			e.preventDefault();
 
-			if ( _open ) {
+			if (open) {
 
 				$body.addClass('_open');
-				_open = false;
+				open = false;
 
-				TweenLite.fromTo($popup, .5, {y: '-100%'}, {y: '0%', ease: Power4.easeOut});
-				TweenLite.fromTo($close_btn, .2, {autoAlpha: 0}, {autoAlpha: 1, ease: Power0.easeNone,delay: .1});
+				TweenLite.fromTo($popup, .5, { y: '-100%' }, { y: '0%', ease: Power4.easeOut });
+				TweenLite.fromTo($close_btn, .2, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power0.easeNone, delay: .1 });
 
 				//
 
@@ -33,7 +33,7 @@ $(function() {
 
 					var toFilter = $(this).data('filters');
 					
-					if ( toFilter == '전체' ) {
+					if (toFilter == '전체') {
 						
 						$('.local a span').text(toFilter);
 						$('.lst_filter li').removeClass('sort').removeClass('on').removeClass('off');
@@ -54,7 +54,7 @@ $(function() {
 						var filters = $(this).data('filters');
 						$('.lst_filter li').addClass('sort').addClass('off');
 
-						if ( filters == toFilter ) {
+						if (filters == toFilter) {
 							$(this).addClass('on');
 						}
 
@@ -91,7 +91,7 @@ $(function() {
 				onComplete: function() {
 					$body.removeClass('_open');
 
-					_open = true;
+					open = true;
 				}
 			});
 
@@ -108,9 +108,9 @@ function list_view(data, folder, insert) {
 
 	// 위부터 4개 Output Hold
 	
-	if ( insert == 'latest' ) {
+	if (insert == 'latest') {
 		
-		data.splice( -8, 4 );
+		data.splice( -8, 4);
 
 	}
 
