@@ -44,7 +44,7 @@ if (getParameter('page') == 'home') {
 
 }
 
-document.write(str);
+document.write(str)
 
 /* str = ''
 str += '<div id="header" class="fix">'
@@ -54,4 +54,4 @@ str += '		<span>뒤로가기</span>'
 str += '	</a>'
 str += '</div>'
 
-document.write(str); */
+document.write(str) */

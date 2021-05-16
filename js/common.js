@@ -2,78 +2,78 @@ $(function() {
 
 	// INIT
 	
-	local();
+	local()
 
-	// swiper_list();
-	// scroll_move();
+	// swiperList()
+	// scrollMove()
 
-	swiper_view();
-	youtube();
+	swiperView()
+	youtube()
 
 
 	// area search
 
 	function local() {
 
-		var $body = $('body'),
-			$close_btn = $('#popup_close'),
-			$popup = $('#popup'),
-			open = true;
+		var $body = $('body')
+		var $closeBtn = $('#popup_close')
+		var $popup = $('#popup')
+		var open = true
 
 		// open
 
 		$(document).on('click', '.local a', function(e) {
 
-			e.preventDefault();
+			e.preventDefault()
 
 			if (open) {
 
-				$body.addClass('_open');
-				open = false;
+				$body.addClass('_open')
+				open = false
 
-				TweenLite.fromTo($popup, .5, { y: '-100%' }, { y: '0%', ease: Power4.easeOut });
-				TweenLite.fromTo($close_btn, .2, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power0.easeNone, delay: .1 });
+				TweenLite.fromTo($popup, .5, { y: '-100%' }, { y: '0%', ease: Power4.easeOut })
+				TweenLite.fromTo($closeBtn, .2, { autoAlpha: 0 }, { autoAlpha: 1, ease: Power0.easeNone, delay: .1 })
 
 				//
 
 				$('.filters a').on('click', function() {
 
-					var toFilter = $(this).data('filters');
+					var toFilter = $(this).data('filters')
 					
 					if (toFilter == '전체') {
 
-						$('.local a span').text(toFilter);
-						$('.lst_filter li').removeClass('sort').removeClass('on').removeClass('off');
+						$('.local a span').text(toFilter)
+						$('.lst_filter li').removeClass('sort').removeClass('on').removeClass('off')
 						
-						close_action();
+						close_action()
 						
-						return;
+						return
 					
 					} else {
 
-						$('.local a span').text(toFilter);
-						$('.lst_filter li').removeClass('on');
+						$('.local a span').text(toFilter)
+						$('.lst_filter li').removeClass('on')
 						
 					}
 
 					$('.lst_filter li').each(function(i, elem) {
 
-						var filters = $(this).data('filters');
-						$('.lst_filter li').addClass('sort').addClass('off');
+						var filters = $(this).data('filters')
+						$('.lst_filter li').addClass('sort').addClass('off')
 
 						if (filters == toFilter) {
-							$(this).addClass('on');
+							$(this).addClass('on')
 						}
 
 					});
 					
-					close_action();
+					close_action()
 
 				});
 
 			} else {
 
-				close_action();
+				close_action()
 
 			}
 
@@ -81,12 +81,12 @@ $(function() {
 
 	   // close
 
-		$close_btn.on('click', function(e) {
+		$closeBtn.on('click', function(e) {
 
-			e.preventDefault();
-			close_action();
+			e.preventDefault()
+			close_action()
 
-		});
+		})
 
 		// search close action
 
@@ -96,11 +96,11 @@ $(function() {
 				y: '-100%',
 				ease: Power4.easeOut,
 				onComplete: function() {
-					$body.removeClass('_open');
+					$body.removeClass('_open')
 
-					open = true;
+					open = true
 				}
-			});
+			})
 
 		}
 
@@ -109,7 +109,7 @@ $(function() {
 
 	// category roll
 
-	function swiper_list() {
+	function swiperList() {
 
 		var swiper = new Swiper('.swiper-list.swiper-container', {
 			slidesPerView: 4,
@@ -117,29 +117,29 @@ $(function() {
 			watchSlidesProgress: true,
             watchSlidesVisibility: true,
 			grabCursor: true
-		});
+		})
 
 	}
 
 
 	// position move
 
-	function scroll_move() {
+	function scrollMove() {
 
 		$('.cate a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
 
 			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 				var target = $(this.hash);
-				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']')
 
 				if (target.length) {
 
-					event.preventDefault();
+					event.preventDefault()
 
-					var win_w = $(window).width(),
-						scroll_top = 40;
+					var win_w = $(window).width()
+					var scroll_top = 40
 
-					$('html, body').animate({ scrollTop: target.offset().top - scroll_top }, 500, function() {});
+					$('html, body').animate({ scrollTop: target.offset().top - scroll_top }, 500, function() {})
 
 				}
 
@@ -152,19 +152,19 @@ $(function() {
 
 	// slider
 
-	function swiper_view() {
+	function swiperView() {
 
-		var $slider = $('.swiper-wrapper');
+		var $slider = $('.swiper-wrapper')
 
-		if (!$slider.length) return;
+		if (!$slider.length) return
 
 		// Timer
 
-		var time = 4000,
-			transition_time = 1200,
-			time_with_trans = (time + transition_time) / 1000,
-			timer,
-			tween = null;
+		var time = 4000
+		var transitionTime = 1200
+		var time_with_trans = (time + transitionTime) / 1000
+		var timer
+		var tween = null
 
 		// Slider init
 
@@ -173,7 +173,7 @@ $(function() {
 			var main_visual_swiper = new Swiper('.swiper-view.swiper-container', {
 				parallax: true,
 				loop : true,
-				speed : transition_time,
+				speed : transitionTime,
 				navigation: {
 					nextEl: '.slideshow_next',
 					prevEl: '.slideshow_prev'
@@ -186,20 +186,20 @@ $(function() {
 					  }
 				}
 
-			}); // END main_visual_swiper
+			}) // END main_visual_swiper
 
 		}
 
 		// Play pause toggle
 
-		$('.slideshow_play_toggle').on('click',function() {
+		$('.slideshow_play_toggle').on('click', function() {
 
-			$(this).toggleClass('paused');
+			$(this).toggleClass('paused')
 
 			if (tween.isActive()) {
-				tween.pause();
+				tween.pause()
 			} else {
-				tween.resume();
+				tween.resume()
 			}
 
 		});
@@ -211,11 +211,11 @@ $(function() {
 
 	function youtube() {
 
-		$( 'iframe[src^="https://www.youtube.com/"], iframe[src^="https://www.facebook.com/"], iframe[src^="https://goo.gl/"]' ).wrap( '<div class="youtubeWrap"></div>' );
+		$('iframe[src^="https://www.youtube.com/"], iframe[src^="https://www.facebook.com/"], iframe[src^="https://goo.gl/"]').wrap('<div class="youtubeWrap"></div>')
 
 	}
 
-});
+})
 
 
 //
@@ -225,12 +225,12 @@ function list_view(data, folder, insert) {
 	// 위부터 4개 Output Hold
 	
 	if (insert == 'latest') {
-		data.splice( -8, 4);
+		data.splice( -8, 4)
 	}
 
-	var insert = document.getElementById(insert),
-		output = '',
-		path = $('body').hasClass('home') ? '' : '../../';
+	var insert = document.getElementById(insert)
+	var output = ''
+	var path = $('body').hasClass('home') ? '' : '../../'
 
 	const uniq = {
 
@@ -241,35 +241,35 @@ function list_view(data, folder, insert) {
 		'hotel'    : 'm_4',
 		'funeral'  : 'm_5'
 
-	};
+	}
 
 	data.forEach(function(item, index) {
 
 		if (item.area) {
-			output += '	<li id=' + item.num + ' data-filters=' + item.area + '>';
+			output += '	<li id=' + item.num + ' data-filters=' + item.area + '>'
 		} else {
-			output += '	<li id=' + item.num + ' data-filters=' + item.ani + '>';
+			output += '	<li id=' + item.num + ' data-filters=' + item.ani + '>'
 		}
 
-		output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
-		output += '			<div class="thumb">';
-		output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
-		output += '			</div>';
-		output += '			<div class="cont">';
-		output += '				<p class="tit">' + item.tit + '</p>';
+		output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">'
+		output += '			<div class="thumb">'
+		output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>'
+		output += '			</div>'
+		output += '			<div class="cont">'
+		output += '				<p class="tit">' + item.tit + '</p>'
 
 		if (item.add) {
-			output += '			<p class="txt">' + item.area + ' ' + item.add + '</p>';
+			output += '			<p class="txt">' + item.area + ' ' + item.add + '</p>'
 		}
 
-		output += '			</div>';
-		output += '		</a>';
-		output += '	</li>';
+		output += '			</div>'
+		output += '		</a>'
+		output += '	</li>'
 
 	});
 
-	insert.innerHTML += output;
-	// $("#"+insert).append(output);
+	insert.innerHTML += output
+	// $("#"+insert).append(output)
 
 }
 
@@ -281,13 +281,13 @@ function list_view2(data, folder, insert) {
 	// 위부터 4개 Output Hold
 	
 	if (insert == 'latest') {
-		data.splice( -8, 4);
+		data.splice( -8, 4)
 	}
 
-	var output = '',
-		fragment = document.createDocumentFragment(),
-		path = $('body').hasClass('home') ? '' : '../../',
-		uniq = {
+	var output = ''
+	var fragment = document.createDocumentFragment()
+	var path = $('body').hasClass('home') ? '' : '../../'
+	var uniq = {
 
 			'info'     : 'm',
 			'beauty'   : 'm_1',
@@ -296,25 +296,25 @@ function list_view2(data, folder, insert) {
 			'hotel'    : 'm_4',
 			'funeral'  : 'm_5'
 
-		};
+		}
 
 	data.forEach(function(item, index) {
 
-		var li = document.createElement('li');
+		var li = document.createElement('li')
 
-		li.classList.add('item');
+		li.classList.add('item')
 
-		li.innerHTML += '	<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
-		li.innerHTML += '		<div id="thumb" class="thumb">';
-		li.innerHTML += '			<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
+		li.innerHTML += '	<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">'
+		li.innerHTML += '		<div id="thumb" class="thumb">'
+		li.innerHTML += '			<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>'
 		li.innerHTML += '		</div>';
 		li.innerHTML += '	</a>';
 
-		fragment.appendChild(li);
+		fragment.appendChild(li)
 
 	});
 
-	document.getElementById(insert).appendChild(fragment.cloneNode(true));
+	document.getElementById(insert).appendChild(fragment.cloneNode(true))
 
 }
 
@@ -416,7 +416,7 @@ function swiper_slide(sort, uniq, sum) {
 
 	}
 
-	swiper_wrap.append(output);
+	swiper_wrap.append(output)
 
 }
 
@@ -425,9 +425,7 @@ function swiper_slide(sort, uniq, sum) {
 
 function list_price(data) {
 
-	if (data == '') {
-		return;
-	}
+	if (data == '') { return }
 
 	var out = '',
 		output = '',
@@ -543,20 +541,20 @@ $.fn.randomize = function(selector) {
 
 var getParameter = function(param) { 
 	
-	var returnValue, 
-		url = location.href,
-		parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&'); 
+	var returnValue
+	var url = location.href
+	var parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&')
 	
 	for (var i = 0; i < parameters.length; i++) { 
 		
-		var varName = parameters[i].split('=')[0]; 
+		var varName = parameters[i].split('=')[0]
 		
 		if (varName.toUpperCase() == param.toUpperCase()) { 
 			
-			returnValue = parameters[i].split('=')[1]; 
-			return decodeURIComponent(returnValue); 
+			returnValue = parameters[i].split('=')[1]
+			return decodeURIComponent(returnValue)
 		
 		} 
 	} 
 
-};
+}

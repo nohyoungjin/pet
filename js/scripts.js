@@ -76,10 +76,10 @@ $(function() {
 
 		$close_btn.on('click', function(e) {
 
-			e.preventDefault();
-			close_action();
+			e.preventDefault()
+			close_action()
 
-		});
+		})
 
 		// search close action
 
@@ -89,17 +89,17 @@ $(function() {
 				y: '-100%',
 				ease: Power4.easeOut,
 				onComplete: function() {
-					$body.removeClass('_open');
+					$body.removeClass('_open')
 
-					open = true;
+					open = true
 				}
-			});
+			})
 
 		}
 
 	}
 
-});
+})
 
 
 // 데이터 생성
@@ -108,16 +108,12 @@ function list_view(data, folder, insert) {
 
 	// 위부터 4개 Output Hold
 	
-	if (insert == 'latest') {
-		
-		data.splice( -8, 4);
+	if (insert == 'latest') { data.splice( -8, 4) }
 
-	}
-
-	var insert = document.getElementById(insert),
-		output = '',
-		path = $('body').hasClass('home') ? '' : '../../',
-		uniq = {
+	var insert = document.getElementById(insert)
+	var output = ''
+	var path = $('body').hasClass('home') ? '' : '../../'
+	var uniq = {
 
 			'info'     : 'm',
 			'beauty'   : 'm_1',
@@ -126,9 +122,9 @@ function list_view(data, folder, insert) {
 			'hotel'    : 'm_4',
 			'funeral'  : 'm_5'
 
-		};
+		}
 
-	console.time();
+	console.time()
 
 	// 데이터로 항목 만들기
 
@@ -139,72 +135,72 @@ function list_view(data, folder, insert) {
 			execute: function() {
 
 				if (item.area) {
-					output += '	<li id=' + item.num + ' data-filters=' + item.area + '>';
+					output += '	<li id=' + item.num + ' data-filters=' + item.area + '>'
 				} else {
-					output += '	<li id=' + item.num + ' data-filters=' + item.ani + '>';
+					output += '	<li id=' + item.num + ' data-filters=' + item.ani + '>'
 				}
 
-				output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">';
-				output += '			<div class="thumb">';
-				output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>';
-				output += '			</div>';
-				output += '			<div class="cont">';
-				output += '				<p class="tit">' + item.tit + '</p>';
+				output += '		<a href="' + path + 'html/' + folder + '/' + item.num + '.html?id=' + item.num + '">'
+				output += '			<div class="thumb">'
+				output += '				<span style="background-image:url(' + path + 'img/thumb/' + folder + '/' + uniq[folder] + '_' + item.num + '.jpg)"></span>'
+				output += '			</div>'
+				output += '			<div class="cont">'
+				output += '				<p class="tit">' + item.tit + '</p>'
 
 				if (item.add) {
-					output += '			<p class="txt">' + item.area + ' ' + item.add + '</p>';
+					output += '			<p class="txt">' + item.area + ' ' + item.add + '</p>'
 				}
 
-				output += '			</div>';
-				output += '		</a>';
-				output += '	</li>';
+				output += '			</div>'
+				output += '		</a>'
+				output += '	</li>'
 
-				insert.innerHTML = output;
+				insert.innerHTML = output
 
-				// alert( getParameter('id') );
+				// alert(getParameter('id'))
 
-				$(document).scrollTop($('#' + getParameter('id')).offset().top - 60);
+				$(document).scrollTop($('#' + getParameter('id')).offset().top - 60)
 				
 			}
 		
-		});
+		})
 
-	});
+	})
 
-	requestIdleCallback(processChanges);
+	requestIdleCallback(processChanges)
 
 	// 반복적으로 큐를 체크하여 ?개씩 실행
 
 	/* setInterval(function() {
 
 		for (var i = 0; i < 1 && !changeQueue.isEmpty(); i++) {
-			var c = changeQueue.dequeue();
+			var c = changeQueue.dequeue()
 
 			if (c) {
-				requestAnimationFrame(c.execute);
+				requestAnimationFrame(c.execute)
 			}
 
 			if (changeQueue.isEmpty()) {
-				 console.timeEnd();
+				 console.timeEnd()
 			}
 		}
 
-	}, 0); */
+	}, 0) */
 
 	function processChanges(deadline) {
 
 		while (deadline.timeRemaining() > 0 && !changeQueue.isEmpty()) {
-			var c = changeQueue.dequeue();
+			var c = changeQueue.dequeue()
 
 			if (c) {
-				requestAnimationFrame(c.execute);
+				requestAnimationFrame(c.execute)
 			}
 		}
 
 		if (!changeQueue.isEmpty()) {
 			requestIdleCallback(processChanges);
 		} else {
-			console.timeEnd();
+			console.timeEnd()
 		}
 
 	}
@@ -215,37 +211,37 @@ function list_view(data, folder, insert) {
 
 $.fn.randomize = function(selector) {
 
-    var $elems = selector ? $(this).find(selector) : $(this).children(),
-        $parents = $elems.parent();
+    var $elems = selector ? $(this).find(selector) : $(this).children()
+	var $parents = $elems.parent()
  
     $parents.each(function() {
         $(this).children(selector).sort(function() {
-            return Math.round(Math.random()) - 0.5;
-        }).detach().appendTo(this);
-    });
+            return Math.round(Math.random()) - 0.5
+        }).detach().appendTo(this)
+    })
  
-    return this;
+    return this
 
-}; 
+}
 
 // get parameter
 
 var getParameter = function(param) { 
 	
-	var returnValue, 
-		url = location.href,
-		parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&'); 
+	var returnValue
+	var url = location.href
+	var parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&')
 	
 	for (var i = 0; i < parameters.length; i++) { 
 		
-		var varName = parameters[i].split('=')[0]; 
+		var varName = parameters[i].split('=')[0]
 		
 		if (varName.toUpperCase() == param.toUpperCase()) { 
 			
-			returnValue = parameters[i].split('=')[1]; 
-			return decodeURIComponent(returnValue); 
+			returnValue = parameters[i].split('=')[1]
+			return decodeURIComponent(returnValue)
 		
 		} 
 	} 
 
-};
+}

@@ -1,25 +1,25 @@
 var changeQueue = (function() {
 
-	var list = [];
-	var index = 0;
+	var list = []
+	var index = 0
 
 	return {
 
 		enqueue: function(c) {
-			list.push(c);
+			list.push(c)
 		},
 
 		dequeue: function() {
-			var o = list[index];
-			index++;
+			var o = list[index]
+			index++
 
 			return o;
 		},
 
 		isEmpty: function() {
-			return list.length - index === 0;
+			return list.length - index === 0
 		}
 
 	}
 
-})();
+})()

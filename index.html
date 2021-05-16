@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/font.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/common.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 </head>
 
 <body class="home"> 
@@ -18,7 +19,10 @@
 
 	<div id="header" class="fix">
 		<a href="https://nohyoungjin.github.io/pet/">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+				<path fill="none" d="M0 0h24v24H0z"/>
+				<path d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zM6 19h12V9.157l-6-5.454-6 5.454V19zm2-4h8v2H8v-2z"/>
+			</svg>
 		</a>
 	</div>
 
@@ -40,7 +44,10 @@
 					<div class="local">
 						<a href="javascript:">
 							메인 
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M13 16.172l5.364-5.364 1.414 1.414L12 20l-7.778-7.778 1.414-1.414L11 16.172V4h2v12.172z"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12">
+								<path fill="none" d="M0 0h24v24H0z"/>
+								<path d="M13 16.172l5.364-5.364 1.414 1.414L12 20l-7.778-7.778 1.414-1.414L11 16.172V4h2v12.172z"/>
+							</svg>
 						</a>
 					</div>
 
@@ -420,40 +427,28 @@
 					<h2>좋은곳으로 갈꺼야 잊지않을께</h2>
 					<p class="key">장례식</p>
 
-					<ul class="lst_shop">
-						<li>
-							<a href="html/funeral/6.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/funeral/m_5_6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">강릉펫사랑</p>
-									<p class="txt">강원 강릉시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/funeral/5.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/funeral/m_5_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">THE 고마워</p>
-									<p class="txt">경기 양주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/funeral/3.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/funeral/m_5_3.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">펫로스엔젤</p>
-									<p class="txt">충북 청주시</p>
-								</div>
-							</a>
-						</li>
+					<ul id="list" class="lst_shop"></ul>
+
+					<script>
+
+					$(function() {
+
+						var data = [
+
+							{num : '4',    tit : '한별리멤버파크',      area : '경남',    add : '함안군'},
+							{num : '3',    tit : '펫로스엔젤',          area : '충북',    add : '청주시'},
+							{num : '2',    tit : '펫노블레스',          area : '경남',    add : '양산시'},
+							{num : '1',    tit : '마스꼬따휴',          area : '경기',    add : '김포시'},
+
+						];
+
+						list_view(data, 'funeral', 'list')
+
+					})
+
+					</script>
+
+					<!-- <ul class="lst_shop">
 						<li>
 							<a href="html/funeral/1.html?page=home">
 								<div class="thumb">
@@ -465,7 +460,7 @@
 								</div>
 							</a>
 						</li>
-					</ul>
+					</ul> -->
 
 					<div class="btn_box">
 						<a href="../pet/html/funeral/view.html">모두보기</a>
@@ -491,6 +486,8 @@
 </div>
 
 <script src="js/common.js"></script>
+<script src="js/ChangeQueue.js" defer></script>
+<script src="js/scripts.js" defer></script>
 
 </body> 
 </html>
