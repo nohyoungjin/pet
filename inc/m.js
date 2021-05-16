@@ -6,4 +6,4 @@ str += '		<span>뒤로가기</span>'
 str += '	</a>'
 str += '</div>'
 
-document.write( str );
+document.write(str)

@@ -10,4 +10,4 @@ str += '		<i class="next"></i>'
 str += '	</button>'
 str += '</div>'
 
-document.write( str );
+document.write(str)

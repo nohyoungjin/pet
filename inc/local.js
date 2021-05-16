@@ -35,4 +35,4 @@ str += '		<span>닫기</span>'
 str += '	</button>'
 str += '</div>'
 
-document.write( str );
+document.write(str)
