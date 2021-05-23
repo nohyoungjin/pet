@@ -195,52 +195,26 @@
 					<h2>우리 아이를 더 예쁘게!</h2>
 					<p class="key">미용/훈련</p>
 
-					<ul class="lst_shop">
-						<li>
-							<a href="html/beauty/40.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/beauty/m_1_40.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">쥔네강아지</p>
-									<p class="txt">경기 하남시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/beauty/38.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/beauty/m_1_38.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">젠틀독아카데미</p>
-									<p class="txt">경기 성남시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/beauty/32.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/beauty/m_1_32.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">스카이피아</p>
-									<p class="txt">경기 광주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/beauty/29.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/beauty/m_1_29.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">도기존 애견훈련학교</p>
-									<p class="txt">경기 남양주시</p>
-								</div>
-							</a>
-						</li>
-					</ul>
+					<ul id="beauty" class="lst_shop"></ul>
+
+					<script>
+
+					$(function() {
+
+						var data = [
+
+						    {num : '46',  tit : '헬로멍뭉',              area : '경기',      add : '안산시'},
+						    {num : '45',  tit : '지켜줄개',              area : '경기',      add : '안산시'},
+							{num : '42',  tit : 'Cocos',                 area : '경기',      add : '수원시'},
+							{num : '40',  tit : '쥔네강아지',            area : '경기',      add : '하남시'},
+
+						];
+
+						list_view(data, 'beauty', 'beauty')
+
+					})
+
+					</script>
 
 					<div class="btn_box">
 						<a href="../pet/html/beauty/view.html">모두보기</a>
@@ -253,52 +227,26 @@
 					<h2>반려동물과 맛난음식 함께 먹을 수 있는곳</h2>
 					<p class="key">까페/식당</p>
 
-					<ul class="lst_shop">
-						<li>
-							<a href="html/cafe/17.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/cafe/m_2_17.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">펫스토리</p>
-									<p class="txt">경기 평택시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/cafe/12.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/cafe/m_2_12.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">샤라라네</p>
-									<p class="txt">경기 수원시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/cafe/5.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/cafe/m_2_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">독타곤</p>
-									<p class="txt">전북 전주시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/cafe/1.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/cafe/m_2_1.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">다독인더시티</p>
-									<p class="txt">서울 강남구</p>
-								</div>
-							</a>
-						</li>
-					</ul>
+					<ul id="cafe" class="lst_shop"></ul>
+
+					<script>
+
+					$(function() {
+
+						var data = [
+
+							{num : '51',  tit : '하오쿠',                  area : '부산',      add : '해운대구'},
+							{num : '50',  tit : '카페키샤',                area : '부산',      add : '해운대구'},
+							{num : '49',  tit : '연화당',                  area : '부산',      add : '기장군'},
+							{num : '44',  tit : '엔젤펫',                  area : '강원',      add : '춘천시'},
+
+						];
+
+						list_view(data, 'cafe', 'cafe')
+
+					})
+
+					</script>
 
 					<div class="btn_box">
 						<a href="../pet/html/cafe/view.html">모두보기</a>
@@ -311,52 +259,26 @@
 					<h2>건강한 우리 아기를 위해!</h2>
 					<p class="key">병원</p>
 
-					<ul class="lst_shop">
-						<li>
-							<a href="html/hospital/6.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/hospital/m_3_6.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">DR.K 종합동물병원</p>
-									<p class="txt">충청남도 아산시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/hospital/4.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/hospital/m_3_4.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">탑스동물메디컬센터</p>
-									<p class="txt">대구시 달서구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/hospital/2.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/hospital/m_3_2.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">중앙동물메디컬센터</p>
-									<p class="txt">서울 강남구</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/hospital/1.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/hospital/m_3_1.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">잠실 준 25시 동물병원</p>
-									<p class="txt">서울 강남구</p>
-								</div>
-							</a>
-						</li>
-					</ul>
+					<ul id="hospital" class="lst_shop"></ul>
+
+					<script>
+
+					$(function() {
+
+						var data = [
+
+							{num : '6',    tit : 'DR.K 종합동물병원',      area : '충남',      add : '아산시'},
+							{num : '5',    tit : '와우동물병원',           area : '전북',      add : '익산시'},
+							{num : '4',    tit : '탑스동물메디컬센터',     area : '대구',      add : '달서구'},
+							{num : '2',    tit : '중앙동물메디컬센터',        area : '서울',      add : '강남구'},
+
+						];
+
+						list_view(data, 'hospital', 'hospital')
+
+					})
+
+					</script>
 
 					<div class="btn_box">
 						<a href="../pet/html/hospital/view.html">모두보기</a>
@@ -369,52 +291,26 @@
 					<h2>같이 놀러가자!</h2>
 					<p class="key">펜션/호텔</p>
 
-					<ul class="lst_shop">
-						<li>
-							<a href="html/hotel/19.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/hotel/m_4_19.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">유니애견풀빌라</p>
-									<p class="txt">경북 포항시</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/hotel/9.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/hotel/m_4_9.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">꼬로몽 애견펜션</p>
-									<p class="txt">강원 양양군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/hotel/5.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/hotel/m_4_5.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">개리비안베이</p>
-									<p class="txt">인천 강화군</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="html/hotel/1.html?page=home">
-								<div class="thumb">
-									<span style="background-image:url(img/thumb/hotel/m_4_1.jpg)"></span>
-								</div>
-								<div class="cont">
-									<p class="tit">달빛애견글램핑</p>
-									<p class="txt">경기 포천시</p>
-								</div>
-							</a>
-						</li>
-					</ul>
+					<ul id="hotel" class="lst_shop"></ul>
+
+					<script>
+
+					$(function() {
+
+						var data = [
+
+							{num : '29',  tit : '골드독펜션',              area : '충남',    add : '태안군'},
+							{num : '28',  tit : '경포도도펜션',            area : '강원',    add : '강릉시'},
+							{num : '27',  tit : '힐스카이',                area : '경북',    add : '문경시'},
+							{num : '18',  tit : '엘까미노',                area : '강원',    add : '강릉시'},
+
+						];
+
+						list_view(data, 'hotel', 'hotel')
+
+					})
+
+					</script>
 
 					<div class="btn_box">
 						<a href="../pet/html/hotel/view.html">모두보기</a>
@@ -427,7 +323,7 @@
 					<h2>좋은곳으로 갈꺼야 잊지않을께</h2>
 					<p class="key">장례식</p>
 
-					<ul id="list" class="lst_shop"></ul>
+					<ul id="funeral" class="lst_shop"></ul>
 
 					<script>
 
@@ -442,7 +338,7 @@
 
 						];
 
-						list_view(data, 'funeral', 'list')
+						list_view(data, 'funeral', 'funeral')
 
 					})
 
